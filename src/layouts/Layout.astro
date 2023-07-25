@@ -12,7 +12,7 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description">
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/profile-photo-siddhesh.jpg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
@@ -22,12 +22,27 @@ const { title } = Astro.props;
 </html>
 <style is:global>
 	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+		--white: #f6f7f8;
+		--bg: #02050a;
+		--lightbg: #2f353d;
+		--accent: #7c3aed;
+		--accent-gradient: linear-gradient(45deg, var(--accent), var(--primary) 60%);
+		--primary: #2d2fe9;
+		--midprimary: #8398d1;
+		--primary-gradient: linear-gradient(60deg, var(--primary) 0%, var(--accent) 29%, rgba(213,195,245,1) 92%, var(--white) 100%);
+		/* --primary-alternate-gradient: linear-gradient(60deg, var(--primary) 0%, var(--midprimary) 70%, var(--white) 100%); */
+		/* --primary-alternate-gradient: linear-gradient(60deg, var(--primary) 0%, rgb(var(--accent)) 70%, var(--white) 100%); */
+		--bg-gradient: linear-gradient(0deg, var(--lightbg), var(--bg) 30%);
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
+		background-image: var(--bg-gradient);
+		background-size: 200%;
+		background-position: 0%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		color: var(--white);
+		min-height: 100vh;
 	}
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,

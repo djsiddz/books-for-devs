@@ -1,81 +1,166 @@
 ---
-import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
+<Layout title="Books for Devs">
+	<header>
+		<h3 class="brand">Books for Devs</h3>
+		<ul class="navLinks">
+			<li><a href="https://supersiddy.wordpress.com/" target="_blank" title="Connect on LinkedIn"><img src="/icons/house.svg" title="Home" height="24" /></a></li>
+			<li class="socialIconLink"><a href="https://linkedin.com/in/siddheshthadeshwar" target="_blank" title="Connect on LinkedIn"><img src="/icons/linkedin.svg" height="24" /></a></li>
+			<li class="socialIconLink"><a href="https://read.cv/siddhesh" target="_blank" title="Connect on Read.cv"><img src="/icons/readcv.svg" height="24" /></a></li>
+			<li class="socialIconLink"><a href="https://twitter.com/Super_Siddy" target="_blank" title="Follow on Twitter"><img src="/icons/twitter.svg" height="24" /></a></li>
+			<li><a href="https://github.com/djsiddz/books-for-devs" target="_blank" title="View Repo"><img src="/icons/github.svg" height="32" /></a></li>
 		</ul>
+	</header>
+	<main>
+		<section class="intro">
+			<h1><span class="text-gradient1">Reading the documentation isn't enough!</span></h1>
+			<div class="introduction">
+				<p>Hi there! 👋</p>
+				<p>This is a curated collection of books that I feel are essential reading for developers.</p>
+				<p>Being a better developer means understanding the <strong>How</strong>s & <strong>Why</strong>s.</p>
+				<ul>
+					<li><strong>Why</strong> do we write our code like this?</li>
+					<li><strong>How</strong> does X work?</li>
+					<li><strong>Why</strong> do we build things in a certain way?</li>
+					<li><strong>How</strong> did we reach here?</li>
+				</ul>
+				<p>Hope some of these books answer such questions, make you think, and grow you as a developer.</p>
+				<p><strong>Stay curious,</strong><br/>Sid :)</p>
+			</div>
+		</section>
+		<section class="collection">
+			<h2><span class="text-gradient1">The Collection</span></h2>
+			<p>You can pick a book in any order. Your brain is smart enough to <span class="text-gradient2">connect the dots</span>.</p>
+			<p>All books link to Amazon.in where you may find options to Kindle editions as well for some of these.</p>
+			<p class="affiliateNote">All books link to Amazon.in where you may find options to Kindle editions as well for some of these.</p>
+			<ul role="list" class="link-card-grid">
+				<Card
+					href="https://www.amazon.in/Refactoring-Improving-Existing-Addison-wesley-Signature/dp/0134757599?pd_rd_w=luoZ6&content-id=amzn1.sym.fa697102-547e-425b-bc67-26478c036f29&pf_rd_p=fa697102-547e-425b-bc67-26478c036f29&pf_rd_r=V6E3H98SRB9AFG5KVQ9Q&pd_rd_wg=YzShR&pd_rd_r=dc09bacd-33b8-468c-bbc5-878de6937380&pd_rd_i=0134757599&psc=1&linkCode=li2&tag=supersiddy-21&linkId=27516fb0a464b93ab985001528ca43fc&language=en_IN&ref_=as_li_ss_il"
+					title="Refactoring: Improving the Design of Existing Code"
+					body="Author: Martin Fowler"
+					image="//ws-in.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0134757599&Format=_SL160_&ID=AsinImage&MarketPlace=IN&ServiceVersion=20070822&WS=1&tag=supersiddy-21&language=en_IN"
+				/>
+				<Card
+					href="https://www.amazon.in/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882?_encoding=UTF8&qid=&sr=&linkCode=li2&tag=supersiddy-21&linkId=fc4554150f70b00b27d3cb626dcd290a&language=en_IN&ref_=as_li_ss_il"
+					title="Clean Code: A Handbook of Agile Software Craftmanship"
+					body="Supercharge your project with new frameworks and libraries."
+					image="//ws-in.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0132350882&Format=_SL160_&ID=AsinImage&MarketPlace=IN&ServiceVersion=20070822&WS=1&tag=supersiddy-21&language=en_IN"
+				/>
+				<Card
+					href="https://www.amazon.in/Algorithms-Live-Computer-Science-Decisions/dp/0007547994?pd_rd_w=CuFdi&content-id=amzn1.sym.6c9a4279-ad42-4fd6-b9a9-3cd14ede34c9&pf_rd_p=6c9a4279-ad42-4fd6-b9a9-3cd14ede34c9&pf_rd_r=7W22MTZEBT8M8V8RD22S&pd_rd_wg=p9PNF&pd_rd_r=cf557fce-e4bb-442a-8c23-a8286d83f2e4&pd_rd_i=0007547994&psc=1&linkCode=li2&tag=supersiddy-21&linkId=17aca0087a0d5c71d4dfc4229078b06b&language=en_IN&ref_=as_li_ss_il"
+					title="Algorithms to Live by"
+					body="Come say hi to our amazing Discord community. ❤️"
+					image="//ws-in.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0007547994&Format=_SL160_&ID=AsinImage&MarketPlace=IN&ServiceVersion=20070822&WS=1&tag=supersiddy-21&language=en_IN"
+				/>
+				<Card
+					href="https://www.amazon.in/Pragmatic-Programmer-Anniversary-journey-mastery/dp/9353949432?psc=1&linkCode=li3&tag=supersiddy-21&linkId=5076f0da0479d446270fa2edc1c50cae&language=en_IN&ref_=as_li_ss_il"
+					title="The Pragmatic Programmer"
+					body="Learn how Astro works and explore the official API docs."
+					image="//ws-in.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=9353949432&Format=_SL160_&ID=AsinImage&MarketPlace=IN&ServiceVersion=20070822&WS=1&tag=supersiddy-21&language=en_IN"
+				/>
+			</ul>
+		</section>
+		<section class="outro">
+			<h2><span class="text-gradient2">Let's Connect</span></h2>
+			<p>Found an interesting book here?<br/>Read one of these previously?<br/>Want to add to this growing collection?</p>
+			<p>Reach out to me on <a href="https://github.com/djsiddz"><img src="/icons/github.svg"></a>, <a href="https://linkedin.com/in/siddheshthadeshwar"><img src="/icons/linkedin.svg"></a>, <a href="https://instagram.com/super__siddy"><img src="/icons/instagram.svg"></a>, <a href="https://threads.net/super__siddy"><img src="/icons/threads.svg" height="16"></a>, <a href="https://twitter.com/super_siddy"><img src="/icons/twitter.svg"></a> (or whatever it is called now)...</p>
+		</section>
 	</main>
+	<footer>
+		<p>Made with 💖 for &lt;Coding/&gt; & &lt;Reading/&gt;. <a href="https://github.com/djsiddz/books-for-devs">Star this Project on GitHub!</a></p>
+		<p class="personalBrand"><img class="profilePhoto" src="/profile-photo-siddhesh.jpg" alt="Profile photo" height="16"/>Siddhesh Thadeshwar</p>
+	</footer>
 </Layout>
 
 <style>
+	header, footer {
+		display: flex;
+		justify-content: space-between;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 90%;
+		padding: 1rem;
+	}
+	.brand {
+		color: var(--white);
+		font-weight: bold;
+	}
+	.navLinks {
+		list-style: none;
+	}
+	.navLinks > li {
+		display: inline;
+		padding: 1rem 2rem;
+	}
+	.navLinks > li.socialIconLink {
+		padding: 1rem 0.5rem;
+	}
+	.navLinks > li > a > img:hover {
+		transform: scale3d(1.5,1.5,2);
+		transition: ease-in-out;
+	}
 	main {
 		margin: auto;
 		padding: 1.5rem;
-		max-width: 60ch;
+		max-width: 80ch;
 	}
 	h1 {
 		font-size: 3rem;
 		font-weight: 800;
 		margin: 0;
+		margin-bottom: 2em;
 	}
-	.text-gradient {
+	.text-gradient1 {
+		background-image: var(--primary-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.text-gradient2 {
 		background-image: var(--accent-gradient);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-size: 400%;
 		background-position: 0%;
 	}
-	.instructions {
+	.introduction {
 		line-height: 1.6;
 		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
+		border: 1px solid var(--primary);
+		background-color: var(--lightbg);
 		padding: 1rem;
 		border-radius: 0.4rem;
+		font-size: smaller;
 	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
+	.introduction strong {
+		color: var(--primary);
 	}
 	.link-card-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
 		gap: 1rem;
 		padding: 0;
+	}
+	section {
+		margin-bottom: 5rem;
+	}
+	section.collection {
+		margin-top: 3rem;
+	}
+	footer {
+		font-size: 0.75rem;
+	}
+	.personalBrand {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.profilePhoto {
+		border-radius: 8px;
+		margin-right: 0.5rem;
 	}
 </style>

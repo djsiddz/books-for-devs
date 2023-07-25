@@ -3,13 +3,17 @@ interface Props {
 	title: string;
 	body: string;
 	href: string;
+	image: string;
 }
 
-const { href, title, body } = Astro.props;
+const { href, title, body, image } = Astro.props;
 ---
 
 <li class="link-card">
 	<a href={href}>
+		<div class="bookCover">
+			<img src={image} />
+		</div>
 		<h2>
 			{title}
 			<span>&rarr;</span>
@@ -24,9 +28,8 @@ const { href, title, body } = Astro.props;
 		list-style: none;
 		display: flex;
 		padding: 0.25rem;
-		background-color: white;
-		background-image: none;
-		background-size: 400%;
+		background-color: var(--bg);
+		background-size: 100%;
 		border-radius: 0.6rem;
 		background-position: 100%;
 		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
@@ -39,25 +42,29 @@ const { href, title, body } = Astro.props;
 		line-height: 1.4;
 		padding: 1rem 1.3rem;
 		border-radius: 0.35rem;
-		color: #111;
-		background-color: white;
+		color: var(--white);
+		background-color: var(--lightbg);
 		opacity: 0.8;
 	}
 	h2 {
 		margin: 0;
+		margin-bottom: 1em;
 		font-size: 1.25rem;
 		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+	}
+	.bookCover {
+		text-align: center;
 	}
 	p {
 		margin-top: 0.5rem;
 		margin-bottom: 0;
-		color: #444;
+		color: var(--white);
 	}
 	.link-card:is(:hover, :focus-within) {
 		background-position: 0;
-		background-image: var(--accent-gradient);
+		background-image: var(--primary-gradient);
 	}
 	.link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent));
+		color: var(--primary);
 	}
 </style>

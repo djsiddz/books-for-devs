@@ -7,11 +7,7 @@ import Layout from '../layouts/Layout.astro';
 	<header>
 		<h3 class="brand">Books for Devs</h3>
 		<ul class="navLinks">
-			<li><a href="https://supersiddy.wordpress.com/" target="_blank" title="Connect on LinkedIn"><img src=`${import.meta.env.BASE_URL}icons/house.svg` title="Home" height="24" /></a></li>
-			<li class="socialIconLink"><a href="https://linkedin.com/in/siddheshthadeshwar" target="_blank" title="Connect on LinkedIn"><img src=`${import.meta.env.BASE_URL}icons/linkedin.svg` height="24" /></a></li>
-			<li class="socialIconLink"><a href="https://read.cv/siddhesh" target="_blank" title="Connect on Read.cv"><img src=`${import.meta.env.BASE_URL}icons/readcv.svg` height="24" /></a></li>
-			<li class="socialIconLink"><a href="https://twitter.com/Super_Siddy" target="_blank" title="Follow on Twitter"><img src=`${import.meta.env.BASE_URL}icons/twitter.svg` height="24" /></a></li>
-			<li><a href="https://github.com/djsiddz/books-for-devs" target="_blank" title="View Repo"><img src=`${import.meta.env.BASE_URL}icons/github.svg` height="32" /></a></li>
+			<li><a href="https://github.com/djsiddz/books-for-devs" target="_blank" title="View Repo"><img src=`${import.meta.env.BASE_URL}icons/github.svg` height="24" /></a></li>
 		</ul>
 	</header>
 	<main>
@@ -32,9 +28,8 @@ import Layout from '../layouts/Layout.astro';
 			</div>
 		</section>
 		<section class="collection">
-			<h2><span class="text-gradient1">The Collection</span></h2>
+			<h2>The 📘 Collection </h2>
 			<p>You can pick a book in any order. Your brain is smart enough to <span class="text-gradient2">connect the dots</span>.</p>
-			<p>All books link to Amazon.in where you may find options to Kindle editions as well for some of these.</p>
 			<p class="affiliateNote">All books link to Amazon.in where you may find options to Kindle editions as well for some of these.</p>
 			<ul role="list" class="link-card-grid">
 				<Card
@@ -70,8 +65,8 @@ import Layout from '../layouts/Layout.astro';
 		</section>
 	</main>
 	<footer>
-		<p>Made with 💖 for &lt;Coding/&gt; & &lt;Reading/&gt;. <a href="https://github.com/djsiddz/books-for-devs">⭐ this Project on GitHub!</a></p>
-		<p class="personalBrand"><img class="profilePhoto" src=`${import.meta.env.BASE_URL}profile-photo-siddhesh.jpg` alt="Profile photo" height="16"/>Siddhesh Thadeshwar</p>
+		<p class="madeWith">Made with 💖 for &lt;Coding/&gt; & &lt;Reading/&gt;.<br/><a href="https://github.com/djsiddz/books-for-devs"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/djsiddz/books-for-devs?logo=github&label=Stars&color=ffce4c"></a></p>
+		<p class="personalBrand"><a href="https://supersiddy.wordpress.com/"><img class="profilePhoto" src=`${import.meta.env.BASE_URL}profile-photo-siddhesh.jpg` alt="Profile photo" height="16"/>Siddhesh Thadeshwar</a></p>
 	</footer>
 </Layout>
 
@@ -82,24 +77,28 @@ import Layout from '../layouts/Layout.astro';
 		margin-left: auto;
 		margin-right: auto;
 		max-width: 90%;
-		padding: 1rem;
+		padding: 0.5rem 1rem;
 	}
 	.brand {
 		color: var(--white);
 		font-weight: bold;
+		margin: 0;
+		display: flex;
+		align-self: center;
 	}
 	.navLinks {
 		list-style: none;
+		margin: 0;
 	}
 	.navLinks > li {
-		display: inline;
-		padding: 1rem 2rem;
+		background-color: transparent;
+		border-radius: 0.4rem;
 	}
-	.navLinks > li.socialIconLink {
-		padding: 1rem 0.5rem;
+	.navLinks > li > a > img {
+		padding: 0.5rem 1rem;
 	}
-	.navLinks > li > a > img:hover {
-		transform: scale3d(1.5,1.5,2);
+	.navLinks > li:hover {
+		background: var(--lightbg);
 		transition: ease-in-out;
 	}
 	main {
@@ -113,8 +112,20 @@ import Layout from '../layouts/Layout.astro';
 		margin: 0;
 		margin-bottom: 2em;
 	}
+	@media (max-width: 450px) {
+		h1 {
+			font-size: 2rem;
+		}
+		.introduction > ul {
+			padding-left: 1rem;
+		}
+		footer {
+			flex-direction: column;
+			text-align: center;
+		}
+	}
 	.text-gradient1 {
-		background-image: var(--primary-gradient);
+		background-image: var(--new-primary-gradient);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-size: 400%;
@@ -131,13 +142,13 @@ import Layout from '../layouts/Layout.astro';
 		line-height: 1.6;
 		margin: 1rem 0;
 		border: 1px solid var(--primary);
-		background-color: var(--lightbg);
+		background: var(--new-gradient);
 		padding: 1rem;
 		border-radius: 0.4rem;
 		font-size: smaller;
 	}
 	.introduction strong {
-		color: var(--primary);
+		color: var(--white);
 	}
 	.link-card-grid {
 		display: grid;
@@ -153,6 +164,9 @@ import Layout from '../layouts/Layout.astro';
 	}
 	footer {
 		font-size: 0.75rem;
+	}
+	.madeWith {
+		line-height: 3;
 	}
 	.personalBrand {
 		display: flex;

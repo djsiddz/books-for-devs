@@ -30,10 +30,14 @@ const { title } = Astro.props;
 		--accent-gradient: linear-gradient(45deg, var(--accent), var(--primary) 60%);
 		--primary: #2d2fe9;
 		--midprimary: #8398d1;
+		--color1: #40c9ff;
+		--color2: #e81cff;
 		--primary-gradient: linear-gradient(60deg, var(--primary) 0%, var(--accent) 29%, rgba(213,195,245,1) 92%, var(--white) 100%);
 		/* --primary-alternate-gradient: linear-gradient(60deg, var(--primary) 0%, var(--midprimary) 70%, var(--white) 100%); */
 		/* --primary-alternate-gradient: linear-gradient(60deg, var(--primary) 0%, rgb(var(--accent)) 70%, var(--white) 100%); */
-		--bg-gradient: linear-gradient(0deg, var(--lightbg), var(--bg) 30%);
+		--bg-gradient: linear-gradient(0deg, var(--primary), var(--bg) 30%);
+		--new-gradient: linear-gradient(135deg, var(--primary) 0%, var(--bg) 100%);
+		--new-primary-gradient: linear-gradient(45deg, var(--white) 0%, var(--primary) 30%);
 	}
 	html {
 		font-family: system-ui, sans-serif;

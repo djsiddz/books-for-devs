@@ -8,18 +8,22 @@ const booksCollection = await getCollection('books');
 
 <Layout title="Books for Devs">
 	<header>
-		<h3 class="brand">Books for Devs</h3>
+		<h3 class="brand text-gradient2">Books for Devs</h3>
 		<ul class="navLinks">
-			<li><a href="https://github.com/djsiddz/books-for-devs" target="_blank" title="View Repo"><img src=`${import.meta.env.BASE_URL}icons/github.svg` height="24" /></a></li>
+			<li>
+				<a href="https://github.com/djsiddz/books-for-devs" target="_blank" title="View Repo">
+					<img src=`${import.meta.env.BASE_URL}icons/github.svg` height="24" />
+				</a>
+			</li>
 		</ul>
 	</header>
 	<main>
 		<section class="intro">
-			<h1><span class="text-gradient1">Reading the documentation isn't enough!</span></h1>
-			<div class="introduction">
-				<p>Hi there! 👋</p>
-				<p>This is a curated collection of books that I feel are essential reading for developers.</p>
-				<p>Being a better developer means understanding the <strong>How</strong>s & <strong>Why</strong>s.</p>
+			<h1><span class="text-gradient1">Reading the documentation isn't enough!</span><img class="introIllustration" src=`${import.meta.env.BASE_URL}icons/3d-fluency-exploding-head.png` alt="3D Exlopding Head Illustration" title="illustration from icons8.com" /></h1>
+			<div class="blueGradientCard">
+				<h2>Hi there! 👋</h2>
+				<p>This is a curated collection of books that I feel are essential reading for all developers.</p>
+				<p>A better developer understands the <strong>How</strong>s & <strong>Why</strong>s, much beyond the documentation.</p>
 				<ul>
 					<li><strong>Why</strong> do we write our code like this?</li>
 					<li><strong>How</strong> does X work?</li>
@@ -32,22 +36,37 @@ const booksCollection = await getCollection('books');
 		</section>
 		<section class="collection">
 			<h2>The 📘 Collection </h2>
-			<p>You can pick a book in any order. Your brain is smart enough to <span class="text-gradient2">connect the dots</span>.</p>
-			<p class="affiliateNote">All books link to Amazon.in where you may find options to Kindle editions as well for some of these.</p>
-			<ul role="list" class="link-card-grid">
+			<p>Pick a book in any order.<br/>You'll <span class="text-gradient2">connect the dots</span> eventually.<br/>Kindle editions are available for most of these.</p>
+			<p class="smallText">ℹ️ This collection contains affiliate links.<br/>This means I may earn a commission should you make a purchase using my links.<br/>Thank you for supporting me & my work! 😊</p>
+			<ul role="list" class="booksGrid">
 				{booksCollection.map(book => (
 					<Card href={book.data.amazonINLink} title={book.data.title} body={book.data.description} image={book.data.coverImage} />
 				))}
 			</ul>
 		</section>
-		<section class="outro">
-			<h2><span class="text-gradient2">Let's Connect</span></h2>
-			<p>Found an interesting book here?<br/>Read one of these previously?<br/>Want to add to this growing collection?</p>
-			<p>Reach out to me on <a href="https://github.com/djsiddz"><img src=`${import.meta.env.BASE_URL}icons/github.svg`></a>, <a href="https://linkedin.com/in/siddheshthadeshwar"><img src=`${import.meta.env.BASE_URL}icons/linkedin.svg`></a>, <a href="https://instagram.com/super__siddy"><img src=`${import.meta.env.BASE_URL}icons/instagram.svg`></a>, <a href="https://threads.net/super__siddy"><img src=`${import.meta.env.BASE_URL}icons/threads.svg` height="16"></a>, <a href="https://twitter.com/super_siddy"><img src=`${import.meta.env.BASE_URL}icons/twitter.svg`></a> (or whatever it is called now)...</p>
+		<section class="blueGradientCard">
+			<div class="splitView">
+				<div class="firstPart switchIllustrations">
+					<img src="https://illustrations.popsy.co/white/creative-work.svg" alt="Creative Work illustration from popsy.co" title="Let's Collaborate"/>
+					<img src="https://illustrations.popsy.co/white/engineer.svg" alt="Engineer illustration from popsy.co" title="Let's Collaborate"/>
+					<img src="https://illustrations.popsy.co/white/podcast-show.svg" alt="Podcast illustration from popsy.co" title="Let's Collaborate"/>
+					<img src="https://illustrations.popsy.co/white/youtube-creator.svg" alt="Youtube Creator illustration from popsy.co" title="Let's Collaborate"/>
+				</div>
+				<div class="lastPart">
+					<h2>Let's Connect 🤝</h2>
+					<p>Want to add to this growing collection?<br/>Found an interesting book here?<br/>Read one of these previously?</p>
+					<p>Reach out to me on any one of these:</p>
+					<p><a class="socialIcon" href="https://github.com/djsiddz"><img src=`${import.meta.env.BASE_URL}icons/github.svg`></a><a class="socialIcon" href="https://linkedin.com/in/siddheshthadeshwar"><img src=`${import.meta.env.BASE_URL}icons/linkedin.svg`></a><a class="socialIcon" href="https://threads.net/super__siddy"><img src=`${import.meta.env.BASE_URL}icons/threads.svg` height="16"></a><a class="socialIcon" href="https://twitter.com/super_siddy"><img src=`${import.meta.env.BASE_URL}icons/x.svg`></a></p>
+				</div>
+			</div>
 		</section>
 	</main>
 	<footer>
-		<p class="madeWith">Made with 💖 for &lt;Coding/&gt; & &lt;Reading/&gt;.<br/><a href="https://github.com/djsiddz/books-for-devs"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/djsiddz/books-for-devs?logo=github&label=Stars&color=ffce4c"></a></p>
+		<p class="madeWith">Made with 💖 for Coding &amp; Reading<br/>
+			<span class="extraSmallText">"Exploding Head" Illustration by <a href="https://icons8.com/illustrations/author/zD2oqC8lLBBA">Icons 8</a> from <a href="https://icons8.com/illustrations">Ouch!</a><br/>
+				"Creative Work", "Engineer", "Podcast Show" & "Youtube Creator" Illustrations from <a href="https://illustrations.popsy.co/">Popsy.co</a>
+			</span>
+		</p>
 		<p class="personalBrand"><a href="https://supersiddy.wordpress.com/"><img class="profilePhoto" src=`${import.meta.env.BASE_URL}profile-photo-siddhesh.jpg` alt="Profile photo" height="16"/>Siddhesh Thadeshwar</a></p>
 	</footer>
 </Layout>
@@ -92,18 +111,41 @@ const booksCollection = await getCollection('books');
 		font-size: 3rem;
 		font-weight: 800;
 		margin: 0;
-		margin-bottom: 2em;
+		margin-bottom: 3em;
 	}
-	@media (max-width: 450px) {
+	.introIllustration {
+		max-height: 3rem;
+		vertical-align: middle;
+		margin-left: 1.5rem;
+	}
+	h2 {
+		margin-bottom: 1em;
+	}
+	.smallText {
+		font-size: 0.75rem;
+	}
+	.extraSmallText {
+		font-size: 0.5rem;
+	}
+	@media screen and (max-width: 450px) {
 		h1 {
 			font-size: 2rem;
 		}
-		.introduction > ul {
+		.introIllustration {
+			max-height: 2rem;
+			margin-left: 1rem;
+		}
+		.blueGradientCard > ul {
 			padding-left: 1rem;
 		}
 		footer {
 			flex-direction: column;
 			text-align: center;
+		}
+		.splitView {
+			display: flex;
+			flex-direction: column !important;
+			justify-content: flex-start;
 		}
 	}
 	.text-gradient1 {
@@ -120,7 +162,7 @@ const booksCollection = await getCollection('books');
 		background-size: 400%;
 		background-position: 0%;
 	}
-	.introduction {
+	.blueGradientCard {
 		line-height: 1.6;
 		margin: 1rem 0;
 		border: 1px solid var(--primary);
@@ -129,35 +171,108 @@ const booksCollection = await getCollection('books');
 		border-radius: 0.4rem;
 		font-size: smaller;
 	}
-	.introduction strong {
+	.blueGradientCard strong {
 		color: var(--white);
 	}
-	.link-card-grid {
+	.booksGrid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
 		gap: 1rem;
 		padding: 0;
+		margin-top: 3rem;
 	}
 	section {
 		margin-bottom: 5rem;
+		margin-top: 5rem;
 	}
-	section.collection {
-		margin-top: 3rem;
+	.splitView {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.firstPart, .lastPart {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		align-self: center;
+	}
+	.switchIllustrations {
+		max-width: 100%;
+		max-height: 100%;
+		position: relative;
+	}
+	.switchIllustrations img {
+		max-width: 100%;
+		position: absolute;
+		top: -160px;
+		left: 0;
+		animation-name: imagefade;
+		animation-timing-function: ease-in-out;
+		animation-iteration-count: infinite;
+		animation-duration: 12s;
+	}
+	@keyframes imagefade {
+		0% {
+			opacity:1;
+		}
+		17% {
+			opacity:1;
+		}
+		25% {
+			opacity:0;
+		}
+		92% {
+			opacity:0;
+		}
+		100% {
+			opacity:1;
+		}
+	}
+	.switchIllustrations img:nth-of-type(1) {
+		animation-delay: 9s;
+	}
+	.switchIllustrations img:nth-of-type(2) {
+		animation-delay: 6s;
+	}
+	.switchIllustrations img:nth-of-type(3) {
+		animation-delay: 3s;
+	}
+	.switchIllustrations img:nth-of-type(4) {
+		animation-delay: 0;
+	}
+
+	.lastPart {
+		text-align: center;
+	}
+	.socialIcon:not(:last-child) {
+		padding-right: 1.5rem;
 	}
 	footer {
 		color: var(--white);
 		font-size: 0.75rem;
 	}
 	.madeWith {
-		line-height: 3;
+		line-height: 1.2;
 	}
 	.personalBrand {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		color: var(--white);
+		font-size: large;
 	}
 	.profilePhoto {
 		border-radius: 8px;
 		margin-right: 0.5rem;
+	}
+	footer a, footer a:visited, footer a:focus {
+		color: var(--white);
+	}
+	footer a:hover {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
 	}
 </style>

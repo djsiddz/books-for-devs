@@ -19,7 +19,7 @@ const { href, title, body, image } = Astro.props;
   <p class="bookDescription">
     {body}
   </p>
-  <a href={href}>Buy on Amazon.in <span>&rarr;</span></a>
+  <a href={href}>Buy on Amazon.in <i class="bi bi-amazon"></i></a>
 </li>
 <style>
   .link-card {
@@ -28,8 +28,8 @@ const { href, title, body, image } = Astro.props;
     background-size: 100%;
     border-radius: 0.6rem;
     box-shadow:
-      0 4px 6px -1px rgba(0, 0, 0, 0.1),
-      0 2px 4px -2px rgba(0, 0, 0, 0.1);
+      0 4px 12px -1px #0000001a,
+      0 4px 24px -2px #0000001a;
     display: flex;
     flex-direction: column;
     list-style: none;
@@ -38,15 +38,20 @@ const { href, title, body, image } = Astro.props;
   }
 
   .link-card > a {
-    background-color: var(--lightbg);
+    background-color: var(--buttonBg);
     border-radius: 0.35rem;
-    color: var(--white);
+    color: var(--buttonText);
+    display:flex;
+    justify-content:space-between;
     line-height: 1.2;
     margin-bottom: 0;
     margin-top: auto;
     opacity: 0.8;
     padding: 0.75rem 1.2rem;
     text-decoration: none;
+  }
+  .link-card > a:hover {
+    background-color: var(--buttonBgHover);
   }
   h2 {
     font-size: 1.2rem;
@@ -58,15 +63,15 @@ const { href, title, body, image } = Astro.props;
     text-align: center;
   }
   .bookDescription {
-    color: var(--white);
+    color: var(--text);
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
   }
   .link-card:is(:hover, :focus-within) {
-    background-image: var(--accent-gradient);
+    background-image: var(--book-card-gradient);
     background-position: 0;
   }
   .link-card:is(:hover, :focus-within) h2 {
-    color: var(--white);
+    color: var(--text);
   }
 </style>

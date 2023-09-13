@@ -1,4 +1,4 @@
---- 
+---
 interface Props {
 	title: string;
 }
@@ -22,31 +22,53 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
+	@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css");
 	:root {
 		--white: #f6f7f8;
-		--bg: #02050a;
-		--lightbg: #2f353d;
-		--accent: #7c3aed;
-		--accent-gradient: linear-gradient(45deg, var(--accent), var(--primary) 60%);
+		--black: #02050a;
+		--grey: #2f353d;
 		--primary: #2d2fe9;
-		--midprimary: #8398d1;
-		--color1: #40c9ff;
-		--color2: #e81cff;
-		--primary-gradient: linear-gradient(60deg, var(--primary) 0%, var(--accent) 29%, rgba(213,195,245,1) 92%, var(--white) 100%);
-		/* --primary-alternate-gradient: linear-gradient(60deg, var(--primary) 0%, var(--midprimary) 70%, var(--white) 100%); */
-		/* --primary-alternate-gradient: linear-gradient(60deg, var(--primary) 0%, rgb(var(--accent)) 70%, var(--white) 100%); */
-		--bg-gradient: linear-gradient(0deg, var(--primary), var(--bg) 30%);
-		--new-gradient: linear-gradient(135deg, var(--primary) 0%, var(--bg) 100%);
-		--new-primary-gradient: linear-gradient(45deg, var(--white) 0%, var(--primary) 30%);
+		--accentDark: #7c3aed;
+		--accentLight: #d5c3f5;
+	}
+		@media (prefers-color-scheme: dark) {
+  /* Dark theme styles go here */
+		:root {
+			--bg: var(--grey);
+			--highlightText: var(--white);
+			--text: var(--white);
+			--buttonBg: var(--grey);
+			--buttonBgHover: var(--black);
+			--buttonText: var(--white);
+			--background-gradient:linear-gradient(0deg, var(--primary), var(--black) 30%);
+			--card-gradient:linear-gradient(135deg, var(--primary) 0%, var(--black) 100%);
+			--header-gradient:linear-gradient(45deg, var(--white) 0%, var(--primary) 30%);
+			--book-card-gradient: linear-gradient(45deg, var(--accentDark), var(--primary) 60%);
+		}
+	}
+	@media (prefers-color-scheme: light) {
+		/* Light theme styles go here */
+		:root {
+			--bg: var(--white);
+			--highlightText: var(--primary);
+			--text: var(--black);
+			--buttonBg: var(--accentDark);
+			--buttonBgHover: var(--primary);
+			--buttonText: var(--white);
+			--background-gradient:linear-gradient(0deg, var(--primary), var(--white) 30%);
+			--card-gradient: linear-gradient(135deg, var(--accentLight) 0%, var(--white) 100%);
+			--header-gradient: linear-gradient(45deg, var(--black) 0%, var(--primary) 30%);
+			--book-card-gradient: linear-gradient(45deg, var(--white), var(--accentLight) 60%);
+		}
 	}
 	html {
-		font-family: system-ui, sans-serif;
-		background-image: var(--bg-gradient);
-		background-size: 200%;
+		background-image: var(--background-gradient);
 		background-position: 0%;
-		background-size: cover;
 		background-repeat: no-repeat;
-		color: var(--white);
+		background-size: 200%;
+		background-size: cover;
+		color: var(--text);
+		font-family: system-ui, sans-serif;
 		min-height: 100vh;
 	}
 	code {

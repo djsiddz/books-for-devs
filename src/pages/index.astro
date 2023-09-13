@@ -8,14 +8,12 @@ const booksCollection = await getCollection('books');
 
 <Layout title="Books for Devs">
 	<header>
-		<h3 class="brand text-gradient2">Books for Devs</h3>
-		<ul class="navLinks">
-			<li>
-				<a href="https://github.com/djsiddz/books-for-devs" target="_blank" title="View Repo">
-					<img src=`${import.meta.env.BASE_URL}icons/github.svg` height="24" />
-				</a>
-			</li>
-		</ul>
+		<a href="https://djsiddz.github.io/books-for-devs">
+			<h3 class="brand"><i class="bi bi-journal-code brandLogo"></i>Books for Devs</h3>
+		</a>
+		<a class="githubLink" href="https://github.com/djsiddz/books-for-devs" target="_blank" title="View Repo">
+			<i class="bi bi-github"></i>
+		</a>
 	</header>
 	<main>
 		<section class="intro">
@@ -36,7 +34,7 @@ const booksCollection = await getCollection('books');
 		</section>
 		<section class="collection">
 			<h2>The 📘 Collection </h2>
-			<p>Pick a book in any order.<br/>You'll <span class="text-gradient2">connect the dots</span> eventually.<br/>Kindle editions are available for most of these.</p>
+			<p>Pick a book in any order.<br/>You'll <span class="brand">connect the dots</span> eventually.<br/>Kindle editions are available for most of these.</p>
 			<p class="smallText">ℹ️ This collection contains affiliate links.<br/>This means I may earn a commission should you make a purchase using my links.<br/>Thank you for supporting me & my work! 😊</p>
 			<ul role="list" class="booksGrid">
 				{booksCollection.map(book => (
@@ -56,7 +54,12 @@ const booksCollection = await getCollection('books');
 					<h2>Let's Connect 🤝</h2>
 					<p>Want to add to this growing collection?<br/>Found an interesting book here?<br/>Read one of these previously?</p>
 					<p>Reach out to me on any one of these:</p>
-					<p><a class="socialIcon" href="https://github.com/djsiddz"><img src=`${import.meta.env.BASE_URL}icons/github.svg`></a><a class="socialIcon" href="https://linkedin.com/in/siddheshthadeshwar"><img src=`${import.meta.env.BASE_URL}icons/linkedin.svg`></a><a class="socialIcon" href="https://threads.net/super__siddy"><img src=`${import.meta.env.BASE_URL}icons/threads.svg` height="16"></a><a class="socialIcon" href="https://twitter.com/super_siddy"><img src=`${import.meta.env.BASE_URL}icons/x.svg`></a></p>
+					<div class="socialLinks">
+						<a href="https://github.com/djsiddz"><i class="bi bi-github socialIcon"></i></a>
+						<a href="https://linkedin.com/in/siddheshthadeshwar"><i class="bi bi-linkedin socialIcon"></i></a>
+						<a href="https://threads.net/super__siddy"><i class="bi bi-threads socialIcon"></i></a>
+						<a href="https://twitter.com/super_siddy"><i class="bi bi-twitter-x socialIcon"></i></a>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -73,6 +76,8 @@ const booksCollection = await getCollection('books');
 
 <style>
 	header, footer {
+		align-content: center;
+		align-items: center;
 		display: flex;
 		justify-content: space-between;
 		margin-left: auto;
@@ -81,31 +86,32 @@ const booksCollection = await getCollection('books');
 		padding: 0.5rem 1rem;
 	}
 	.brand {
-		color: var(--white);
+		align-items: center;
+		color: var(--primary);
+		display: inline-flex;
 		font-weight: bold;
 		margin: 0;
-		display: flex;
-		align-self: center;
 	}
-	.navLinks {
-		list-style: none;
-		margin: 0;
+	.brandLogo {
+		font-size: 1.25em;
+		margin-right: 0.75rem;
+		transition: rotate 0.5s, scale 0.25s;
 	}
-	.navLinks > li {
-		background-color: transparent;
-		border-radius: 0.4rem;
+	.brandLogo:hover, .githubLink:hover, .socialLinks a:hover {
+		rotate: -15deg;
+		scale: 1.25;
 	}
-	.navLinks > li > a > img {
+	.githubLink {
+		color: var(--text);
+		font-size: 1.5rem;
 		padding: 0.5rem 1rem;
-	}
-	.navLinks > li:hover {
-		background: var(--lightbg);
-		transition: ease-in-out;
+		transition: rotate 0.5s, scale 0.25s;
+		vertical-align: top;
 	}
 	main {
 		margin: auto;
-		padding: 1.5rem;
 		max-width: 80ch;
+		padding: 1.5rem;
 	}
 	h1 {
 		font-size: 3rem;
@@ -149,35 +155,28 @@ const booksCollection = await getCollection('books');
 		}
 	}
 	.text-gradient1 {
-		background-image: var(--new-primary-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.text-gradient2 {
-		background-image: var(--accent-gradient);
+		background-image: var(--header-gradient);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-size: 400%;
 		background-position: 0%;
 	}
 	.blueGradientCard {
+		background: var(--card-gradient);
+		border-radius: 0.4rem;
+		border: 1px solid var(--primary);
+		font-size: smaller;
 		line-height: 1.6;
 		margin: 1rem 0;
-		border: 1px solid var(--primary);
-		background: var(--new-gradient);
 		padding: 1rem;
-		border-radius: 0.4rem;
-		font-size: smaller;
 	}
 	.blueGradientCard strong {
-		color: var(--white);
+		color: var(--highlightText);
 	}
 	.booksGrid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
 		gap: 1rem;
+		grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
 		padding: 0;
 		margin-top: 3rem;
 	}
@@ -202,15 +201,15 @@ const booksCollection = await getCollection('books');
 		position: relative;
 	}
 	.switchIllustrations img {
-		max-width: 100%;
-		position: absolute;
-		top: -160px;
-		left: 0;
+		animation-duration: 12s;
+		animation-iteration-count: infinite;
 		animation-name: imagefade;
 		animation-timing-function: ease-in-out;
-		animation-iteration-count: infinite;
-		animation-duration: 12s;
+		left: 0;
+		max-width: 100%;
 		opacity: 0;
+		position: absolute;
+		top: -160px;
 	}
 	@keyframes imagefade {
 		0% {
@@ -245,8 +244,14 @@ const booksCollection = await getCollection('books');
 	.lastPart {
 		text-align: center;
 	}
-	.socialIcon:not(:last-child) {
-		padding-right: 1.5rem;
+	.socialLinks {
+		display: flex;
+		gap: calc(1.5rem);
+		justify-content: center;
+	}
+	.socialLinks a {
+		color: var(--text);
+		transition: rotate 0.5s, scale 0.25s;
 	}
 	footer {
 		color: var(--white);
@@ -256,24 +261,17 @@ const booksCollection = await getCollection('books');
 		line-height: 1.2;
 	}
 	.personalBrand {
-		display: flex;
 		align-items: center;
-		justify-content: center;
 		color: var(--white);
+		display: flex;
 		font-size: large;
+		justify-content: center;
 	}
 	.profilePhoto {
 		border-radius: 8px;
 		margin-right: 0.5rem;
 	}
-	footer a, footer a:visited, footer a:focus {
+	footer a, footer a:visited, footer a:focus, footer a:hover {
 		color: var(--white);
-	}
-	footer a:hover {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
 	}
 </style>

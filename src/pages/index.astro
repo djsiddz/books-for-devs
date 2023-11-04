@@ -34,13 +34,14 @@ const booksCollection = await getCollection('books');
 		</section>
 		<section class="collection">
 			<h2>The 📘 Collection </h2>
-			<p>Pick a book in any order.<br/>You'll <span class="brand">connect the dots</span> eventually.<br/>Kindle editions are available for most of these.</p>
-			<p class="smallText">ℹ️ This collection contains affiliate links.<br/>This means I may earn a commission should you make a purchase using my links.<br/>Thank you for supporting me & my work! 😊</p>
+			<p>Pick a book in any order.<br/>You'll <span class="brand">connect the dots</span> eventually.<br/></p>
+			<p>Kindle editions too are available for most of these.</p>
 			<ul role="list" class="booksGrid">
 				{booksCollection.map(book => (
-					<Card href={book.data.amazonINLink} title={book.data.title} body={book.data.description} image={book.data.coverImage} />
-				))}
+					<Card href={book.data.amazonINLink} title={book.data.title} subtitle={book.data.subtitle} body={book.data.description} image={book.data.coverImage} />
+					))}
 			</ul>
+			<p class="affiliateDisclaimer">This collection contains affiliate links. This means I may earn a commission should you make a purchase using my links.<br/>Thank you for supporting me & my work! 😊</p>
 		</section>
 		<section class="blueGradientCard">
 			<div class="splitView">
@@ -127,8 +128,16 @@ const booksCollection = await getCollection('books');
 	h2 {
 		margin-bottom: 1em;
 	}
-	.smallText {
-		font-size: 0.75rem;
+	.affiliateDisclaimer {
+		border-radius: 0.4rem;
+		border: 1px solid var(--grey);
+		font-size: 0.5rem;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 2rem;
+		max-width: fit-content;
+		padding: 0.75rem 1rem;
+		text-align: center;
 	}
 	.extraSmallText {
 		font-size: 0.5rem;

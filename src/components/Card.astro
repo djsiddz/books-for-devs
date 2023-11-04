@@ -1,24 +1,21 @@
 ---
 interface Props {
   title: string;
+  subtitle: string;
   body: string;
   href: string;
   image: string;
 }
 
-const { href, title, body, image } = Astro.props;
+const { href, title, subtitle, body, image } = Astro.props;
 ---
 
 <li class="link-card">
-  <div class="bookCover">
+  <div class="bookDetails">
     <img src={image} alt={title + " Cover"} />
+    <h3>{title}<br/><span>{subtitle}</span></h3>
+    <!-- <p class="bookDescription">{body}</p> -->
   </div>
-  <h2>
-    {title}
-  </h2>
-  <p class="bookDescription">
-    {body}
-  </p>
   <a href={href}>Buy on Amazon.in <i class="bi bi-amazon"></i></a>
 </li>
 <style>
@@ -53,24 +50,40 @@ const { href, title, body, image } = Astro.props;
   .link-card > a:hover {
     background-color: var(--buttonBgHover);
   }
-  h2 {
+  h3 {
     font-size: 1.2rem;
-    margin-bottom: 1em;
+    line-height: 1.1;
     margin: 0;
     transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
   }
-  .bookCover {
-    text-align: center;
-    margin-bottom: 1rem;
+  h3 > span {
+    font-size: 0.75rem;
+    font-weight: 300;
+    line-height: 0.6rem;
   }
-  .bookDescription {
-    color: var(--text);
+  h3:hover {
+    margin-left: 0.25rem;
+    transition: all 0.15s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .bookDetails {
+    top: -10%;
+    position: relative;
+  }
+  .bookDetails img {
+    border-radius: 0.4rem;
+    max-height: 160px;
+    max-width: 110px;
     margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
+    box-shadow: var(--boxShadow);
   }
+  /* .bookDescription {
+    font-size: 0.75rem;
+    color: var(--text);
+    margin-bottom: 1rem;
+    margin-top: 0;
+  } */
   .link-card:is(:hover, :focus-within) {
     background-image: var(--book-card-gradient);
-    background-position: 0;
   }
   .link-card:is(:hover, :focus-within) h2 {
     color: var(--text);

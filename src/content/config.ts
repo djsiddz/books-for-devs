@@ -5,6 +5,7 @@ const booksCollection = defineCollection({
   type: "content",
   schema: z.object({
     title: z.string(),
+    subtitle: z.string(),
     authorName: z.string(),
     publisher: z.string(),
     publicationDate: z.string().transform((str) => new Date(str)),

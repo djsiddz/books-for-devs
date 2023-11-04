@@ -26,14 +26,16 @@ const { title } = Astro.props;
 	:root {
 		--white: #f6f7f8;
 		--black: #02050a;
-		--grey: #2f353d;
+		--darkGrey: #2f353d;
+		--lightGrey: #71757a;
 		--primary: #2d2fe9;
 		--accentDark: #7c3aed;
 		--accentLight: #d5c3f5;
 	}
-		@media (prefers-color-scheme: dark) {
-  /* Dark theme styles go here */
+	@media (prefers-color-scheme: dark) {
+		/* Dark theme styles go here */
 		:root {
+			--grey: var(--darkGrey);
 			--bg: var(--grey);
 			--highlightText: var(--white);
 			--text: var(--white);
@@ -44,11 +46,16 @@ const { title } = Astro.props;
 			--card-gradient:linear-gradient(135deg, var(--primary) 0%, var(--black) 100%);
 			--header-gradient:linear-gradient(45deg, var(--white) 0%, var(--primary) 30%);
 			--book-card-gradient: linear-gradient(45deg, var(--accentDark), var(--primary) 60%);
+			--boxShadow: 0px -3px 3px 0px rgba(255,255,255,0.25);
+		}
+		img {
+			filter: brightness(.8) contrast(1.2);
 		}
 	}
 	@media (prefers-color-scheme: light) {
 		/* Light theme styles go here */
 		:root {
+			--grey: var(--lightGrey);
 			--bg: var(--white);
 			--highlightText: var(--primary);
 			--text: var(--black);
@@ -59,6 +66,7 @@ const { title } = Astro.props;
 			--card-gradient: linear-gradient(135deg, var(--accentLight) 0%, var(--white) 100%);
 			--header-gradient: linear-gradient(45deg, var(--black) 0%, var(--primary) 30%);
 			--book-card-gradient: linear-gradient(45deg, var(--white), var(--accentLight) 60%);
+			--boxShadow: 0px -4px 12px 0px rgba(0,0,0,0.5);
 		}
 	}
 	html {

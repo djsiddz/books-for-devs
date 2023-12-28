@@ -10,9 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^0.19.7",
-    "astro": "^2.9.1",
-    "typescript": "^5.1.6"
+    "@astrojs/mdx": "^2.0.3",
+    "astro": "^4.0.8",
+    "typescript": "5.3.3"
   },
   "volta": {
     "node": "20.9.0",

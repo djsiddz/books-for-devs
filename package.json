@@ -1,7 +1,7 @@
 {
   "name": "books-for-devs",
   "type": "module",
-  "version": "0.4.1",
+  "version": "0.18.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

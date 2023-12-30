@@ -5,13 +5,35 @@ interface Props {
   body: string;
   href: string;
   image: string;
+  readingStatus: string;
+  recommended: boolean;
 }
 
-const { href, title, subtitle, body, image } = Astro.props;
+let tagBasedCSS = "";
+
+const { href, title, subtitle, body, image, readingStatus, recommended } = Astro.props;
+
+switch (readingStatus) {
+  case "Read ✅":
+    tagBasedCSS = "greenTag";
+    break;
+  case "Currently Reading 👓":
+    tagBasedCSS = "blueTag";
+    break;
+  case "Next Up ⏭️":
+    tagBasedCSS = "blueTag";
+    break;
+  case "Wishlisted ⭐":
+    tagBasedCSS = "orangeTag";
+    break;
+  default:
+    break;
+}
 ---
 
 <li class="link-card">
   <div class="bookDetails">
+    {recommended ? <div class="tag yellowTag">Recommended 👍</div> : <div class={"tag " + tagBasedCSS}>{readingStatus}</div>}
     <img src={image} alt={title + " Cover"} />
     <h3>{title}<br/><span>{subtitle}</span></h3>
     <!-- <p class="bookDescription">{body}</p> -->
@@ -87,5 +109,37 @@ const { href, title, subtitle, body, image } = Astro.props;
   }
   .link-card:is(:hover, :focus-within) h2 {
     color: var(--text);
+  }
+  .tag {
+    background-color: var(--bg);
+    border-radius: 0.75rem;
+    border: 1px solid var(--buttonText);
+    color: var(--buttonText);
+    font-size: 0.625rem;
+    padding: 0.25rem 0.625rem;
+    position: absolute;
+    right: -0.5rem;
+    top: 1rem;
+    width: max-content;
+  }
+  .primaryTag {
+    border-color: var(--primary);
+    color: var(--primary);
+  }
+  .blueTag {
+    border-color: var(--blue);
+    color: var(--blue);
+  }
+  .greenTag {
+    border-color: var(--green);
+    color: var(--green);
+  }
+  .yellowTag {
+    border-color: var(--yellow);
+    color: var(--text);
+  }
+  .orangeTag {
+    border-color: #e9892d;
+    color: #e9892d;
   }
 </style>

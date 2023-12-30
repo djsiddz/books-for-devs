@@ -38,7 +38,7 @@ const booksCollection = await getCollection('books');
 			<p>Kindle editions too are available for most of these.</p>
 			<ul role="list" class="booksGrid">
 				{booksCollection.map(book => (
-					<Card href={book.data.amazonINLink} title={book.data.title} subtitle={book.data.subtitle} body={book.data.description} image={book.data.coverImage} />
+					<Card href={book.data.amazonINLink} title={book.data.title} subtitle={book.data.subtitle} body={book.data.description} image={book.data.coverImage} readingStatus={book.data.readingStatus || ""} recommended={book.data.recommended || false} />
 					))}
 			</ul>
 			<p class="affiliateDisclaimer">This collection contains affiliate links. This means I may earn a commission should you make a purchase using my links.<br/>Thank you for supporting me & my work! 😊</p>

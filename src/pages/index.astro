@@ -11,8 +11,9 @@ const booksCollection = await getCollection('books');
 		<a href="https://djsiddz.github.io/books-for-devs">
 			<h3 class="brand"><i class="bi bi-journal-code brandLogo"></i>Books for Devs</h3>
 		</a>
-		<a class="githubLink" href="https://github.com/djsiddz/books-for-devs" target="_blank" title="View Repo">
-			<i class="bi bi-github"></i>
+		<a class="githubLink" href="https://github.com/djsiddz/books-for-devs" target="_blank" title="View Repo" aria-label="View Repo">
+			<span class="sr-only">View Repo</span>
+			<i aria-label="View GitHub Repo" class="bi bi-github"></i>
 		</a>
 	</header>
 	<main>
@@ -56,10 +57,10 @@ const booksCollection = await getCollection('books');
 					<p>Want to add to this growing collection?<br/>Found an interesting book here?<br/>Read one of these previously?</p>
 					<p>Reach out to me on any one of these:</p>
 					<div class="socialLinks">
-						<a href="https://github.com/djsiddz"><i class="bi bi-github socialIcon"></i></a>
-						<a href="https://linkedin.com/in/siddheshthadeshwar"><i class="bi bi-linkedin socialIcon"></i></a>
-						<a href="https://threads.net/super__siddy"><i class="bi bi-threads socialIcon"></i></a>
-						<a href="https://twitter.com/super_siddy"><i class="bi bi-twitter-x socialIcon"></i></a>
+						<a target="_blank" href="https://github.com/djsiddz"><span class="sr-only">Github Profile</span><i class="bi bi-github socialIcon"></i></a>
+						<a target="_blank" href="https://linkedin.com/in/siddheshthadeshwar"><span class="sr-only">LinkedIn</span><i class="bi bi-linkedin socialIcon"></i></a>
+						<a target="_blank" href="https://threads.net/super__siddy"><span class="sr-only">Threads</span><i class="bi bi-threads socialIcon"></i></a>
+						<a target="_blank" href="https://twitter.com/super_siddy"><span class="sr-only">X/Twitter</span><i class="bi bi-twitter-x socialIcon"></i></a>
 					</div>
 				</div>
 			</div>
@@ -67,8 +68,8 @@ const booksCollection = await getCollection('books');
 	</main>
 	<footer>
 		<p class="madeWith">Made with 💖 for Coding &amp; Reading<br/>
-			<span class="extraSmallText">"Exploding Head" Illustration by <a href="https://icons8.com/illustrations/author/zD2oqC8lLBBA">Icons 8</a> from <a href="https://icons8.com/illustrations">Ouch!</a><br/>
-				"Creative Work", "Engineer", "Podcast Show" & "Youtube Creator" Illustrations from <a href="https://illustrations.popsy.co/">Popsy.co</a>
+			<span class="extraSmallText">"Exploding Head" Illustration by <a href="https://icons8.com/illustrations/author/zD2oqC8lLBBA" target="_blank">Icons 8</a> from <a href="https://icons8.com/illustrations" target="_blank">Ouch!</a><br/>
+				"Creative Work", "Engineer", "Podcast Show" & "Youtube Creator" Illustrations from <a href="https://popsy.co/illustrations" target="_blank">Popsy.co</a>
 			</span>
 		</p>
 		<p class="personalBrand"><a href="https://supersiddy.wordpress.com/"><img class="profilePhoto" src=`${import.meta.env.BASE_URL}profile-photo-siddhesh.jpg` alt="Siddhesh's Profile" height="16"/>Siddhesh Thadeshwar</a></p>
@@ -261,6 +262,16 @@ const booksCollection = await getCollection('books');
 	.socialLinks a {
 		color: var(--text);
 		transition: rotate 0.5s, scale 0.25s;
+	}
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		border: 0;
 	}
 	footer {
 		color: var(--white);

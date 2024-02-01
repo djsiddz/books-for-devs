@@ -42,6 +42,7 @@ const { title } = Astro.props;
 			--buttonBg: var(--grey);
 			--buttonBgHover: var(--black);
 			--buttonText: var(--white);
+			--buttonTextAlt: var(--white);
 			--background-gradient:linear-gradient(0deg, var(--primary), var(--black) 30%);
 			--card-gradient:linear-gradient(135deg, var(--primary) 0%, var(--black) 100%);
 			--header-gradient:linear-gradient(45deg, var(--white) 0%, var(--primary) 30%);
@@ -66,6 +67,7 @@ const { title } = Astro.props;
 			--buttonBg: var(--accentDark);
 			--buttonBgHover: var(--primary);
 			--buttonText: var(--white);
+			--buttonTextAlt: var(--buttonBg);
 			--background-gradient:linear-gradient(0deg, var(--primary), var(--white) 30%);
 			--card-gradient: linear-gradient(135deg, var(--accentLight) 0%, var(--white) 100%);
 			--header-gradient: linear-gradient(45deg, var(--black) 0%, var(--primary) 30%);
@@ -87,9 +89,41 @@ const { title } = Astro.props;
 		font-family: system-ui, sans-serif;
 		font-size: 24px;
 		min-height: 100vh;
+		min-width: 100vw;
 	}
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
 	}
+	header, footer {
+		align-content: center;
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 90%;
+		padding: 0.5rem 1rem;
+	}
+	section {
+		margin-bottom: 5rem;
+		margin-top: 5rem;
+	}
+
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		border: 0;
+	}
+	.textBalance {
+		text-wrap: balance;
+	}
+	.extraSmallText {
+    font-size: 0.75rem;
+  }
 </style>

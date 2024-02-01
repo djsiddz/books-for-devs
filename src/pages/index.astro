@@ -1,38 +1,22 @@
 ---
 import { getCollection } from 'astro:content';
 import Card from '../components/Card.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Intro from '../components/Intro.astro';
+import Outro from '../components/Outro.astro';
 import Layout from '../layouts/Layout.astro';
 
 const booksCollection = await getCollection('books');
 ---
 
 <Layout title="Books for Devs">
-	<header>
-		<a href="https://djsiddz.github.io/books-for-devs">
-			<h3 class="brand"><i class="bi bi-journal-code brandLogo"></i>Books for Devs</h3>
-		</a>
-		<a class="githubLink" href="https://github.com/djsiddz/books-for-devs" target="_blank" title="View Repo" aria-label="View Repo">
-			<span class="sr-only">View Repo</span>
-			<i aria-label="View GitHub Repo" class="bi bi-github"></i>
-		</a>
-	</header>
+	<Header/>
 	<main>
 		<section class="intro">
 			<h1><span class="text-gradient1">Reading the documentation isn't enough!</span><img class="introIllustration" src=`${import.meta.env.BASE_URL}icons/3d-fluency-exploding-head.png` alt="3D Exlopding Head Illustration" title="illustration from icons8.com" /></h1>
-			<div class="blueGradientCard">
-				<h2>Hi there! 👋</h2>
-				<p>This is a curated collection of books that I feel are essential reading for all developers.</p>
-				<p>A better developer understands the <strong>How</strong>s & <strong>Why</strong>s, much beyond the documentation.</p>
-				<ul>
-					<li><strong>Why</strong> do we write our code like this?</li>
-					<li><strong>How</strong> does X work?</li>
-					<li><strong>Why</strong> do we build things in a certain way?</li>
-					<li><strong>How</strong> did we reach here?</li>
-				</ul>
-				<p>Hope some of these books answer such questions, make you think, and grow you as a developer.</p>
-				<p><strong>Stay curious,</strong><br/>Sid :)</p>
-			</div>
 		</section>
+		<Intro/>
 		<section class="collection">
 			<h2>The 📘 Collection </h2>
 			<p>Pick a book in any order.<br/>You'll <span class="brand">connect the dots</span> eventually.<br/></p>
@@ -42,74 +26,14 @@ const booksCollection = await getCollection('books');
 					<Card href={book.data.amazonINLink} title={book.data.title} subtitle={book.data.subtitle} body={book.data.description} image={book.data.coverImage} readingStatus={book.data.readingStatus || ""} recommended={book.data.recommended || false} />
 					))}
 			</ul>
-			<p class="affiliateDisclaimer">This collection contains affiliate links. This means I may earn a commission should you make a purchase using my links.<br/>Thank you for supporting me & my work! 😊</p>
+			<p class="affiliateDisclaimer">This collection contains affiliate links. I may earn a commission should you make a purchase using my links.<br/>Thank you for supporting me & my work! 😊</p>
 		</section>
-		<section class="blueGradientCard">
-			<div class="splitView">
-				<div class="firstPart switchIllustrations">
-					<img src="https://illustrations.popsy.co/white/creative-work.svg" alt="Creative Work illustration from popsy.co" title="Let's Collaborate"/>
-					<img src="https://illustrations.popsy.co/white/engineer.svg" alt="Engineer illustration from popsy.co" title="Let's Collaborate"/>
-					<img src="https://illustrations.popsy.co/white/podcast-show.svg" alt="Podcast illustration from popsy.co" title="Let's Collaborate"/>
-					<img src="https://illustrations.popsy.co/white/youtube-creator.svg" alt="Youtube Creator illustration from popsy.co" title="Let's Collaborate"/>
-				</div>
-				<div class="lastPart">
-					<h2>Let's Connect 🤝</h2>
-					<p>Want to add to this growing collection?<br/>Found an interesting book here?<br/>Read one of these previously?</p>
-					<p>Reach out to me on any one of these:</p>
-					<div class="socialLinks">
-						<a target="_blank" href="https://github.com/djsiddz"><span class="sr-only">Github Profile</span><i class="bi bi-github socialIcon"></i></a>
-						<a target="_blank" href="https://linkedin.com/in/siddheshthadeshwar"><span class="sr-only">LinkedIn</span><i class="bi bi-linkedin socialIcon"></i></a>
-						<a target="_blank" href="https://threads.net/super__siddy"><span class="sr-only">Threads</span><i class="bi bi-threads socialIcon"></i></a>
-						<a target="_blank" href="https://twitter.com/super_siddy"><span class="sr-only">X/Twitter</span><i class="bi bi-twitter-x socialIcon"></i></a>
-					</div>
-				</div>
-			</div>
-		</section>
+		<Outro/>
 	</main>
-	<footer>
-		<p class="madeWith">Made with 💖 for Coding &amp; Reading<br/>
-			<span class="extraSmallText">"Exploding Head" Illustration by <a href="https://icons8.com/illustrations/author/zD2oqC8lLBBA" target="_blank">Icons 8</a> from <a href="https://icons8.com/illustrations" target="_blank">Ouch!</a><br/>
-				"Creative Work", "Engineer", "Podcast Show" & "Youtube Creator" Illustrations from <a href="https://popsy.co/illustrations" target="_blank">Popsy.co</a>
-			</span>
-		</p>
-		<p class="personalBrand"><a href="https://supersiddy.wordpress.com/"><img class="profilePhoto" src=`${import.meta.env.BASE_URL}profile-photo-siddhesh.jpg` alt="Siddhesh's Profile" height="32"/>Siddhesh Thadeshwar</a></p>
-	</footer>
+	<Footer/>
 </Layout>
 
 <style>
-	header, footer {
-		align-content: center;
-		align-items: center;
-		display: flex;
-		justify-content: space-between;
-		margin-left: auto;
-		margin-right: auto;
-		max-width: 90%;
-		padding: 0.5rem 1rem;
-	}
-	.brand {
-		align-items: center;
-		color: var(--primary);
-		display: inline-flex;
-		font-weight: bold;
-		margin: 0;
-	}
-	.brandLogo {
-		font-size: 1.25em;
-		margin-right: 0.75rem;
-		transition: rotate 0.5s, scale 0.25s;
-	}
-	.brandLogo:hover, .githubLink:hover, .socialLinks a:hover {
-		rotate: -15deg;
-		scale: 1.25;
-	}
-	.githubLink {
-		color: var(--text);
-		font-size: 1.5rem;
-		padding: 0.5rem 1rem;
-		transition: rotate 0.5s, scale 0.25s;
-		vertical-align: top;
-	}
 	main {
 		margin: auto;
 		max-width: 80ch;
@@ -140,29 +64,18 @@ const booksCollection = await getCollection('books');
 		padding: 0.75rem 1rem;
 		text-align: center;
 	}
-	.extraSmallText {
-		font-size: 0.75rem;
-	}
 	@media screen and (max-width: 450px) {
+		main {
+			padding: 1.25rem;
+		}
 		h1 {
-			font-size: 2rem;
+			font-size: 1.625rem;
 		}
 		.introIllustration {
 			max-height: 2rem;
 			margin-left: 1rem;
 		}
-		.blueGradientCard > ul {
-			padding-left: 1rem;
-		}
-		footer {
-			flex-direction: column;
-			text-align: center;
-		}
-		.splitView {
-			display: flex;
-			flex-direction: column !important;
-			justify-content: flex-start;
-		}
+
 	}
 	.text-gradient1 {
 		background-image: var(--header-gradient);
@@ -171,127 +84,12 @@ const booksCollection = await getCollection('books');
 		background-size: 400%;
 		background-position: 0%;
 	}
-	.blueGradientCard {
-		background: var(--card-gradient);
-		border-radius: 0.4rem;
-		border: 1px solid var(--primary);
-		font-size: 0.875rem;
-		line-height: 1.6;
-		margin: 1rem 0;
-		padding: 1rem;
-	}
-	.blueGradientCard strong {
-		color: var(--highlightText);
-	}
 	.booksGrid {
 		display: grid;
-		gap: 4rem;
-		grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+		gap: 3rem;
+		grid-template-columns: repeat(auto-fit, minmax(25ch, 1fr));
 		padding: 0;
 		margin-top: 3rem;
-	}
-	section {
-		margin-bottom: 5rem;
-		margin-top: 5rem;
-	}
-	.splitView {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-	}
-	.firstPart, .lastPart {
-		display: flex;
-		flex-direction: column;
-		flex: 1;
-		align-self: center;
-	}
-	.switchIllustrations {
-		max-width: 100%;
-		max-height: 100%;
-		position: relative;
-	}
-	.switchIllustrations img {
-		animation-duration: 12s;
-		animation-iteration-count: infinite;
-		animation-name: imagefade;
-		animation-timing-function: ease-in-out;
-		left: 0;
-		max-width: 100%;
-		opacity: 0;
-		position: absolute;
-		top: -10rem;
-	}
-	@keyframes imagefade {
-		0% {
-			opacity:1;
-		}
-		17% {
-			opacity:1;
-		}
-		25% {
-			opacity:0;
-		}
-		92% {
-			opacity:0;
-		}
-		100% {
-			opacity:1;
-		}
-	}
-	.switchIllustrations img:nth-of-type(1) {
-		animation-delay: 9s;
-	}
-	.switchIllustrations img:nth-of-type(2) {
-		animation-delay: 6s;
-	}
-	.switchIllustrations img:nth-of-type(3) {
-		animation-delay: 3s;
-	}
-	.switchIllustrations img:nth-of-type(4) {
-		animation-delay: 0;
-	}
-
-	.lastPart {
-		text-align: center;
-	}
-	.socialLinks {
-		display: flex;
-		gap: calc(1.5rem);
-		justify-content: center;
-	}
-	.socialLinks a {
-		color: var(--text);
-		transition: rotate 0.5s, scale 0.25s;
-	}
-	.sr-only {
-		position: absolute;
-		width: 1px;
-		height: 1px;
-		padding: 0;
-		margin: -1px;
-		overflow: hidden;
-		clip: rect(0, 0, 0, 0);
-		border: 0;
-	}
-	footer {
-		color: var(--white);
-		font-size: 0.75rem;
-	}
-	.madeWith {
-		line-height: 1.2;
-	}
-	.personalBrand {
-		align-items: center;
-		color: var(--white);
-		display: flex;
-		font-size: 1.25rem;
-		justify-content: center;
-	}
-	.profilePhoto {
-		border-radius: 16px;
-		margin-right: 0.75rem;
-	}
-	footer a, footer a:visited, footer a:focus, footer a:hover {
-		color: var(--white);
+		min-width: 100%;
 	}
 </style>

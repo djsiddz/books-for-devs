@@ -1,0 +1,140 @@
+---
+import BlueGradientCard from "../layouts/BlueGradientCard.astro";
+---
+
+<BlueGradientCard>
+  <div class="splitView">
+    <div class="firstPart switchIllustrations">
+      <img
+        src="https://illustrations.popsy.co/white/creative-work.svg"
+        alt="Creative Work illustration from popsy.co"
+        title="Let's Collaborate"
+      />
+      <img
+        src="https://illustrations.popsy.co/white/engineer.svg"
+        alt="Engineer illustration from popsy.co"
+        title="Let's Collaborate"
+      />
+      <img
+        src="https://illustrations.popsy.co/white/podcast-show.svg"
+        alt="Podcast illustration from popsy.co"
+        title="Let's Collaborate"
+      />
+      <img
+        src="https://illustrations.popsy.co/white/youtube-creator.svg"
+        alt="Youtube Creator illustration from popsy.co"
+        title="Let's Collaborate"
+      />
+    </div>
+    <div class="lastPart">
+      <h2>Let's Connect 🤝</h2>
+      <p>
+        Want to add to this growing collection?<br />Found an interesting book
+        here?<br />Read one of these previously?
+      </p>
+      <p>Reach out to me on any one of these:</p>
+      <div class="socialLinks">
+        <a target="_blank" href="https://github.com/djsiddz"
+          ><span class="sr-only">Github Profile</span><i
+            class="bi bi-github socialIcon"></i></a
+        >
+        <a target="_blank" href="https://linkedin.com/in/siddheshthadeshwar"
+          ><span class="sr-only">LinkedIn</span><i
+            class="bi bi-linkedin socialIcon"></i></a
+        >
+        <a target="_blank" href="https://threads.net/super__siddy"
+          ><span class="sr-only">Threads</span><i
+            class="bi bi-threads socialIcon"></i></a
+        >
+        <a target="_blank" href="https://twitter.com/super_siddy"
+          ><span class="sr-only">X/Twitter</span><i
+            class="bi bi-twitter-x socialIcon"></i></a
+        >
+      </div>
+    </div>
+  </div>
+</BlueGradientCard>
+<style>
+  .splitView {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .firstPart,
+  .lastPart {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-self: center;
+  }
+  .switchIllustrations {
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+  }
+  .switchIllustrations img {
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-name: imagefade;
+    animation-timing-function: ease-in-out;
+    left: 0;
+    max-width: 100%;
+    opacity: 0;
+    position: absolute;
+    top: -10rem;
+  }
+  @keyframes imagefade {
+    0% {
+      opacity: 1;
+    }
+    17% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 0;
+    }
+    92% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .switchIllustrations img:nth-of-type(1) {
+    animation-delay: 9s;
+  }
+  .switchIllustrations img:nth-of-type(2) {
+    animation-delay: 6s;
+  }
+  .switchIllustrations img:nth-of-type(3) {
+    animation-delay: 3s;
+  }
+  .switchIllustrations img:nth-of-type(4) {
+    animation-delay: 0;
+  }
+  .lastPart {
+    text-align: center;
+  }
+  .socialLinks {
+    display: flex;
+    gap: calc(1.5rem);
+    justify-content: center;
+  }
+  .socialLinks a {
+    color: var(--text);
+    transition:
+      rotate 0.5s,
+      scale 0.25s;
+  }
+  .socialLinks a:hover {
+    rotate: -15deg;
+    scale: 1.25;
+  }
+  @media screen and (max-width: 450px) {
+    .splitView {
+      display: flex;
+      flex-direction: column !important;
+      justify-content: flex-start;
+    }
+  }
+</style>

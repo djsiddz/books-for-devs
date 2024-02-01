@@ -38,7 +38,10 @@ switch (readingStatus) {
     <h3>{title}<br/><span>{subtitle}</span></h3>
     <!-- <p class="bookDescription">{body}</p> -->
   </div>
-  <a href={href}>Buy on Amazon.in <i class="bi bi-amazon"></i></a>
+  <div class="bookButtons">
+    <!-- <a class="secondary" href={"/books-for-devs/books/"+friendlySlug}>Learn More</a> -->
+    <a href={href}>Buy Now on <i class="bi bi-amazon"></i></a>
+  </div>
 </li>
 <style>
   .link-card {
@@ -56,27 +59,13 @@ switch (readingStatus) {
     transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
-  .link-card > a {
-    background-color: var(--buttonBg);
-    border-radius: 0.35rem;
-    color: var(--buttonText);
-    display:flex;
-    justify-content:space-between;
-    line-height: 1.2;
-    margin-bottom: 0;
-    margin-top: auto;
-    opacity: 0.8;
-    padding: 0.75rem 1.2rem;
-    text-decoration: none;
-  }
-  .link-card > a:hover {
-    background-color: var(--buttonBgHover);
-  }
   h3 {
     font-size: 1.25rem;
     line-height: 1.1;
     margin: 0;
     transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    text-wrap: balance;
+    max-width: calc(100vw - 120px);
   }
   h3 > span {
     font-size: 0.75rem;
@@ -104,6 +93,44 @@ switch (readingStatus) {
     margin-bottom: 1rem;
     margin-top: 0;
   } */
+
+  .bookButtons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+    margin-top: auto;
+    gap: 1rem;
+  }
+
+  .bookButtons > a {
+    background-color: var(--buttonBg);
+    border-radius: 0.35rem;
+    color: var(--buttonText);
+    display:flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    line-height: 1;
+    opacity: 0.8;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+  }
+
+  .bookButtons > a:hover {
+    background-color: var(--buttonBgHover);
+  }
+
+  .bookButtons > a.secondary {
+    background-color: var(--transparent);
+    border: 2px solid var(--buttonBg);
+    color: var(--buttonAltText);
+  }
+
+  .bookButtons > a.secondary:hover {
+    border-color: var(--buttonBgHover);
+    color: var(--buttonBgHover);
+
+  }
+
   .link-card:is(:hover, :focus-within) {
     background-image: var(--book-card-gradient);
   }
@@ -141,5 +168,26 @@ switch (readingStatus) {
   .orangeTag {
     border-color: #e9892d;
     color: #e9892d;
+  }
+
+  @media screen and (max-width: 450px) {
+    .bookButtons {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      font-size: smaller;
+    }
+    .bookButtons > a {
+      padding: 0.5rem;
+      justify-content: left;
+    }
+    .tag {
+      text-wrap: balance;
+      display: inline;
+      font-size: 0.5rem;
+      padding: 0.25rem 0.5rem;
+      top: 1.25rem;
+      max-width: 50%;
+    }
   }
 </style>

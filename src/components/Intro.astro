@@ -1,0 +1,33 @@
+---
+import BlueGradientCard from "../layouts/BlueGradientCard.astro";
+---
+
+<BlueGradientCard>
+  <h2>Hi there! 👋</h2>
+  <p class="textBalance">
+    A better developer understands the <strong>How</strong>s & <strong
+      >Why</strong
+    >s, much beyond the documentation.
+  </p>
+  <ul>
+    <li><strong>Why</strong> do we write our code like this?</li>
+    <li><strong>How</strong> does X work?</li>
+    <li><strong>Why</strong> do we build things in a certain way?</li>
+    <li><strong>How</strong> did we reach here?</li>
+  </ul>
+  <p class="textBalance">
+    These books IMHO, broaden your perspective, imagination, make you think, and
+    help you grow as a developer.
+  </p>
+  <p><strong>Stay curious,</strong><br />Sid :)</p>
+</BlueGradientCard>
+<style>
+  strong {
+    color: var(--highlightText);
+  }
+  @media screen and (max-width: 450px) {
+    ul {
+      padding-left: 1rem;
+    }
+  }
+</style>

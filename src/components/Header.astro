@@ -1,0 +1,47 @@
+<header>
+  <a href="https://djsiddz.github.io/books-for-devs">
+    <h3 class="brand">
+      <i class="bi bi-journal-code brandLogo"></i>Books for Devs
+    </h3>
+  </a>
+  <a
+    class="githubLink"
+    href="https://github.com/djsiddz/books-for-devs"
+    target="_blank"
+    title="View Repo"
+    aria-label="View Repo"
+  >
+    <span class="sr-only">View Repo</span>
+    <i aria-label="View GitHub Repo" class="bi bi-github"></i>
+  </a>
+</header>
+<style>
+  .brand {
+    align-items: center;
+    color: var(--primary);
+    display: inline-flex;
+    font-weight: bold;
+    margin: 0;
+  }
+  .brandLogo {
+    font-size: 1.25em;
+    margin-right: 0.75rem;
+    transition:
+      rotate 0.5s,
+      scale 0.25s;
+  }
+  .brandLogo:hover,
+  .githubLink:hover {
+    rotate: -15deg;
+    scale: 1.25;
+  }
+  .githubLink {
+    color: var(--text);
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    transition:
+      rotate 0.5s,
+      scale 0.25s;
+    vertical-align: top;
+  }
+</style>

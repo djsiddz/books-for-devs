@@ -1,0 +1,66 @@
+<footer>
+  <p class="madeWith">
+    Made with 💖 for Coding &amp; Reading<br /><br />
+    <span class="extraSmallText"
+      >"Exploding Head" Illustration by <a
+        href="https://icons8.com/illustrations/author/zD2oqC8lLBBA"
+        target="_blank">Icons 8</a
+      > from <a href="https://icons8.com/illustrations" target="_blank">Ouch!</a
+      ><br />
+      "Creative Work", "Engineer", "Podcast Show" & "Youtube Creator" Illustrations
+      from <a href="https://popsy.co/illustrations" target="_blank">Popsy.co</a>
+    </span>
+  </p>
+  <p class="personalBrand">
+    <a href="https://supersiddy.wordpress.com/"
+      ><img
+        class="profilePhoto"
+        src=`${import.meta.env.BASE_URL}profile-photo-siddhesh.jpg`
+        alt="Siddhesh's Profile"
+        height="32"
+      />Siddhesh Thadeshwar</a
+    >
+  </p>
+</footer>
+<style>
+  footer {
+    color: var(--white);
+    font-size: 0.75rem;
+  }
+  .madeWith {
+    line-height: 1.2;
+  }
+  .personalBrand {
+    align-items: center;
+    color: var(--white);
+    display: flex;
+    font-size: 1.25rem;
+    justify-content: center;
+  }
+  .profilePhoto {
+    border-radius: 16px;
+    margin-right: 0.75rem;
+  }
+  footer a,
+  footer a:visited,
+  footer a:focus,
+  footer a:hover {
+    color: var(--white);
+  }
+  @media screen and (max-width: 450px) {
+    footer {
+      flex-direction: column;
+      text-align: center;
+    }
+    .personalBrand > a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .profilePhoto {
+      aspect-ratio: 1 !important;
+      width: 32px;
+    }
+  }
+</style>

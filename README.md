@@ -10,6 +10,6 @@ Built using [Astro](https://astro.build/) & pure CSS.
 
 ## Disclosure
 
-This project contains affiliate links. This means I may earn a commission should you chose to sign up for a program or make a purchase using my link. It’s okay – I love all of these companies anyways, and you will too!
+This project contains affiliate links. This means I may earn a commission should you chose to sign up for a program or make a purchase using my link. It’s okay – I love all of these books anyway, and you will too!
 
 Thank you for supporting me & my work! :)

@@ -7,11 +7,12 @@ interface Props {
   image: string;
   readingStatus: string;
   recommended: boolean;
+  friendlySlug: string;
 }
 
 let tagBasedCSS = "";
 
-const { href, title, subtitle, body, image, readingStatus, recommended } = Astro.props;
+const { href, title, subtitle, body, image, readingStatus, recommended, friendlySlug } = Astro.props;
 
 switch (readingStatus) {
   case "Read ✅":

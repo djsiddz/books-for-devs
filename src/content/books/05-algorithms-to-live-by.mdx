@@ -10,5 +10,20 @@ amazonINLink: "https://amzn.to/48pn174"
 description: "A fascinating exploration of how computer algorithms can be applied to our everyday lives.What should we do, or leave undone, in a day or a lifetime?"
 readingStatus: "Wishlisted ⭐"
 recommended: true
-friendlySlug: "algorithms-to-live-by"
+slug: "algorithms-to-live-by"
 ---
+
+import { Image } from "astro:assets";
+
+# {frontmatter.title}
+
+<Image
+  src={frontmatter.coverImage}
+  alt={frontmatter.title}
+  width="110"
+  height="160"
+/>
+
+## Description
+
+{frontmatter.description}

@@ -9,5 +9,20 @@ coverImage: "https://m.media-amazon.com/images/I/71Nxk9VhSTL._SY466_.jpg"
 amazonINLink: "https://amzn.to/48LdK8N"
 description: "Supercharge your project with new frameworks and libraries."
 readingStatus: "Wishlisted ⭐"
-friendlySlug: "pragmatic-programmer"
+slug: "pragmatic-programmer"
 ---
+
+import { Image } from "astro:assets";
+
+# {frontmatter.title}
+
+<Image
+  src={frontmatter.coverImage}
+  alt={frontmatter.title}
+  width="110"
+  height="160"
+/>
+
+## Description
+
+{frontmatter.description}

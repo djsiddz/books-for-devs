@@ -8,6 +8,21 @@ printLength: 320
 coverImage: "https://m.media-amazon.com/images/I/91bYsX41DVL._SY466_.jpg"
 amazonINLink: "https://amzn.to/3H5SsGX"
 description: "Real change comes from the compound effect of hundreds of small decisions: doing two push-ups a day, waking up five minutes early, or holding a single short phone call."
-readingStatus: "Next Up ⏭️"
-friendlySlug: "atomic-habits"
+readingStatus: "Currently Reading 👓"
+slug: "atomic-habits"
 ---
+
+import { Image } from "astro:assets";
+
+# {frontmatter.title}
+
+<Image
+  src={frontmatter.coverImage}
+  alt={frontmatter.title}
+  width="110"
+  height="160"
+/>
+
+## Description
+
+{frontmatter.description}

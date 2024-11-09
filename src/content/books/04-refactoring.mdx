@@ -9,5 +9,20 @@ coverImage: "https://m.media-amazon.com/images/I/71yPDDIwcoL._SY466_.jpg"
 amazonINLink: "https://amzn.to/48iZy6U"
 description: "Unlock the secrets of code craftsmanship, your guide to transforming messy code into elegant software artistry."
 readingStatus: "Wishlisted ⭐"
-friendlySlug: "refactoring"
+slug: "refactoring"
 ---
+
+import { Image } from "astro:assets";
+
+# {frontmatter.title}
+
+<Image
+  src={frontmatter.coverImage}
+  alt={frontmatter.title}
+  width="110"
+  height="160"
+/>
+
+## Description
+
+{frontmatter.description}

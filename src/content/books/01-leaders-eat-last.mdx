@@ -8,6 +8,21 @@ printLength: 368
 coverImage: "https://m.media-amazon.com/images/I/71rMrK1DdZL._SY466_.jpg"
 amazonINLink: "https://amzn.to/3RNjc3Q"
 description: "Leaders are the ones who run head first into the unknown. They rush towards the danger. They put their own interests aside to protect us or to pull us into the future."
-readingStatus: "Currently Reading 👓"
-friendlySlug: "leaders-eat-last"
+readingStatus: "Read ✅"
+slug: "leaders-eat-last"
 ---
+
+import { Image } from "astro:assets";
+
+# {frontmatter.title}
+
+<Image
+  src={frontmatter.coverImage}
+  alt={frontmatter.title}
+  width="110"
+  height="160"
+/>
+
+## Description
+
+{frontmatter.description}

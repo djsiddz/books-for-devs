@@ -7,12 +7,13 @@ interface Props {
   image: string;
   readingStatus: string;
   recommended: boolean;
-  friendlySlug: string;
+  slug: string;
 }
 
 let tagBasedCSS = "";
 
-const { href, title, subtitle, body, image, readingStatus, recommended, friendlySlug } = Astro.props;
+const { href, title, subtitle, body, image, readingStatus, recommended, slug } =
+  Astro.props;
 
 switch (readingStatus) {
   case "Read ✅":
@@ -34,13 +35,19 @@ switch (readingStatus) {
 
 <li class="link-card">
   <div class="bookDetails">
-    {recommended ? <div class="tag yellowTag">Recommended 👍</div> : <div class={"tag " + tagBasedCSS}>{readingStatus}</div>}
+    {
+      recommended ? (
+        <div class="tag yellowTag">Recommended 👍</div>
+      ) : (
+        <div class={"tag " + tagBasedCSS}>{readingStatus}</div>
+      )
+    }
     <img src={image} alt={title + " Cover"} />
-    <h3>{title}<br/><span>{subtitle}</span></h3>
+    <h3>{title}<br /><span>{subtitle}</span></h3>
     <!-- <p class="bookDescription">{body}</p> -->
   </div>
   <div class="bookButtons">
-    <!-- <a class="secondary" href={"/books-for-devs/books/"+friendlySlug}>Learn More</a> -->
+    <a class="secondary" href={"/books-for-devs/books/" + slug}>Learn More</a>
     <a href={href}>Buy Now on <i class="bi bi-amazon"></i></a>
   </div>
 </li>
@@ -107,7 +114,7 @@ switch (readingStatus) {
     background-color: var(--buttonBg);
     border-radius: 0.35rem;
     color: var(--buttonText);
-    display:flex;
+    display: flex;
     justify-content: space-between;
     gap: 0.5rem;
     line-height: 1;
@@ -129,7 +136,6 @@ switch (readingStatus) {
   .bookButtons > a.secondary:hover {
     border-color: var(--buttonBgHover);
     color: var(--buttonBgHover);
-
   }
 
   .link-card:is(:hover, :focus-within) {

@@ -1,129 +1,176 @@
 ---
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Curated list of books every developer must read. Ranging from Computer Science, How Things Works, Autobiographies or Biographies of People from the Tech world.">
-		<meta name="author" content="Siddhesh Thadeshwar" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href=`${import.meta.env.BASE_URL}profile-photo-siddhesh.jpg` />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Curated list of books every developer must read. Ranging from Computer Science, How Things Works, Autobiographies or Biographies of People from the Tech world."
+    />
+    <meta name="author" content="Siddhesh Thadeshwar" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href=`${import.meta.env.BASE_URL}profile-photo-siddhesh.jpg`
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 <style is:global>
-	@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css");
-	:root {
-		--white: #f6f7f8;
-		--black: #02050a;
-		--darkGrey: #2f353d;
-		--lightGrey: #71757a;
-		--primary: #2d2fe9;
-		--accentDark: #7c3aed;
-		--accentLight: #d5c3f5;
-	}
-	@media (prefers-color-scheme: dark) {
-		/* Dark theme styles go here */
-		:root {
-			--grey: var(--darkGrey);
-			--bg: var(--grey);
-			--highlightText: var(--white);
-			--text: var(--white);
-			--buttonBg: var(--grey);
-			--buttonBgHover: var(--black);
-			--buttonText: var(--white);
-			--buttonTextAlt: var(--white);
-			--background-gradient:linear-gradient(0deg, var(--primary), var(--black) 30%);
-			--card-gradient:linear-gradient(135deg, var(--primary) 0%, var(--black) 100%);
-			--header-gradient:linear-gradient(45deg, var(--white) 0%, var(--primary) 30%);
-			--book-card-gradient: linear-gradient(45deg, var(--accentDark), var(--primary) 60%);
-			--boxShadow: 0px -3px 3px 0px rgba(255,255,255,0.25);
-			/* other colors */
-			--yellow: #e9a92d;
-			--blue: #2de9e7;
-			--green: #8de92d;
-		}
-		img {
-			filter: brightness(.8) contrast(1.2);
-		}
-	}
-	@media (prefers-color-scheme: light) {
-		/* Light theme styles go here */
-		:root {
-			--grey: var(--lightGrey);
-			--bg: var(--white);
-			--highlightText: var(--primary);
-			--text: var(--black);
-			--buttonBg: var(--accentDark);
-			--buttonBgHover: var(--primary);
-			--buttonText: var(--white);
-			--buttonTextAlt: var(--buttonBg);
-			--background-gradient:linear-gradient(0deg, var(--primary), var(--white) 30%);
-			--card-gradient: linear-gradient(135deg, var(--accentLight) 0%, var(--white) 100%);
-			--header-gradient: linear-gradient(45deg, var(--black) 0%, var(--primary) 30%);
-			--book-card-gradient: linear-gradient(45deg, var(--white), var(--accentLight) 60%);
-			--boxShadow: 0px -4px 12px 0px rgba(0,0,0,0.5);
-			/* other colors */
-			--yellow: #e9c82d;
-			--blue: #2d8de9;
-			--green: #42880f;
-		}
-	}
-	html {
-		background-image: var(--background-gradient);
-		background-position: 0%;
-		background-repeat: no-repeat;
-		background-size: 200%;
-		background-size: cover;
-		color: var(--text);
-		font-family: system-ui, sans-serif;
-		font-size: 24px;
-		min-height: 100vh;
-		min-width: 100vw;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-	header, footer {
-		align-content: center;
-		align-items: center;
-		display: flex;
-		justify-content: space-between;
-		margin-left: auto;
-		margin-right: auto;
-		max-width: 90%;
-		padding: 0.5rem 1rem;
-	}
-	section {
-		margin-bottom: 5rem;
-		margin-top: 5rem;
-	}
+  @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css");
+  :root {
+    --white: #f6f7f8;
+    --black: #02050a;
+    --darkGrey: #2f353d;
+    --lightGrey: #71757a;
+    --primary: #2d2fe9;
+    --accentDark: #7c3aed;
+    --accentLight: #d5c3f5;
+  }
+  @media (prefers-color-scheme: dark) {
+    /* Dark theme styles go here */
+    :root {
+      --grey: var(--darkGrey);
+      --bg: var(--grey);
+      --highlightText: var(--white);
+      --text: var(--white);
+      --buttonBg: var(--grey);
+      --buttonBgHover: var(--black);
+      --buttonText: var(--white);
+      --buttonTextAlt: var(--white);
+      --background-gradient: linear-gradient(
+        0deg,
+        var(--primary),
+        var(--black) 30%
+      );
+      --card-gradient: linear-gradient(
+        135deg,
+        var(--primary) 0%,
+        var(--black) 100%
+      );
+      --header-gradient: linear-gradient(
+        45deg,
+        var(--white) 0%,
+        var(--primary) 30%
+      );
+      --book-card-gradient: linear-gradient(
+        45deg,
+        var(--accentDark),
+        var(--primary) 60%
+      );
+      --boxShadow: 0px -3px 3px 0px rgba(255, 255, 255, 0.25);
+      /* other colors */
+      --yellow: #e9a92d;
+      --blue: #2de9e7;
+      --green: #8de92d;
+    }
+    img {
+      filter: brightness(0.8) contrast(1.2);
+    }
+  }
+  @media (prefers-color-scheme: light) {
+    /* Light theme styles go here */
+    :root {
+      --grey: var(--lightGrey);
+      --bg: var(--white);
+      --highlightText: var(--primary);
+      --text: var(--black);
+      --buttonBg: var(--accentDark);
+      --buttonBgHover: var(--primary);
+      --buttonText: var(--white);
+      --buttonTextAlt: var(--buttonBg);
+      --background-gradient: linear-gradient(
+        0deg,
+        var(--primary),
+        var(--white) 30%
+      );
+      --card-gradient: linear-gradient(
+        135deg,
+        var(--accentLight) 0%,
+        var(--white) 100%
+      );
+      --header-gradient: linear-gradient(
+        45deg,
+        var(--black) 0%,
+        var(--primary) 30%
+      );
+      --book-card-gradient: linear-gradient(
+        45deg,
+        var(--white),
+        var(--accentLight) 60%
+      );
+      --boxShadow: 0px -4px 12px 0px rgba(0, 0, 0, 0.5);
+      /* other colors */
+      --yellow: #e9c82d;
+      --blue: #2d8de9;
+      --green: #42880f;
+    }
+  }
+  html {
+    background-image: var(--background-gradient);
+    background-position: 0%;
+    background-repeat: no-repeat;
+    background-size: 200%;
+    background-size: cover;
+    color: var(--text);
+    font-family: system-ui, sans-serif;
+    font-size: 24px;
+    min-height: 100vh;
+    min-width: 100vw;
+  }
+  code {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+  }
+  header,
+  footer {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+    padding: 0.5rem 1rem;
+  }
+  section {
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+  }
 
-	.sr-only {
-		position: absolute;
-		width: 1px;
-		height: 1px;
-		padding: 0;
-		margin: -1px;
-		overflow: hidden;
-		clip: rect(0, 0, 0, 0);
-		border: 0;
-	}
-	.textBalance {
-		text-wrap: balance;
-	}
-	.extraSmallText {
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  .textBalance {
+    text-wrap: balance;
+  }
+  .extraSmallText {
     font-size: 0.75rem;
   }
 </style>

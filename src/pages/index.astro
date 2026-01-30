@@ -69,61 +69,37 @@ const booksCollection = await getCollection("books");
 </Layout>
 
 <style>
+  @reference "../styles/global.css";
   main {
-    margin: auto;
-    max-width: 80ch;
-    padding: 1.5rem;
+    @apply mx-auto max-w-[80ch] p-6;
   }
   h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin: 0;
-    margin-bottom: 3em;
+    @apply text-5xl font-extrabold m-0 mb-[3em];
   }
   .introIllustration {
-    max-height: 3rem;
-    vertical-align: middle;
-    margin-left: 1.5rem;
+    @apply max-h-12 align-middle ml-6;
   }
   h2 {
-    margin-bottom: 1em;
+    @apply mb-[1em];
   }
   .affiliateDisclaimer {
-    border-radius: 0.4rem;
-    border: 1px solid var(--grey);
-    font-size: 0.75rem;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2rem;
-    max-width: fit-content;
-    padding: 0.75rem 1rem;
-    text-align: center;
+    @apply rounded-[0.4rem] border border-(--grey) text-xs mx-auto mt-8 max-w-fit px-4 py-3 text-center;
+  }
+  .text-gradient1 {
+    @apply bg-(--header-gradient) bg-clip-text text-transparent bg-size-[400%] bg-position-[0%];
+  }
+  .booksGrid {
+    @apply grid gap-12 grid-cols-[repeat(auto-fit,minmax(25ch,1fr))] p-0 mt-12 min-w-full;
   }
   @media screen and (max-width: 450px) {
     main {
-      padding: 1.25rem;
+      @apply p-5;
     }
     h1 {
-      font-size: 1.625rem;
+      @apply text-[1.625rem];
     }
     .introIllustration {
-      max-height: 2rem;
-      margin-left: 1rem;
+      @apply max-h-8 ml-4;
     }
-  }
-  .text-gradient1 {
-    background-image: var(--header-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
-  }
-  .booksGrid {
-    display: grid;
-    gap: 3rem;
-    grid-template-columns: repeat(auto-fit, minmax(25ch, 1fr));
-    padding: 0;
-    margin-top: 3rem;
-    min-width: 100%;
   }
 </style>

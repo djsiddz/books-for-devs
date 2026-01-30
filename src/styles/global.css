@@ -33,12 +33,13 @@
 
   /* Dark theme */
   :root.dark {
-    --grey: var(--darkGrey);
+    --grey: #9ca3af;
+    --lightGrey: #d1d5db;
     --bg: var(--darkGrey);
     --highlightText: var(--white);
     --text: var(--white);
-    --buttonBg: var(--grey);
-    --buttonBgHover: var(--black);
+    --buttonBg: #4b5563;
+    --buttonBgHover: var(--primary);
     --buttonText: var(--white);
     --buttonTextAlt: var(--white);
     --background-gradient: linear-gradient(0deg, var(--primary), var(--black) 30%);

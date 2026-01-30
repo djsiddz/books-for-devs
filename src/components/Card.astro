@@ -52,28 +52,41 @@ switch (readingStatus) {
 ---
 
 <li class="link-card">
-  <div class="tags-container">
+  <div class="status-container">
     {
       recommended ? (
-        <div class="tag yellowTag">Recommended</div>
+        <div class="tag yellowTag font-mono">Recommended</div>
       ) : (
-        <div class={"tag " + tagBasedCSS}>{displayStatus}</div>
+        <div class={"tag " + tagBasedCSS + " font-mono"}>{displayStatus}</div>
       )
-    }
-    {
-      intentTags &&
-        intentTags.length > 0 &&
-        intentTags.map((tag) => <div class="tag intentTag">{tag}</div>)
     }
   </div>
   <div class="bookDetails">
     <img src={image} alt={title + " Cover"} />
     <h3>{title}<br /><span>{subtitle}</span></h3>
     <!-- <p class="bookDescription">{body}</p> -->
-    {insight && <p class="insight">{insight}</p>}
+    <div class="my-auto flex flex-col gap-0 mt-3">
+      {
+        insight && (
+          <p class="insight text-xs mb-0">
+            <i class="not-italic bi bi-coin text-xs mr-1" /> {insight}
+          </p>
+        )
+      }
+      {
+        intentTags && intentTags.length > 0 && (
+          <div class="intent-tags">
+            <i class="bi bi-tags text-xs" />
+            {intentTags.map((tag) => (
+              <div class="tag intentTag">{tag}</div>
+            ))}
+          </div>
+        )
+      }
+    </div>
   </div>
   <div class="bookButtons">
-    <a class="secondary" href={"/books-for-devs/books/" + slug}>Learn More</a>
+    <!-- <a class="secondary" href={"/books-for-devs/books/" + slug}>Learn More</a> -->
     <a href={href}>Buy Now on <i class="bi bi-amazon"></i></a>
   </div>
 </li>
@@ -103,11 +116,15 @@ switch (readingStatus) {
   }
 
   .insight {
-    @apply text-xs text-(--lightGrey) mt-3 mb-1 italic leading-relaxed max-w-[90%];
+    @apply text-xs mt-3 mb-1 italic leading-relaxed max-w-[90%];
+  }
+
+  .intent-tags {
+    @apply flex flex-wrap gap-1 max-w-[90%];
   }
 
   .bookButtons {
-    @apply flex justify-between mt-auto gap-4 mb-0 sm:flex-col sm:gap-2 sm:text-sm;
+    @apply flex justify-between mt-auto gap-4 mb-0 sm:text-sm;
   }
 
   .bookButtons > a {
@@ -132,15 +149,15 @@ switch (readingStatus) {
   .link-card:is(:hover, :focus-within) h2 {
     color: var(--text);
   }
-  .tags-container {
-    @apply absolute -right-2 top-4 flex flex-col items-end gap-2 z-10;
+  .status-container {
+    @apply absolute right-4 top-4 flex flex-col items-end gap-2 z-10;
   }
   /* Updated tag styles to be relative to container, removing absolute positioning */
   .tag {
-    @apply bg-(--bg) rounded-xl border border-(--buttonText) text-(--buttonText) text-[0.625rem] py-1 px-2.5 w-max sm:text-balance sm:inline sm:text-[0.5rem] sm:py-1 sm:px-2 sm:max-w-[100%];
+    @apply bg-(--bg) rounded-xl border border-(--buttonText) text-(--buttonText) text-xs py-1 px-2.5 w-max sm:text-balance sm:inline sm:text-[0.5rem] sm:py-1 sm:px-2 sm:max-w-full;
   }
   .intentTag {
-    @apply bg-transparent border-(--lightGrey) text-(--lightGrey) border opacity-80 scale-90 origin-right;
+    @apply bg-transparent border-0 text-(--lightGrey) scale-90;
   }
   .primaryTag {
     @apply border-(--primary) text-(--primary);

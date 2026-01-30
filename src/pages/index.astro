@@ -27,11 +27,13 @@ const booksCollection = await getCollection("books");
     </section>
     <Intro />
     <section class="collection">
-      <h2>The Collection</h2>
-      <p>Kindle editions too are available for most of these.</p>
-      <p>
+      <h2 class="text-xl font-bold uppercase">The Collection</h2>
+      <p class="text-xs">
+        Kindle editions too are available for most of these.
+      </p>
+      <p class="text-xs">
         The tag on each book marks my status with these books:<br />
-        <span class="extraSmallText"
+        <span class="font-mono"
           >Read, Currently Reading, Next Up, Wishlisted, and Recommended.</span
         >
       </p>
@@ -54,13 +56,13 @@ const booksCollection = await getCollection("books");
         }
       </ul>
       <div class="footer-note">
+        <p class="curation-signature">
+          Curated and maintained by a frontend engineer turned design engineer.
+        </p>
         <p class="affiliateDisclaimer">
           This collection contains affiliate links. I may earn a commission
           should you make a purchase using my links. Thank you for supporting me
           & my work!
-        </p>
-        <p class="curation-signature">
-          Curated and maintained by a frontend engineer turned design engineer.
         </p>
       </div>
     </section>
@@ -99,10 +101,10 @@ const booksCollection = await getCollection("books");
     }
   }
   .hero-subtext {
-    @apply text-xl text-(--grey) dark:text-(--accentLight) max-w-[60ch] mt-6 mb-12 leading-relaxed;
+    @apply text-base text-(--accent) max-w-[60ch] mt-6 mb-12 leading-relaxed;
   }
   .curation-signature {
-    @apply text-sm text-(--lightGrey) mt-2 opacity-80;
+    @apply text-xs italic text-(--white) mt-2;
   }
   .footer-note {
     @apply text-center mt-12 mb-8;

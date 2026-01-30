@@ -15,18 +15,24 @@ let tagBasedCSS = "";
 const { href, title, subtitle, body, image, readingStatus, recommended, slug } =
   Astro.props;
 
+let displayStatus = readingStatus;
+
 switch (readingStatus) {
   case "Read ✅":
     tagBasedCSS = "greenTag";
+    displayStatus = "Read";
     break;
   case "Currently Reading 👓":
     tagBasedCSS = "blueTag";
+    displayStatus = "Currently Reading";
     break;
   case "Next Up ⏭️":
     tagBasedCSS = "blueTag";
+    displayStatus = "Next Up";
     break;
   case "Wishlisted ⭐":
     tagBasedCSS = "orangeTag";
+    displayStatus = "Wishlisted";
     break;
   default:
     break;
@@ -37,9 +43,9 @@ switch (readingStatus) {
   <div class="bookDetails">
     {
       recommended ? (
-        <div class="tag yellowTag">Recommended 👍</div>
+        <div class="tag yellowTag">Recommended</div>
       ) : (
-        <div class={"tag " + tagBasedCSS}>{readingStatus}</div>
+        <div class={"tag " + tagBasedCSS}>{displayStatus}</div>
       )
     }
     <img src={image} alt={title + " Cover"} />
@@ -103,7 +109,7 @@ switch (readingStatus) {
     color: var(--text);
   }
   .tag {
-    @apply bg-(--bg) rounded-[0.75rem] border border-(--buttonText) text-(--buttonText) text-[0.625rem] py-1 px-2.5 absolute -right-2 top-4 w-max sm:text-balance sm:inline sm:text-[0.5rem] sm:py-1 sm:px-2 sm:top-5 sm:max-w-[50%];
+    @apply bg-(--bg) rounded-xl border border-(--buttonText) text-(--buttonText) text-[0.625rem] py-1 px-2.5 absolute -right-2 top-4 w-max sm:text-balance sm:inline sm:text-[0.5rem] sm:py-1 sm:px-2 sm:top-5 sm:max-w-[50%];
   }
   .primaryTag {
     @apply border-(--primary) text-(--primary);

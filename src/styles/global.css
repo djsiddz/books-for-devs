@@ -71,6 +71,12 @@
 
   p {
     margin-bottom: 1rem;
+    line-height: 1.7;
+  }
+
+  ul,
+  li {
+    line-height: 1.7;
   }
 
   code {

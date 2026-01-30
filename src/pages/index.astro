@@ -16,30 +16,24 @@ const booksCollection = await getCollection("books");
     <section class="intro">
       <h1>
         <span class="text-gradient1"
-          >Reading the documentation isn't enough!</span
-        ><img
-          class="introIllustration"
-          src=`${import.meta.env.BASE_URL}icons/3d-fluency-exploding-head.png`
-          alt="3D Exlopding Head Illustration"
-          title="illustration from icons8.com"
-        />
+          >Good engineers read docs.<br />
+          Great engineers study decisions, systems, and people.</span
+        >
       </h1>
+      <p class="hero-subtext">
+        A curated reading list shaped by years of building interfaces, systems,
+        and teams — beyond APIs and frameworks.
+      </p>
     </section>
     <Intro />
     <section class="collection">
-      <h2>The 📘 Collection</h2>
-      <p>
-        Pick a book in any order.<br />You'll <span class="brand"
-          >connect the dots</span
-        > eventually.<br />
-      </p>
+      <h2>The Collection</h2>
       <p>Kindle editions too are available for most of these.</p>
       <p>
         The tag on each book marks my status with these books:<br />
         <span class="extraSmallText"
-          >Read ✅, Currently Reading 👓, Next Up ⏭️, Wishlisted ⭐, and
-          Recommended 👍</span
-        >.
+          >Read, Currently Reading, Next Up, Wishlisted, and Recommended.</span
+        >
       </p>
       <ul role="list" class="booksGrid">
         {
@@ -57,11 +51,16 @@ const booksCollection = await getCollection("books");
           ))
         }
       </ul>
-      <p class="affiliateDisclaimer">
-        This collection contains affiliate links. I may earn a commission should
-        you make a purchase using my links.<br />Thank you for supporting me &
-        my work! 😊
-      </p>
+      <div class="footer-note">
+        <p class="affiliateDisclaimer">
+          This collection contains affiliate links. I may earn a commission
+          should you make a purchase using my links. Thank you for supporting me
+          & my work!
+        </p>
+        <p class="curation-signature">
+          Curated and maintained by a frontend engineer turned design engineer.
+        </p>
+      </div>
     </section>
     <Outro />
   </main>
@@ -74,10 +73,7 @@ const booksCollection = await getCollection("books");
     @apply mx-auto max-w-[80ch] p-6;
   }
   h1 {
-    @apply text-5xl font-extrabold m-0 mb-[3em];
-  }
-  .introIllustration {
-    @apply max-h-12 align-middle ml-6 inline;
+    @apply text-4xl font-bold m-0 mb-6;
   }
   h2 {
     @apply mb-[1em];
@@ -99,8 +95,14 @@ const booksCollection = await getCollection("books");
     h1 {
       @apply text-[1.625rem];
     }
-    .introIllustration {
-      @apply max-h-8 ml-4;
-    }
+  }
+  .hero-subtext {
+    @apply text-xl text-(--grey) dark:text-(--accentLight) max-w-[60ch] mt-6 mb-12 leading-relaxed;
+  }
+  .curation-signature {
+    @apply text-sm text-(--lightGrey) mt-2 opacity-80;
+  }
+  .footer-note {
+    @apply text-center mt-12 mb-8;
   }
 </style>

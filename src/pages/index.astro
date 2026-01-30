@@ -46,6 +46,8 @@ const booksCollection = await getCollection("books");
               image={book.data.coverImage}
               readingStatus={book.data.readingStatus || ""}
               recommended={book.data.recommended || false}
+              insight={book.data.insight}
+              intentTags={book.data.intentTags}
               slug={book.slug}
             />
           ))

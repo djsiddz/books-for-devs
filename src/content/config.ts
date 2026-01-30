@@ -16,6 +16,8 @@ const booksCollection = defineCollection({
     description: z.string(),
     readingStatus: z.enum(["Currently Reading 👓", "Read ✅", "Wishlisted ⭐", "Next Up ⏭️"]).optional(),
     recommended: z.boolean().optional(),
+    insight: z.string().optional(),
+    intentTags: z.array(z.string()).optional(),
   })
 });
 // 3. Export a single `collections` object to register your collection(s)

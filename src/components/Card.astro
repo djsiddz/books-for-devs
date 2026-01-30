@@ -7,13 +7,25 @@ interface Props {
   image: string;
   readingStatus: string;
   recommended: boolean;
+  insight?: string;
+  intentTags?: string[];
   slug: string;
 }
 
 let tagBasedCSS = "";
 
-const { href, title, subtitle, body, image, readingStatus, recommended, slug } =
-  Astro.props;
+const {
+  href,
+  title,
+  subtitle,
+  body,
+  image,
+  readingStatus,
+  recommended,
+  insight,
+  intentTags,
+  slug,
+} = Astro.props;
 
 let displayStatus = readingStatus;
 
@@ -40,7 +52,7 @@ switch (readingStatus) {
 ---
 
 <li class="link-card">
-  <div class="bookDetails">
+  <div class="tags-container">
     {
       recommended ? (
         <div class="tag yellowTag">Recommended</div>
@@ -48,9 +60,17 @@ switch (readingStatus) {
         <div class={"tag " + tagBasedCSS}>{displayStatus}</div>
       )
     }
+    {
+      intentTags &&
+        intentTags.length > 0 &&
+        intentTags.map((tag) => <div class="tag intentTag">{tag}</div>)
+    }
+  </div>
+  <div class="bookDetails">
     <img src={image} alt={title + " Cover"} />
     <h3>{title}<br /><span>{subtitle}</span></h3>
     <!-- <p class="bookDescription">{body}</p> -->
+    {insight && <p class="insight">{insight}</p>}
   </div>
   <div class="bookButtons">
     <a class="secondary" href={"/books-for-devs/books/" + slug}>Learn More</a>
@@ -63,7 +83,7 @@ switch (readingStatus) {
     background-color: var(--bg);
     background-position: 100%;
     background-size: 100%;
-    @apply rounded-[0.6rem] flex flex-col list-none p-4 transition-[background-position] duration-600 ease-[cubic-bezier(0.22,1,0.36,1)] shadow-[0_4px_12px_-1px_#0000001a,0_4px_24px_-2px_#0000001a];
+    @apply rounded-[0.6rem] flex flex-col list-none p-4 transition-[background-position] duration-600 ease-[cubic-bezier(0.22,1,0.36,1)] shadow-[0_4px_12px_-1px_#0000001a,0_4px_24px_-2px_#0000001a] relative;
   }
 
   h3 {
@@ -80,6 +100,10 @@ switch (readingStatus) {
   }
   .bookDetails img {
     @apply rounded-[0.4rem] max-h-[160px] max-w-[110px] mb-2 shadow-(--boxShadow);
+  }
+
+  .insight {
+    @apply text-xs text-(--lightGrey) mt-3 mb-1 italic leading-relaxed max-w-[90%];
   }
 
   .bookButtons {
@@ -108,8 +132,15 @@ switch (readingStatus) {
   .link-card:is(:hover, :focus-within) h2 {
     color: var(--text);
   }
+  .tags-container {
+    @apply absolute -right-2 top-4 flex flex-col items-end gap-2 z-10;
+  }
+  /* Updated tag styles to be relative to container, removing absolute positioning */
   .tag {
-    @apply bg-(--bg) rounded-xl border border-(--buttonText) text-(--buttonText) text-[0.625rem] py-1 px-2.5 absolute -right-2 top-4 w-max sm:text-balance sm:inline sm:text-[0.5rem] sm:py-1 sm:px-2 sm:top-5 sm:max-w-[50%];
+    @apply bg-(--bg) rounded-xl border border-(--buttonText) text-(--buttonText) text-[0.625rem] py-1 px-2.5 w-max sm:text-balance sm:inline sm:text-[0.5rem] sm:py-1 sm:px-2 sm:max-w-[100%];
+  }
+  .intentTag {
+    @apply bg-transparent border-(--lightGrey) text-(--lightGrey) border opacity-80 scale-90 origin-right;
   }
   .primaryTag {
     @apply border-(--primary) text-(--primary);

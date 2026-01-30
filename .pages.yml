@@ -1,0 +1,55 @@
+media: public/images
+public_path: /images
+content:
+  - name: books
+    label: Books
+    type: collection
+    path: src/content/books
+    format: frontmatter
+    extension: mdx
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: subtitle
+        label: Subtitle
+        type: string
+      - name: authorName
+        label: Author
+        type: string
+        required: true
+      - name: publisher
+        label: Publisher
+        type: string
+      - name: publicationDate
+        label: Publication Date
+        type: date
+      - name: printLength
+        label: Print Length
+        type: number
+      - name: amazonINLink
+        label: Amazon Link
+        type: string
+      - name: coverImage
+        label: Cover Image URL
+        type: string
+        description: Link to image (e.g. Amazon image URL)
+      - name: description
+        label: Description
+        type: string
+        list: true
+      - name: readingStatus
+        label: Reading Status
+        type: select
+        options:
+          - "Currently Reading 👓"
+          - "Read ✅"
+          - "Wishlisted ⭐"
+          - "Next Up ⏭️"
+      - name: recommended
+        label: Recommended
+        type: boolean
+      - name: body
+        label: Review/Notes
+        type: main

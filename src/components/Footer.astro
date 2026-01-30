@@ -23,44 +23,26 @@
   </p>
 </footer>
 <style>
+  @reference "../styles/global.css";
   footer {
-    color: var(--white);
-    font-size: 0.75rem;
+    @apply text-(--white) text-xs flex flex-col md:flex-row gap-4 md:gap-0 text-center md:text-left;
   }
   .madeWith {
-    line-height: 1.2;
+    @apply leading-[1.2];
   }
   .personalBrand {
-    align-items: center;
-    color: var(--white);
-    display: flex;
-    font-size: 1.25rem;
-    justify-content: center;
+    @apply flex items-center justify-center text-(--white) text-xl;
   }
   .profilePhoto {
-    border-radius: 16px;
-    margin-right: 0.75rem;
+    @apply rounded-[16px] mr-3 aspect-square w-8;
   }
   footer a,
   footer a:visited,
   footer a:focus,
   footer a:hover {
-    color: var(--white);
+    @apply text-(--white);
   }
-  @media screen and (max-width: 450px) {
-    footer {
-      flex-direction: column;
-      text-align: center;
-    }
-    .personalBrand > a {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    .profilePhoto {
-      aspect-ratio: 1 !important;
-      width: 32px;
-    }
+  .personalBrand > a {
+    @apply flex flex-col md:flex-row justify-center items-center;
   }
 </style>

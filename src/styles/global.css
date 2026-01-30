@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --white: #f6f7f8;
+    --black: #02050a;
+    --darkGrey: #2f353d;
+    --lightGrey: #71757a;
+    --primary: #2d2fe9;
+    --accentDark: #7c3aed;
+    --accentLight: #d5c3f5;
+
+    /* Light theme default */
+    --grey: var(--lightGrey);
+    --bg: var(--white);
+    --highlightText: var(--primary);
+    --text: var(--black);
+    --buttonBg: var(--accentDark);
+    --buttonBgHover: var(--primary);
+    --buttonText: var(--white);
+    --buttonTextAlt: var(--buttonBg);
+    --background-gradient: linear-gradient(0deg, var(--primary), var(--white) 30%);
+    --card-gradient: linear-gradient(135deg, var(--accentLight) 0%, var(--white) 100%);
+    --header-gradient: linear-gradient(45deg, var(--black) 0%, var(--primary) 30%);
+    --book-card-gradient: linear-gradient(45deg, var(--white), var(--accentLight) 60%);
+    --boxShadow: 0px -4px 12px 0px rgba(0, 0, 0, 0.5);
+
+    /* specific colors */
+    --yellow: #e9c82d;
+    --blue: #2d8de9;
+    --green: #42880f;
+  }
+
+  /* Dark theme */
+  :root.dark {
+    --grey: var(--darkGrey);
+    --bg: var(--darkGrey);
+    --highlightText: var(--white);
+    --text: var(--white);
+    --buttonBg: var(--grey);
+    --buttonBgHover: var(--black);
+    --buttonText: var(--white);
+    --buttonTextAlt: var(--white);
+    --background-gradient: linear-gradient(0deg, var(--primary), var(--black) 30%);
+    --card-gradient: linear-gradient(135deg, var(--primary) 0%, var(--black) 100%);
+    --header-gradient: linear-gradient(45deg, var(--white) 0%, var(--primary) 30%);
+    --book-card-gradient: linear-gradient(45deg, var(--accentDark), var(--primary) 60%);
+    --boxShadow: 0px -3px 3px 0px rgba(255, 255, 255, 0.25);
+
+    /* specific colors override */
+    --yellow: #e9a92d;
+    --blue: #2de9e7;
+    --green: #8de92d;
+  }
+
+  :root.dark img {
+    filter: brightness(0.8) contrast(1.2);
+  }
+
+  html {
+    background-image: var(--background-gradient);
+    background-position: 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--text);
+    font-family: system-ui, sans-serif;
+    font-size: 24px;
+    min-height: 100vh;
+    min-width: 100vw;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  code {
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  }
+}
+
+@layer utilities {
+  .textBalance {
+    text-wrap: balance;
+  }
+
+  .extraSmallText {
+    font-size: 0.75rem;
+  }
+}

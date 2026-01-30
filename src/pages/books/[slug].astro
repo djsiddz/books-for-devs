@@ -24,26 +24,22 @@ const { Content } = await entry.render();
   </main>
 </Layout>
 <style>
+  @reference "../../styles/global.css";
   main {
-    margin: auto;
-    max-width: 80ch;
-    padding: 1.5rem;
+    @apply mx-auto max-w-[80ch] p-6;
   }
   h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin: 0;
-    margin-bottom: 3em;
+    @apply text-5xl font-extrabold m-0 mb-[3em];
   }
   h2 {
-    margin-bottom: 1em;
+    @apply mb-[1em];
   }
   @media screen and (max-width: 450px) {
     main {
-      padding: 1.25rem;
+      @apply p-5;
     }
     h1 {
-      font-size: 1.625rem;
+      @apply text-[1.625rem];
     }
   }
 </style>

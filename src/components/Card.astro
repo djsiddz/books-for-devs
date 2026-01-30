@@ -52,90 +52,48 @@ switch (readingStatus) {
   </div>
 </li>
 <style>
+  @reference "../styles/global.css";
   .link-card {
     background-color: var(--bg);
     background-position: 100%;
     background-size: 100%;
-    border-radius: 0.6rem;
-    box-shadow:
-      0 4px 12px -1px #0000001a,
-      0 4px 24px -2px #0000001a;
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    padding: 1rem;
-    transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    @apply rounded-[0.6rem] flex flex-col list-none p-4 transition-[background-position] duration-600 ease-[cubic-bezier(0.22,1,0.36,1)] shadow-[0_4px_12px_-1px_#0000001a,0_4px_24px_-2px_#0000001a];
   }
 
   h3 {
-    font-size: 1.25rem;
-    line-height: 1.1;
-    margin: 0;
-    transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-    text-wrap: balance;
-    max-width: calc(100vw - 120px);
+    @apply text-xl leading-[1.1] m-0 transition-colors duration-600 ease-[cubic-bezier(0.22,1,0.36,1)] text-balance max-w-[calc(100vw-120px)];
   }
   h3 > span {
-    font-size: 0.75rem;
-    font-weight: 300;
-    line-height: 0.6rem;
+    @apply text-xs font-light leading-[0.6rem];
   }
   h3:hover {
-    margin-left: 0.25rem;
-    transition: all 0.15s cubic-bezier(0.22, 1, 0.36, 1);
+    @apply ml-1 transition-all duration-150 ease-[cubic-bezier(0.22,1,0.36,1)];
   }
   .bookDetails {
-    top: -10%;
-    position: relative;
+    @apply relative -top-[10%];
   }
   .bookDetails img {
-    border-radius: 0.4rem;
-    max-height: 160px;
-    max-width: 110px;
-    margin-bottom: 0.5rem;
-    box-shadow: var(--boxShadow);
+    @apply rounded-[0.4rem] max-h-[160px] max-w-[110px] mb-2 shadow-(--boxShadow);
   }
-  /* .bookDescription {
-    font-size: 0.75rem;
-    color: var(--text);
-    margin-bottom: 1rem;
-    margin-top: 0;
-  } */
 
   .bookButtons {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0;
-    margin-top: auto;
-    gap: 1rem;
+    @apply flex justify-between mt-auto gap-4 mb-0 sm:flex-col sm:gap-2 sm:text-sm;
   }
 
   .bookButtons > a {
-    background-color: var(--buttonBg);
-    border-radius: 0.35rem;
-    color: var(--buttonText);
-    display: flex;
-    justify-content: space-between;
-    gap: 0.5rem;
-    line-height: 1;
-    opacity: 0.8;
-    padding: 0.75rem 1rem;
-    text-decoration: none;
+    @apply bg-(--buttonBg) rounded-[0.35rem] text-(--buttonText) flex justify-between gap-2 leading-none opacity-80 py-3 px-4 no-underline sm:p-2 sm:justify-start;
   }
 
   .bookButtons > a:hover {
-    background-color: var(--buttonBgHover);
+    @apply bg-(--buttonBgHover);
   }
 
   .bookButtons > a.secondary {
-    background-color: var(--transparent);
-    border: 2px solid var(--buttonBg);
-    color: var(--buttonAltText);
+    @apply bg-transparent border-2 border-(--buttonBg) text-(--buttonAltText);
   }
 
   .bookButtons > a.secondary:hover {
-    border-color: var(--buttonBgHover);
-    color: var(--buttonBgHover);
+    @apply border-(--buttonBgHover) text-(--buttonBgHover);
   }
 
   .link-card:is(:hover, :focus-within) {
@@ -145,56 +103,21 @@ switch (readingStatus) {
     color: var(--text);
   }
   .tag {
-    background-color: var(--bg);
-    border-radius: 0.75rem;
-    border: 1px solid var(--buttonText);
-    color: var(--buttonText);
-    font-size: 0.625rem;
-    padding: 0.25rem 0.625rem;
-    position: absolute;
-    right: -0.5rem;
-    top: 1rem;
-    width: max-content;
+    @apply bg-(--bg) rounded-[0.75rem] border border-(--buttonText) text-(--buttonText) text-[0.625rem] py-1 px-2.5 absolute -right-2 top-4 w-max sm:text-balance sm:inline sm:text-[0.5rem] sm:py-1 sm:px-2 sm:top-5 sm:max-w-[50%];
   }
   .primaryTag {
-    border-color: var(--primary);
-    color: var(--primary);
+    @apply border-(--primary) text-(--primary);
   }
   .blueTag {
-    border-color: var(--blue);
-    color: var(--blue);
+    @apply border-(--blue) text-(--blue);
   }
   .greenTag {
-    border-color: var(--green);
-    color: var(--green);
+    @apply border-(--green) text-(--green);
   }
   .yellowTag {
-    border-color: var(--yellow);
-    color: var(--text);
+    @apply border-(--yellow) text-(--text);
   }
   .orangeTag {
-    border-color: #e9892d;
-    color: #e9892d;
-  }
-
-  @media screen and (max-width: 450px) {
-    .bookButtons {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      font-size: smaller;
-    }
-    .bookButtons > a {
-      padding: 0.5rem;
-      justify-content: left;
-    }
-    .tag {
-      text-wrap: balance;
-      display: inline;
-      font-size: 0.5rem;
-      padding: 0.25rem 0.5rem;
-      top: 1.25rem;
-      max-width: 50%;
-    }
+    @apply border-[#e9892d] text-[#e9892d];
   }
 </style>

@@ -25,10 +25,9 @@ const booksCollection = await getCollection("books");
         and teams — beyond APIs and frameworks.
       </p>
     </section>
-    <Intro />
     <section class="collection">
-      <h2 class="text-xl font-bold uppercase">The Collection</h2>
-      <p class="text-xs">
+      <h2 class="text-xl font-bold uppercase">The Reading List</h2>
+      <!-- <p class="text-xs">
         Kindle editions too are available for most of these.
       </p>
       <p class="text-xs">
@@ -36,8 +35,9 @@ const booksCollection = await getCollection("books");
         <span class="font-mono"
           >Read, Currently Reading, Next Up, Wishlisted, and Recommended.</span
         >
-      </p>
+      </p> -->
       <ul role="list" class="booksGrid">
+        <li class="row-span-2"><Intro /></li>
         {
           booksCollection.map((book) => (
             <Card
@@ -54,19 +54,17 @@ const booksCollection = await getCollection("books");
             />
           ))
         }
+        <li><Outro /></li>
       </ul>
-      <div class="footer-note">
-        <p class="curation-signature">
-          Curated and maintained by a frontend engineer turned design engineer.
-        </p>
-        <p class="affiliateDisclaimer">
-          This collection contains affiliate links. I may earn a commission
-          should you make a purchase using my links. Thank you for supporting me
-          & my work!
+      <div class="mt-12 mb-8">
+        <p
+          class="rounded-[0.4rem] border border-gray-500/10 px-4 py-2 text-center text-balance text-xs font-mono"
+        >
+          The list contains affiliate links. I may earn a commission should you
+          make a purchase using my links. Thank you for supporting me & my work!
         </p>
       </div>
     </section>
-    <Outro />
   </main>
   <Footer />
 </Layout>
@@ -74,16 +72,13 @@ const booksCollection = await getCollection("books");
 <style>
   @reference "../styles/global.css";
   main {
-    @apply mx-auto max-w-[80ch] p-6;
+    @apply mx-auto max-w-4xl p-6;
   }
   h1 {
-    @apply text-4xl font-bold m-0 mb-6;
+    @apply text-4xl max-w-2xl font-bold m-0 mb-6;
   }
   h2 {
     @apply mb-[1em];
-  }
-  .affiliateDisclaimer {
-    @apply rounded-[0.4rem] border border-(--grey) text-xs mx-auto mt-8 max-w-fit px-4 py-3 text-center;
   }
   .text-gradient1 {
     background-image: var(--header-gradient);
@@ -102,11 +97,5 @@ const booksCollection = await getCollection("books");
   }
   .hero-subtext {
     @apply text-base text-(--accent) max-w-[60ch] mt-6 mb-12 leading-relaxed;
-  }
-  .curation-signature {
-    @apply text-xs italic text-(--white) mt-2;
-  }
-  .footer-note {
-    @apply text-center mt-12 mb-8;
   }
 </style>

@@ -7,8 +7,8 @@
     --darkGrey: #2f353d;
     --lightGrey: #71757a;
     --primary: #2d2fe9;
-    --accentDark: #7c3aed;
-    --accentLight: #d5c3f5;
+    --accentDark: #3a79ed;
+    --accentLight: #c3d0f5;
 
     /* Light theme default */
     --grey: var(--lightGrey);

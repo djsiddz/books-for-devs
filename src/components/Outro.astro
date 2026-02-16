@@ -3,8 +3,8 @@ import BlueGradientCard from "../layouts/BlueGradientCard.astro";
 ---
 
 <BlueGradientCard>
-  <div class="splitView">
-    <div class="firstPart switchIllustrations">
+  <div class="flex flex-col gap-4">
+    <div class="w-full switchIllustrations">
       <img
         src="https://illustrations.popsy.co/white/creative-work.svg"
         alt="Creative Work illustration from popsy.co"
@@ -26,55 +26,49 @@ import BlueGradientCard from "../layouts/BlueGradientCard.astro";
         title="Let's Collaborate"
       />
     </div>
-    <div class="lastPart">
-      <h2 class="mb-6 text-xl font-bold uppercase">Let’s connect</h2>
-      <p class="mb-4 text-sm">
-        Building, reading, or thinking deeply about software?
-      </p>
+    <div class="flex flex-col">
+      <h2 class="mb-6 text-xl font-bold uppercase">Let&apos;s connect</h2>
       <div class="text-left inline-block max-w-md mx-auto mb-6 text-xs">
         <p class="mb-2">I’m always open to:</p>
         <ul class="list-disc pl-5">
           <li>Thoughtful book recommendations</li>
-          <li>Conversations around systems, product, and design</li>
-          <li>Collaborations that value clarity over hype</li>
+          <li>Conversations on product and design</li>
+          <li>Collaborations over interesting problems</li>
         </ul>
       </div>
-      <p class="mb-4 text-sm">Reach out on any of the platforms below.</p>
-      <div class="socialLinks">
-        <a target="_blank" href="https://github.com/djsiddz"
-          ><span class="sr-only">Github Profile</span><i
-            class="bi bi-github socialIcon"></i></a
+      <p class="mb-4 text-xs">
+        Find me on:
+        <span
+          class="socialLinks inline-flex gap-4 justify-center ml-4 items-center"
         >
-        <a target="_blank" href="https://linkedin.com/in/siddheshthadeshwar"
-          ><span class="sr-only">LinkedIn</span><i
-            class="bi bi-linkedin socialIcon"></i></a
-        >
-        <a target="_blank" href="https://threads.net/super__siddy"
-          ><span class="sr-only">Threads</span><i
-            class="bi bi-threads socialIcon"></i></a
-        >
-        <a target="_blank" href="https://twitter.com/super_siddy"
-          ><span class="sr-only">X/Twitter</span><i
-            class="bi bi-twitter-x socialIcon"></i></a
-        >
-      </div>
+          <a target="_blank" href="https://github.com/djsiddz"
+            ><span class="sr-only">Github Profile</span><i
+              class="bi bi-github socialIcon"></i></a
+          >
+          <a target="_blank" href="https://linkedin.com/in/siddheshthadeshwar"
+            ><span class="sr-only">LinkedIn</span><i
+              class="bi bi-linkedin socialIcon"></i></a
+          >
+          <a target="_blank" href="https://threads.net/super__siddy"
+            ><span class="sr-only">Threads</span><i
+              class="bi bi-threads socialIcon"></i></a
+          >
+          <a target="_blank" href="https://twitter.com/super_siddy"
+            ><span class="sr-only">X/Twitter</span><i
+              class="bi bi-twitter-x socialIcon"></i></a
+          >
+        </span>
+      </p>
     </div>
   </div>
 </BlueGradientCard>
 <style>
   @reference "../styles/global.css";
-  .splitView {
-    @apply flex flex-row justify-between;
-  }
-  .firstPart,
-  .lastPart {
-    @apply flex flex-col flex-1 self-center;
-  }
   .switchIllustrations {
-    @apply max-w-full max-h-full relative;
+    @apply max-w-full max-h-full relative min-h-30;
   }
   .switchIllustrations img {
-    @apply absolute -top-40 left-0 max-w-full opacity-0 animate-[imagefade_12s_ease-in-out_infinite];
+    @apply absolute top-0 left-1/2 -translate-x-1/2 max-h-full object-contain opacity-0 animate-[imagefade_12s_ease-in-out_infinite];
   }
   @keyframes imagefade {
     0% {
@@ -105,21 +99,10 @@ import BlueGradientCard from "../layouts/BlueGradientCard.astro";
   .switchIllustrations img:nth-of-type(4) {
     animation-delay: 0s;
   }
-  .lastPart {
-    @apply text-center;
-  }
-  .socialLinks {
-    @apply flex gap-6 justify-center;
-  }
   .socialLinks a {
     @apply text-(--text) transition-[rotate_0.5s,scale_0.25s];
   }
   .socialLinks a:hover {
     @apply -rotate-15 scale-125;
-  }
-  @media screen and (max-width: 450px) {
-    .splitView {
-      @apply flex flex-col justify-start;
-    }
   }
 </style>

@@ -2,9 +2,9 @@
 import ThemeToggle from "./ThemeToggle.astro";
 ---
 
-<header>
-  <a href="https://djsiddz.github.io/books-for-devs">
-    <h3 class="brand">
+<header class="flex justify-between items-center">
+  <a class="group" href="https://djsiddz.github.io/books-for-devs">
+    <h3 class="brand text-(--primary)">
       <i class="bi bi-journal-code brandLogo"></i>Books for Devs
     </h3>
   </a>
@@ -25,19 +25,19 @@ import ThemeToggle from "./ThemeToggle.astro";
 <style>
   @reference "../styles/global.css";
   .actions {
-    @apply flex items-center gap-2;
+    @apply flex items-center gap-0 md:gap-2;
   }
   .brand {
-    @apply inline-flex items-center m-0 font-bold text-(--primary) uppercase;
+    @apply inline-flex items-center m-0 font-bold text-xs md:text-base uppercase;
   }
   .brandLogo {
-    @apply mr-3 text-[1.25em] transition-[rotate_0.5s,scale_0.25s];
+    @apply mr-3 text-xl transition-[rotate_0.5s,scale_0.25s,color_0.15s];
   }
-  .brandLogo:hover,
+  .group:hover .brandLogo,
   .githubLink:hover {
-    @apply -rotate-15 scale-125;
+    @apply -rotate-15 scale-125 text-(--primary);
   }
   .githubLink {
-    @apply text-(--text) text-2xl px-4 py-2 align-top transition-[rotate_0.5s,scale_0.25s];
+    @apply text-(--text) px-4 py-2 align-top transition-[rotate_0.25s,scale_0.15s];
   }
 </style>

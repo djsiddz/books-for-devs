@@ -2,15 +2,15 @@
 import BlueGradientCard from "../layouts/BlueGradientCard.astro";
 ---
 
-<BlueGradientCard>
-  <h2 class="mb-6 text-xl font-bold uppercase">Why this exists</h2>
+<BlueGradientCard class="max-w-fit">
+  <h2 class="mb-4 text-xs font-medium uppercase">Why this exists</h2>
   <p class="textBalance mb-4 text-xs">
     After years of building frontends, scaling systems, and collaborating across
     product, design, and engineering, one pattern keeps repeating:
   </p>
   <p class="textBalance mb-4 text-xs">
     Documentation helps you ship.<br />
-    Books help you decide what to build — and why.
+    And books help you decide what to build — and why.
   </p>
   <p class="textBalance mb-4 text-xs">
     This collection reflects how I think about software today:
@@ -22,9 +22,11 @@ import BlueGradientCard from "../layouts/BlueGradientCard.astro";
   </ul>
   <p class="textBalance mb-4 text-xs">
     Read these in any order.<br />
-    The connections reveal themselves over time.
+    The connections will reveal themselves over time.
   </p>
-  <p class="text-xs"><strong>Stay curious,</strong><br />Sid</p>
+  <p class="text-xs font-mono">
+    <strong>Stay curious,</strong><br />Sid
+  </p>
 </BlueGradientCard>
 <style>
   @reference "../styles/global.css";

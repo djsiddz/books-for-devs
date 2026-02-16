@@ -1,0 +1,112 @@
+---
+
+---
+
+<button
+    id="credits-trigger"
+    class="underline hover:text-(--accentLight) cursor-pointer transition-colors"
+    >Credits</button
+>
+
+<dialog
+    id="credits-dialog"
+    class="backdrop:backdrop-blur-sm backdrop:bg-black/50 p-0 rounded-xl shadow-2xl bg-(--bg) text-(--text) max-w-md w-[90%] m-auto scale-90 opacity-0 transition-all duration-300 open:scale-100 open:opacity-100"
+>
+    <div
+        class="p-8 relative bg-(--card-gradient) rounded-xl border border-(--lightGrey)/20"
+    >
+        <button
+            id="credits-close"
+            class="absolute top-4 right-4 p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors cursor-pointer text-(--text)"
+            aria-label="Close credits"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><line x1="18" y1="6" x2="6" y2="18"></line><line
+                    x1="6"
+                    y1="6"
+                    x2="18"
+                    y2="18"></line></svg
+            >
+        </button>
+
+        <h3 class="text-sm uppercase mb-4">Credits</h3>
+
+        <div class="space-y-2 text-center text-xs">
+            <p class="leading-relaxed">
+                "Exploding Head" Illustration by
+                <a
+                    href="https://icons8.com/illustrations/author/zD2oqC8lLBBA"
+                    target="_blank"
+                    class="font-medium text-(--primary) hover:underline"
+                    >Icons 8</a
+                >
+                from
+                <a
+                    href="https://icons8.com/illustrations"
+                    target="_blank"
+                    class="font-medium text-(--primary) hover:underline"
+                    >Ouch!</a
+                >
+            </p>
+
+            <p class="leading-relaxed">
+                "Creative Work", "Engineer", "Podcast Show" & "Youtube Creator"
+                Illustrations from
+                <a
+                    href="https://popsy.co/illustrations"
+                    target="_blank"
+                    class="font-medium text-(--primary) hover:underline"
+                    >Popsy.co</a
+                >
+            </p>
+        </div>
+    </div>
+</dialog>
+
+<script>
+    const trigger = document.getElementById("credits-trigger");
+    const dialog = document.getElementById(
+        "credits-dialog",
+    ) as HTMLDialogElement;
+    const closeBtn = document.getElementById("credits-close");
+
+    if (trigger && dialog && closeBtn) {
+        trigger.addEventListener("click", () => {
+            dialog.showModal();
+        });
+
+        closeBtn.addEventListener("click", () => {
+            dialog.close();
+        });
+
+        dialog.addEventListener("click", (e) => {
+            const rect = dialog.getBoundingClientRect();
+            const isInDialog =
+                rect.top <= e.clientY &&
+                e.clientY <= rect.top + rect.height &&
+                rect.left <= e.clientX &&
+                e.clientX <= rect.left + rect.width;
+            if (!isInDialog) {
+                dialog.close();
+            }
+        });
+    }
+</script>
+
+<style>
+    @reference "../styles/global.css";
+
+    /* Ensure modal text color overrides footer text color */
+    dialog {
+        color: var(--text);
+    }
+</style>

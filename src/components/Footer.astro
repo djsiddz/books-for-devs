@@ -1,15 +1,12 @@
-<footer>
-  <p class="madeWith">
-    Made with 💖 for Coding &amp; Reading<br /><br />
-    <span class="extraSmallText"
-      >"Exploding Head" Illustration by <a
-        href="https://icons8.com/illustrations/author/zD2oqC8lLBBA"
-        target="_blank">Icons 8</a
-      > from <a href="https://icons8.com/illustrations" target="_blank">Ouch!</a
-      ><br />
-      "Creative Work", "Engineer", "Podcast Show" & "Youtube Creator" Illustrations
-      from <a href="https://popsy.co/illustrations" target="_blank">Popsy.co</a>
-    </span>
+---
+import CreditsModal from "./CreditsModal.astro";
+---
+
+<footer
+  class="text-xs flex flex-col md:flex-row justify-between text-center text-white"
+>
+  <p class="">
+    Made with 💖 for Coding &amp; Reading | <CreditsModal />
   </p>
   <p class="personalBrand">
     <a href="https://supersiddy.wordpress.com/"
@@ -24,17 +21,11 @@
 </footer>
 <style>
   @reference "../styles/global.css";
-  footer {
-    @apply text-(--white) text-xs flex flex-col md:flex-row gap-4 md:gap-0 text-center md:text-left;
-  }
-  .madeWith {
-    @apply leading-[1.2];
-  }
   .personalBrand {
-    @apply flex items-center justify-center text-(--white) text-xl;
+    @apply flex items-center justify-center text-(--white);
   }
   .profilePhoto {
-    @apply rounded-[16px] mr-3 aspect-square w-8;
+    @apply rounded-[16px] mr-3 aspect-square w-4;
   }
   footer a,
   footer a:visited,

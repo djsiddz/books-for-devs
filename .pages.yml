@@ -19,6 +19,14 @@ content:
         label: Author
         type: string
         required: true
+      - name: insight
+        label: Insight
+        type: string
+        description: "One line 'senior' insight about the book"
+      - name: intentTags
+        label: Intent Tags
+        type: list
+        description: "List of intent tags (e.g. 'For Refactoring', 'For Architecture')"
       - name: publisher
         label: Publisher
         type: string

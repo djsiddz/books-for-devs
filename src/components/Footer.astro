@@ -1,13 +1,9 @@
 ---
-import CreditsModal from "./CreditsModal.astro";
+
 ---
 
-<footer
-  class="text-xs flex flex-col md:flex-row justify-between text-center text-white"
->
-  <p class="">
-    Made with 💖 for Coding &amp; Reading | <CreditsModal />
-  </p>
+<footer class="text-xs flex flex-col md:flex-row justify-between text-center">
+  <p class="">Made with 💖 for Coding &amp; Reading</p>
   <p class="personalBrand">
     <a href="https://supersiddy.wordpress.com/"
       ><img
@@ -22,7 +18,7 @@ import CreditsModal from "./CreditsModal.astro";
 <style>
   @reference "../styles/global.css";
   .personalBrand {
-    @apply flex items-center justify-center text-(--white);
+    @apply flex items-center justify-center;
   }
   .profilePhoto {
     @apply rounded-[16px] mr-3 aspect-square w-4;
@@ -31,7 +27,7 @@ import CreditsModal from "./CreditsModal.astro";
   footer a:visited,
   footer a:focus,
   footer a:hover {
-    @apply text-(--white);
+    @apply text-(--text);
   }
   .personalBrand > a {
     @apply flex flex-col md:flex-row justify-center items-center;

@@ -4,34 +4,12 @@ import BlueGradientCard from "../layouts/BlueGradientCard.astro";
 
 <BlueGradientCard>
   <div class="flex flex-col gap-4">
-    <div class="w-full switchIllustrations">
-      <img
-        src="https://illustrations.popsy.co/white/creative-work.svg"
-        alt="Creative Work illustration from popsy.co"
-        title="Let's Collaborate"
-      />
-      <img
-        src="https://illustrations.popsy.co/white/engineer.svg"
-        alt="Engineer illustration from popsy.co"
-        title="Let's Collaborate"
-      />
-      <img
-        src="https://illustrations.popsy.co/white/podcast-show.svg"
-        alt="Podcast illustration from popsy.co"
-        title="Let's Collaborate"
-      />
-      <img
-        src="https://illustrations.popsy.co/white/youtube-creator.svg"
-        alt="Youtube Creator illustration from popsy.co"
-        title="Let's Collaborate"
-      />
-    </div>
     <div class="flex flex-col">
-      <h2 class="mb-6 text-xl font-bold uppercase">Let&apos;s connect</h2>
+      <h2 class="mb-6 font-medium">Thanks for visiting!</h2>
       <div class="text-left inline-block max-w-md mx-auto mb-6 text-xs">
         <p class="mb-2">I’m always open to:</p>
         <ul class="list-disc pl-5">
-          <li>Thoughtful book recommendations</li>
+          <li>Book recommendations</li>
           <li>Conversations on product and design</li>
           <li>Collaborations over interesting problems</li>
         </ul>
@@ -64,41 +42,6 @@ import BlueGradientCard from "../layouts/BlueGradientCard.astro";
 </BlueGradientCard>
 <style>
   @reference "../styles/global.css";
-  .switchIllustrations {
-    @apply max-w-full max-h-full relative min-h-30;
-  }
-  .switchIllustrations img {
-    @apply absolute top-0 left-1/2 -translate-x-1/2 max-h-full object-contain opacity-0 animate-[imagefade_12s_ease-in-out_infinite];
-  }
-  @keyframes imagefade {
-    0% {
-      opacity: 1;
-    }
-    17% {
-      opacity: 1;
-    }
-    25% {
-      opacity: 0;
-    }
-    92% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  .switchIllustrations img:nth-of-type(1) {
-    animation-delay: 9s;
-  }
-  .switchIllustrations img:nth-of-type(2) {
-    animation-delay: 6s;
-  }
-  .switchIllustrations img:nth-of-type(3) {
-    animation-delay: 3s;
-  }
-  .switchIllustrations img:nth-of-type(4) {
-    animation-delay: 0s;
-  }
   .socialLinks a {
     @apply text-(--text) transition-[rotate_0.5s,scale_0.25s];
   }

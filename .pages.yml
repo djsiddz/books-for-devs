@@ -1,12 +1,13 @@
-media: public/images
-public_path: /images
+media:
+  input: public/images
+  output: /images
 content:
   - name: books
     label: Books
     type: collection
     path: src/content/books
-    format: frontmatter
-    extension: mdx
+    format: yaml-frontmatter
+    filename: '{index}-{slug}.mdx'
     fields:
       - name: title
         label: Title
@@ -19,6 +20,14 @@ content:
         label: Author
         type: string
         required: true
+      - name: insight
+        label: Insight
+        type: string
+        description: "One line 'senior' insight about the book"
+      - name: intentTags
+        label: Intent Tags
+        type: list
+        description: "List of intent tags (e.g. 'For Refactoring', 'For Architecture')"
       - name: publisher
         label: Publisher
         type: string
@@ -42,11 +51,7 @@ content:
       - name: readingStatus
         label: Reading Status
         type: select
-        options:
-          - "Currently Reading 👓"
-          - "Read ✅"
-          - "Wishlisted ⭐"
-          - "Next Up ⏭️"
+        values: ["Currently Reading 👓","Read ✅", "Wishlisted ⭐", "Next Up ⏭️"]
       - name: recommended
         label: Recommended
         type: boolean

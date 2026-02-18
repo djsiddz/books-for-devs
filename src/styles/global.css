@@ -19,7 +19,7 @@
     --buttonBgHover: var(--primary);
     --buttonText: var(--white);
     --buttonTextAlt: var(--buttonBg);
-    --background-gradient: linear-gradient(0deg, var(--accentLight), var(--white) 30%);
+    --background-gradient: linear-gradient(0deg, var(--accentLight) 0%, #eff6ff 50%, var(--white) 100%);
     --card-gradient: linear-gradient(135deg, var(--accentLight) 0%, var(--white) 100%);
     --header-gradient: linear-gradient(45deg, var(--black) 0%, var(--primary) 30%);
     --book-card-gradient: linear-gradient(45deg, var(--white), var(--accentLight) 60%);
@@ -42,8 +42,8 @@
     --buttonBgHover: var(--primary);
     --buttonText: var(--white);
     --buttonTextAlt: var(--white);
-    --background-gradient: linear-gradient(0deg, var(--primary), var(--black) 30%);
-    --card-gradient: linear-gradient(135deg, var(--primary) 0%, var(--black) 100%);
+    --background-gradient: linear-gradient(0deg, #172554 0%, #0f172a 50%, var(--black) 100%);
+    --card-gradient: linear-gradient(135deg, var(--primary) 0%, #172554 30%, var(--black) 100%);
     --header-gradient: linear-gradient(45deg, var(--white) 0%, var(--primary) 30%);
     --book-card-gradient: linear-gradient(45deg, var(--accentDark), var(--primary) 60%);
     --boxShadow: 0px -3px 3px 0px rgba(255, 255, 255, 0.25);

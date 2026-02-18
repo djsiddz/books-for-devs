@@ -9,7 +9,7 @@ const booksCollection = defineCollection({
     subtitle: z.string(),
     authorName: z.string(),
     publisher: z.string(),
-    publicationDate: z.string().transform((str) => new Date(str)),
+    publicationDate: z.string().transform((str) => new Date(str)) || z.date(),
     printLength: z.number(),
     amazonINLink: z.string(),
     coverImage: z.string(),

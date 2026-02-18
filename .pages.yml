@@ -28,6 +28,7 @@ content:
         label: Intent Tags
         type: select
         options:
+          multiple: true
           creatable: true
         description: "List of intent tags (e.g. 'For Refactoring', 'For Architecture')"
       - name: publisher

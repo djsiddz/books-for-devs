@@ -5,7 +5,9 @@ import ThemeToggle from "./ThemeToggle.astro";
 <header class="flex justify-between items-center">
   <a class="group" href="https://djsiddz.github.io/books-for-devs">
     <h3 class="brand text-(--primary)">
-      <i class="bi bi-journal-code brandLogo"></i>Books for Devs
+      <i class="bi bi-journal-code brandLogo"></i>Books <span
+        class="text-(--text) opacity-60 font-light">&nbsp;for&nbsp;</span
+      > Devs
     </h3>
   </a>
   <div class="actions">
@@ -28,7 +30,7 @@ import ThemeToggle from "./ThemeToggle.astro";
     @apply flex items-center gap-0 md:gap-2;
   }
   .brand {
-    @apply inline-flex items-center m-0 font-bold text-xs md:text-base uppercase;
+    @apply inline-flex items-center m-0 tracking-tighter text-xs md:text-base;
   }
   .brandLogo {
     @apply mr-3 text-xl transition-[rotate_0.5s,scale_0.25s,color_0.15s];

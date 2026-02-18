@@ -1,32 +1,24 @@
 ---
-title: "Harry Potter and the Philosopher's Stone"
-subtitle: ""
-authorName: "J.K. Rowling"
-publisher: "Pottermore Publishing"
-publicationDate: "2014-09-03"
+title: Harry Potter and the Philosopher's Stone
+authorName: J.K. Rowling
+insight: Great for resetting your brain after deep technical work.
+intentTags:
+  - Human Behavior
+publisher: Pottermore Publishing
+publicationDate: 2014-09-03
 printLength: 352
-coverImage: "https://m.media-amazon.com/images/I/71UcMLicPWL._SY466_.jpg"
-amazonINLink: "https://amzn.to/3HGhixn"
-description: "Harry Potter has never even heard of Hogwarts when the letters start dropping on the doormat at number four, Privet Drive. Addressed in green ink on yellowish parchment with a purple seal, they are swiftly confiscated by his grisly aunt and uncle. Then, on Harry's eleventh birthday, a great beetle-eyed giant of a man called Rubeus Hagrid bursts in with some astonishing news: Harry Potter is a wizard, and he has a place at Hogwarts School of Witchcraft and Wizardry. An incredible adventure is about to begin!"
-readingStatus: "Read ✅"
+amazonINLink: https://amzn.to/3HGhixn
+coverImage: https://m.media-amazon.com/images/I/71UcMLicPWL._SY466_.jpg
+readingStatus: Read ✅
 recommended: true
-insight: "Great for resetting your brain after deep technical work."
-intentTags: ["Human Behavior"]
-slug: "harry-potter-and-the-philosophers-stone"
 ---
-
 import { Image } from "astro:assets";
 
 # {frontmatter.title}
 
 {frontmatter.subtitle}
 
-<Image
-  src={frontmatter.coverImage}
-  alt={frontmatter.title}
-  width="110"
-  height="160"
-/>
+<img src="{frontmatter.coverImage}" alt="{frontmatter.title}" width="110" height="160">
 
 ## Description
 
@@ -34,6 +26,8 @@ import { Image } from "astro:assets";
 
 ## Three reasons to read this book
 
-1. It is a world to get lost in.
-2. The books are better than the movies.
-3. One of the most popular books to start building reading habits with! It will get you hooked for sure.
+1.  It is a world to get lost in.
+    
+2.  The books are better than the movies.
+    
+3.  One of the most popular books to start building a reading habit if you are new to this! This one will get you hooked for sure.

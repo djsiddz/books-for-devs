@@ -1,7 +1,7 @@
 {
   "name": "books-for-devs",
   "type": "module",
-  "version": "0.25.0",
+  "version": "0.26.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -10,11 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.3.13",
-    "@tailwindcss/vite": "^4.1.18",
-    "astro": "^5.17.2",
-    "tailwindcss": "^4.1.18",
+    "@astrojs/mdx": "^5.0.0",
+    "@tailwindcss/vite": "^4.2.1",
+    "astro": "^6.0.2",
+    "tailwindcss": "^4.2.1",
     "typescript": "^5.9.3"
   },
-  "packageManager": "pnpm@10.28.1"
+  "packageManager": "pnpm@10.32.1"
 }

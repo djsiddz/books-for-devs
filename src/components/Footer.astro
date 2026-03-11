@@ -1,16 +1,17 @@
 ---
-
+import { Image } from "astro:assets";
 ---
 
 <footer class="text-xs flex flex-col md:flex-row justify-between text-center">
   <p class="">Made with 💖 for Coding &amp; Reading</p>
   <p class="personalBrand">
     <a href="https://supersiddy.wordpress.com/"
-      ><img
+      ><Image
         class="profilePhoto"
         src=`${import.meta.env.BASE_URL}profile-photo-siddhesh.jpg`
         alt="Siddhesh's Profile"
         height="32"
+        width="32"
       />Siddhesh Thadeshwar</a
     >
   </p>

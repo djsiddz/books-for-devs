@@ -53,7 +53,7 @@ const booksCollection = await getCollection("books");
               recommended={book.data.recommended || false}
               insight={book.data.insight}
               intentTags={book.data.intentTags}
-              slug={book.slug}
+              slug={book.id}
             />
           ))
         }

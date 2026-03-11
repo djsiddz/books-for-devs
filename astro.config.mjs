@@ -9,5 +9,8 @@ export default defineConfig({
   integrations: [mdx()],
   vite: {
     plugins: [tailwindcss()]
+  },
+  image: {
+    domains: ["m.media-amazon.com"]
   }
 });

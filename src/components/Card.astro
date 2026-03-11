@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 interface Props {
   title: string;
   subtitle: string;
@@ -62,7 +64,7 @@ switch (readingStatus) {
     }
   </div>
   <div class="bookDetails">
-    <img src={image} alt={title + " Cover"} />
+    <Image src={image} alt={title + " Cover"} inferSize />
     <h3>{title}<br /><span>{subtitle}</span></h3>
     <!-- <p class="bookDescription">{body}</p> -->
     <div class="my-auto flex flex-col gap-0 mt-3">

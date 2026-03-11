@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig, passthroughImageService } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import mdx from "@astrojs/mdx";
 
@@ -11,6 +11,7 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
   image: {
-    domains: ["m.media-amazon.com"]
+    domains: ["m.media-amazon.com"],
+    service: passthroughImageService(),
   }
 });

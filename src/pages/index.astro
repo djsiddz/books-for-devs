@@ -46,9 +46,12 @@ const hasRecommended = booksCollection.some(b => b.data.recommended);
           <button class={`filter-btn ${s.css}`} data-filter={s.value}>{s.label}</button>
         ))}
         {hasRecommended && (
-          <button class="filter-btn yellowTag" data-filter="recommended">Recommended</button>
+          <>
+            <span class="filter-sep">|</span>
+            <button class="filter-btn yellowTag" data-filter="recommended">Recommended</button>
+          </>
         )}
-        <button class="clear-btn font-mono" id="clear-btn" disabled>Clear filters ✕</button>
+        <button class="clear-btn font-mono" id="clear-btn" hidden>Clear filters ✕</button>
       </div>
 
       <!-- <p class="text-xs">
@@ -148,25 +151,22 @@ const hasRecommended = booksCollection.some(b => b.data.recommended);
     color: #e9892d;
   }
   .filter-btn.active {
-    background-color: color-mix(in srgb, currentColor 15%, transparent);
+    background-color: color-mix(in srgb, currentColor 22%, transparent);
+    box-shadow: 0 0 0 1.5px currentColor;
     @apply font-semibold;
   }
   .filter-bar {
     @apply flex flex-wrap items-center gap-2 mt-4 mb-0;
   }
+  .filter-sep {
+    @apply text-xs opacity-30;
+    color: var(--text);
+  }
   .clear-btn {
-    @apply text-xs cursor-pointer transition-opacity duration-150 ml-auto;
+    @apply text-xs opacity-60 hover:opacity-100 cursor-pointer transition-opacity duration-150 ml-auto;
     background: none;
     border: none;
     color: var(--text);
-    opacity: 0.5;
-  }
-  .clear-btn:not(:disabled):hover {
-    opacity: 1;
-  }
-  .clear-btn:disabled {
-    opacity: 0.25;
-    cursor: not-allowed;
   }
 </style>
 
@@ -191,7 +191,7 @@ const hasRecommended = booksCollection.some(b => b.data.recommended);
       card.hidden = !visible;
     });
 
-    clearBtn.disabled = activeStatus === 'all';
+    clearBtn.hidden = activeStatus === 'all';
   }
 
   filterBtns.forEach(btn => {

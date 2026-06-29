@@ -8,6 +8,16 @@ import Outro from "../components/Outro.astro";
 import Layout from "../layouts/Layout.astro";
 
 const booksCollection = await getCollection("books");
+
+const statuses = [
+  { value: "Currently Reading 👓", label: "Currently Reading", css: "blueTag" },
+  { value: "Read ✅",              label: "Read",              css: "greenTag" },
+  { value: "Next Up ⏭️",          label: "Next Up",           css: "blueTag" },
+  { value: "Wishlisted ⭐",        label: "Wishlisted",        css: "orangeTag" },
+];
+const activeStatuses = new Set(booksCollection.map(b => b.data.readingStatus).filter(Boolean));
+const hasRecommended = booksCollection.some(b => b.data.recommended);
+const allIntentTags = [...new Set(booksCollection.flatMap(b => b.data.intentTags ?? []))].sort();
 ---
 
 <Layout title="Books for Devs">
@@ -30,6 +40,24 @@ const booksCollection = await getCollection("books");
       <p class="text-xs opacity-60 mb-0 font-light">
         Updated in <span class="capitalize">Feb 2026</span>
       </p>
+
+      <div class="filter-bar" id="filter-bar">
+        <button class="tag filter-btn active" data-filter="all">All</button>
+        {statuses.filter(s => activeStatuses.has(s.value)).map(s => (
+          <button class={`tag ${s.css} filter-btn`} data-filter={s.value}>{s.label}</button>
+        ))}
+        {hasRecommended && (
+          <button class="tag yellowTag filter-btn" data-filter="recommended">Recommended</button>
+        )}
+        <div class="tag-row" id="tag-row" hidden>
+          <select class="tag-select font-mono" id="tag-select">
+            <option value="">All Tags</option>
+            {allIntentTags.map(tag => <option value={tag}>{tag}</option>)}
+          </select>
+        </div>
+        <button class="clear-btn font-mono" id="clear-btn" hidden>Clear filters ✕</button>
+      </div>
+
       <!-- <p class="text-xs">
         Kindle editions too are available for most of these.
       </p>
@@ -101,4 +129,115 @@ const booksCollection = await getCollection("books");
   .hero-subtext {
     @apply text-base text-(--accent) max-w-[60ch] mt-6 mb-12 leading-relaxed;
   }
+  .filter-bar {
+    @apply flex flex-wrap items-center gap-2 mt-4 mb-0;
+  }
+  .filter-btn {
+    @apply cursor-pointer transition-all duration-150;
+    background: transparent;
+    border-style: solid;
+  }
+  .filter-btn.active {
+    background-color: color-mix(in srgb, currentColor 15%, transparent);
+    @apply font-semibold;
+  }
+  .tag-row {
+    @apply flex items-center;
+  }
+  .tag-select {
+    appearance: none;
+    background: transparent;
+    border: 1px solid var(--lightGrey);
+    border-radius: 9999px;
+    padding: 0.2rem 1.8rem 0.2rem 0.75rem;
+    font-size: 0.5rem;
+    color: var(--text);
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%2371757a'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.6rem center;
+  }
+  .clear-btn {
+    @apply text-xs opacity-50 hover:opacity-100 cursor-pointer transition-opacity duration-150 ml-auto;
+    background: none;
+    border: none;
+    color: var(--text);
+  }
 </style>
+
+<script>
+  const filterBtns = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
+  const cards = document.querySelectorAll<HTMLElement>('.link-card');
+  const tagRow = document.getElementById('tag-row')!;
+  const tagSelect = document.getElementById('tag-select') as HTMLSelectElement;
+  const clearBtn = document.getElementById('clear-btn')!;
+
+  let activeStatus = 'all';
+  let activeTag = '';
+
+  function applyFilters() {
+    cards.forEach(card => {
+      const status = card.dataset.status ?? '';
+      const isRecommended = card.dataset.recommended === 'true';
+      const tags: string[] = JSON.parse(card.dataset.tags ?? '[]');
+
+      let visible = true;
+      if (activeStatus === 'recommended') {
+        visible = isRecommended;
+      } else if (activeStatus !== 'all') {
+        visible = status === activeStatus;
+      }
+      if (visible && activeTag) {
+        visible = tags.includes(activeTag);
+      }
+      card.hidden = !visible;
+    });
+
+    const hasFilter = activeStatus !== 'all' || activeTag !== '';
+    tagRow.hidden = activeStatus === 'all';
+    clearBtn.hidden = !hasFilter;
+
+    // Repopulate tag options to only those present in currently-visible cards
+    const visibleTags = new Set<string>();
+    cards.forEach(card => {
+      if (!card.hidden) {
+        const tags: string[] = JSON.parse(card.dataset.tags ?? '[]');
+        tags.forEach(t => visibleTags.add(t));
+      }
+    });
+    const currentTag = tagSelect.value;
+    tagSelect.innerHTML = '<option value="">All Tags</option>';
+    [...visibleTags].sort().forEach(tag => {
+      const opt = document.createElement('option');
+      opt.value = tag;
+      opt.textContent = tag;
+      if (tag === currentTag) opt.selected = true;
+      tagSelect.appendChild(opt);
+    });
+  }
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeStatus = btn.dataset.filter ?? 'all';
+      activeTag = '';
+      tagSelect.value = '';
+      applyFilters();
+    });
+  });
+
+  tagSelect.addEventListener('change', () => {
+    activeTag = tagSelect.value;
+    applyFilters();
+  });
+
+  clearBtn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    document.querySelector<HTMLButtonElement>('[data-filter="all"]')!.classList.add('active');
+    activeStatus = 'all';
+    activeTag = '';
+    tagSelect.value = '';
+    applyFilters();
+  });
+</script>

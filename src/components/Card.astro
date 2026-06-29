@@ -53,7 +53,10 @@ switch (readingStatus) {
 }
 ---
 
-<li class="link-card">
+<li class="link-card"
+    data-status={readingStatus}
+    data-recommended={String(recommended)}
+    data-tags={JSON.stringify(intentTags ?? [])}>
   <div class="status-container">
     {
       recommended ? (

@@ -37,20 +37,22 @@ const hasRecommended = booksCollection.some(b => b.data.recommended);
     <section class="collection">
       <h2 class="text-xl font-bold uppercase">The Reading List</h2>
       <p class="text-xs opacity-60 mb-0 font-light">
-        Updated in <span class="capitalize">Feb 2026</span>
+        Updated in <span class="capitalize">Jun 2026</span>
       </p>
 
-      <div class="filter-bar" id="filter-bar">
-        <button class="filter-btn neutralTag active" data-filter="all">All</button>
-        {statuses.filter(s => activeStatuses.has(s.value)).map(s => (
-          <button class={`filter-btn ${s.css}`} data-filter={s.value}>{s.label}</button>
-        ))}
-        {hasRecommended && (
-          <>
-            <span class="filter-sep">|</span>
-            <button class="filter-btn yellowTag" data-filter="recommended">⭐ Recommended</button>
-          </>
-        )}
+      <div class="filter-bar-wrap">
+        <div class="filter-bar" id="filter-bar">
+          <button class="filter-btn neutralTag active" data-filter="all">All</button>
+          {statuses.filter(s => activeStatuses.has(s.value)).map(s => (
+            <button class={`filter-btn ${s.css}`} data-filter={s.value}>{s.label}</button>
+          ))}
+          {hasRecommended && (
+            <>
+              <span class="filter-sep">|</span>
+              <button class="filter-btn yellowTag" data-filter="recommended">⭐ Recommended</button>
+            </>
+          )}
+        </div>
         <button class="clear-btn font-mono" id="clear-btn" hidden>Clear filters ✕</button>
       </div>
 
@@ -155,18 +157,65 @@ const hasRecommended = booksCollection.some(b => b.data.recommended);
     box-shadow: 0 0 0 1.5px currentColor;
     @apply font-semibold;
   }
+  .filter-bar-wrap {
+    @apply flex items-center gap-2 mt-4 mb-0;
+  }
   .filter-bar {
-    @apply flex flex-wrap items-center gap-2 mt-4 mb-0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+    min-width: 0;
   }
   .filter-sep {
     @apply text-xs opacity-30;
     color: var(--text);
   }
   .clear-btn {
-    @apply text-xs opacity-60 hover:opacity-100 cursor-pointer transition-opacity duration-150 ml-auto;
+    @apply text-xs opacity-60 hover:opacity-100 cursor-pointer transition-opacity duration-150;
+    flex-shrink: 0;
     background: none;
     border: none;
     color: var(--text);
+    white-space: nowrap;
+  }
+  @media (max-width: 640px) {
+    .filter-bar-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: var(--bg);
+      padding: 0.5rem 0;
+      /* bleed bg edge-to-edge so scrolling cards don't peek behind the bar */
+      margin-left: -1.25rem;
+      margin-right: -1.25rem;
+      padding-left: 1.25rem;
+      padding-right: 0.75rem;
+      box-shadow: 0 2px 8px -2px color-mix(in srgb, var(--text) 10%, transparent);
+    }
+    .filter-bar {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      /* fade ends before the right edge so the hint is visible left of the clear btn */
+      mask-image: linear-gradient(to right, black 70%, transparent 92%);
+      /* scroll-end padding so the last tag clears the fade zone when fully scrolled */
+      padding-right: 2rem;
+    }
+    .filter-bar::-webkit-scrollbar {
+      display: none;
+    }
+    .filter-btn,
+    .filter-sep {
+      flex-shrink: 0;
+    }
+    .clear-btn {
+      background: var(--bg);
+      position: relative;
+      z-index: 2;
+    }
   }
 </style>
 

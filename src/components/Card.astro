@@ -60,10 +60,7 @@ switch (readingStatus) {
   <div class="status-container">
     <div class="status-row">
       {recommended && (
-        <button class="rec-star" aria-label="Recommended">
-          ⭐
-          <span class="rec-tooltip">Recommended</span>
-        </button>
+        <button class="rec-star" title="Recommended" aria-label="Recommended">⭐</button>
       )}
       <div class={"tag " + tagBasedCSS + " font-mono"}>{displayStatus}</div>
     </div>
@@ -163,32 +160,12 @@ switch (readingStatus) {
     @apply flex items-center gap-1;
   }
   .rec-star {
-    position: relative;
     background: none;
     border: none;
     padding: 0;
     cursor: help;
     font-size: 0.75rem;
     line-height: 1;
-  }
-  .rec-tooltip {
-    position: absolute;
-    bottom: calc(100% + 4px);
-    right: 0;
-    background: var(--text);
-    color: var(--bg);
-    font-size: 0.45rem;
-    font-family: monospace;
-    padding: 2px 6px;
-    border-radius: 4px;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.15s;
-  }
-  .rec-star:hover .rec-tooltip,
-  .rec-star:focus .rec-tooltip {
-    opacity: 1;
   }
   /* Updated tag styles to be relative to container, removing absolute positioning */
   .tag {

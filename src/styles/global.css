@@ -1,4 +1,9 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
+
+@theme {
+  --font-hand: "Nothing You Could Do", cursive;
+}
 
 @layer base {
   :root {

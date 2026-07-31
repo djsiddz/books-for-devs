@@ -1,0 +1,2644 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "index_page_composition",
+        "label": "Index Page Full Component Composition",
+        "nodes": [
+          "pages_index",
+          "components_card",
+          "components_header",
+          "components_footer",
+          "components_intro",
+          "components_outro",
+          "layouts_layout"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "src/pages/index.astro"
+      },
+      {
+        "id": "books_data_flow",
+        "label": "Books Content Data Flow Pipeline (Schema to Pages to Card)",
+        "nodes": [
+          "src_content_config",
+          "concept_books_collection",
+          "pages_index",
+          "books__slug_",
+          "components_card"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.95,
+        "source_file": "src/content.config.ts"
+      },
+      {
+        "id": "theme_management_system",
+        "label": "Dark/Light Theme Management System",
+        "nodes": [
+          "layouts_layout",
+          "components_themetoggle",
+          "concept_theme_persistence"
+        ],
+        "relation": "implement",
+        "confidence": "INFERRED",
+        "confidence_score": 0.95,
+        "source_file": "src/layouts/Layout.astro"
+      },
+      {
+        "id": "hyperedge_software_craft_canon",
+        "label": "Software Craft Book Canon",
+        "nodes": [
+          "books_04_refactoring",
+          "books_06_clean_code",
+          "books_07_pragmatic_programmer",
+          "concept_software_craft"
+        ],
+        "relation": "implement",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "src/content/books/04-refactoring.mdx"
+      },
+      {
+        "id": "hyperedge_career_leverage_books",
+        "label": "Career Leverage Reading Cluster",
+        "nodes": [
+          "books_00_the_alchemist",
+          "books_00_who_moved_my_cheese",
+          "books_07_pragmatic_programmer",
+          "concept_career_leverage"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "src/content/books/00-the-alchemist.mdx"
+      },
+      {
+        "id": "hyperedge_decision_making_cluster",
+        "label": "Decision Making and Adaptability Books",
+        "nodes": [
+          "books_05_algorithms_to_live_by",
+          "books_00_who_moved_my_cheese",
+          "concept_decision_making"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "src/content/books/05-algorithms-to-live-by.mdx"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "astro.config.mjs",
+      "file_type": "code",
+      "source_file": "astro.config.mjs",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "astro_config",
+      "community": 8,
+      "norm_label": "astro.config.mjs"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "package",
+      "community": 5,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "package_name",
+      "community": 5,
+      "norm_label": "name"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "package_type",
+      "community": 5,
+      "norm_label": "type"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "package_version",
+      "community": 5,
+      "norm_label": "version"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "package_scripts",
+      "community": 5,
+      "norm_label": "scripts"
+    },
+    {
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "package_scripts_dev",
+      "community": 5,
+      "norm_label": "dev"
+    },
+    {
+      "label": "start",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "package_scripts_start",
+      "community": 5,
+      "norm_label": "start"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "package_scripts_build",
+      "community": 5,
+      "norm_label": "build"
+    },
+    {
+      "label": "preview",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "package_scripts_preview",
+      "community": 5,
+      "norm_label": "preview"
+    },
+    {
+      "label": "astro",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "package_scripts_astro",
+      "community": 5,
+      "norm_label": "astro"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "package_dependencies",
+      "community": 1,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "@astrojs/mdx",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "package_dependencies_astrojs_mdx",
+      "community": 1,
+      "norm_label": "@astrojs/mdx"
+    },
+    {
+      "label": "@tailwindcss/vite",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "package_dependencies_tailwindcss_vite",
+      "community": 1,
+      "norm_label": "@tailwindcss/vite"
+    },
+    {
+      "label": "astro",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "package_dependencies_astro",
+      "community": 1,
+      "norm_label": "astro"
+    },
+    {
+      "label": "sharp",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "package_dependencies_sharp",
+      "community": 1,
+      "norm_label": "sharp"
+    },
+    {
+      "label": "tailwindcss",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "package_dependencies_tailwindcss",
+      "community": 1,
+      "norm_label": "tailwindcss"
+    },
+    {
+      "label": "typescript",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "package_dependencies_typescript",
+      "community": 1,
+      "norm_label": "typescript"
+    },
+    {
+      "label": "packageManager",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "package_packagemanager",
+      "community": 5,
+      "norm_label": "packagemanager"
+    },
+    {
+      "label": "../components/Card.astro",
+      "file_type": "code",
+      "source_file": "src/components/Card.astro",
+      "source_location": "L1",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "id": "components_card",
+      "community": 2,
+      "norm_label": "../components/card.astro"
+    },
+    {
+      "label": "astro:assets",
+      "file_type": "code",
+      "source_file": "astro:assets",
+      "confidence": "EXTRACTED",
+      "_origin": "ast",
+      "id": "astro_assets",
+      "community": 2,
+      "norm_label": "astro:assets"
+    },
+    {
+      "label": "CreditsModal.astro",
+      "file_type": "code",
+      "source_file": "src/components/CreditsModal.astro",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "components_creditsmodal",
+      "community": 2,
+      "norm_label": "creditsmodal.astro"
+    },
+    {
+      "label": "../components/Footer.astro",
+      "file_type": "code",
+      "source_file": "src/components/Footer.astro",
+      "source_location": "L1",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "id": "components_footer",
+      "community": 2,
+      "norm_label": "../components/footer.astro"
+    },
+    {
+      "label": "../components/Header.astro",
+      "file_type": "code",
+      "source_file": "src/components/Header.astro",
+      "source_location": "L1",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "id": "components_header",
+      "community": 2,
+      "norm_label": "../components/header.astro"
+    },
+    {
+      "label": "ThemeToggle.astro",
+      "file_type": "code",
+      "source_file": "src/components/ThemeToggle.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast",
+      "source_location": "L1",
+      "id": "components_themetoggle",
+      "community": 2,
+      "norm_label": "themetoggle.astro"
+    },
+    {
+      "label": "../components/Intro.astro",
+      "file_type": "code",
+      "source_file": "src/components/Intro.astro",
+      "source_location": "L1",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "id": "components_intro",
+      "community": 2,
+      "norm_label": "../components/intro.astro"
+    },
+    {
+      "label": "BlueGradientCard.astro",
+      "file_type": "code",
+      "source_file": "src/layouts/BlueGradientCard.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast",
+      "source_location": "L1",
+      "id": "layouts_bluegradientcard",
+      "community": 2,
+      "norm_label": "bluegradientcard.astro"
+    },
+    {
+      "label": "../components/Outro.astro",
+      "file_type": "code",
+      "source_file": "src/components/Outro.astro",
+      "source_location": "L1",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "id": "components_outro",
+      "community": 2,
+      "norm_label": "../components/outro.astro"
+    },
+    {
+      "label": "content.config.ts",
+      "file_type": "code",
+      "source_file": "src/content.config.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_content_config",
+      "community": 4,
+      "norm_label": "content.config.ts"
+    },
+    {
+      "label": "booksCollection",
+      "file_type": "code",
+      "source_file": "src/content.config.ts",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "src_content_config_bookscollection",
+      "community": 4,
+      "norm_label": "bookscollection"
+    },
+    {
+      "label": "collections",
+      "file_type": "code",
+      "source_file": "src/content.config.ts",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "src_content_config_collections",
+      "community": 4,
+      "norm_label": "collections"
+    },
+    {
+      "label": "env.d.ts",
+      "file_type": "code",
+      "source_file": "src/env.d.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_env_d",
+      "community": 15,
+      "norm_label": "env.d.ts"
+    },
+    {
+      "label": "../layouts/Layout.astro",
+      "file_type": "code",
+      "source_file": "src/layouts/Layout.astro",
+      "source_location": "L1",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "id": "layouts_layout",
+      "community": 2,
+      "norm_label": "../layouts/layout.astro"
+    },
+    {
+      "label": "[slug].astro",
+      "file_type": "code",
+      "source_file": "src/pages/books/[slug].astro",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "books_slug",
+      "community": 2,
+      "norm_label": "[slug].astro"
+    },
+    {
+      "label": "getStaticPaths()",
+      "file_type": "code",
+      "source_file": "src/pages/books/[slug].astro",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "books_slug_getstaticpaths",
+      "community": 2,
+      "norm_label": "getstaticpaths()"
+    },
+    {
+      "label": "screen()",
+      "file_type": "code",
+      "source_file": "src/pages/books/[slug].astro",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "books_slug_screen",
+      "community": 2,
+      "norm_label": "screen()"
+    },
+    {
+      "label": "astro:content",
+      "file_type": "code",
+      "source_file": "astro:content",
+      "confidence": "EXTRACTED",
+      "_origin": "ast",
+      "id": "astro_content",
+      "community": 2,
+      "norm_label": "astro:content"
+    },
+    {
+      "label": "index.astro",
+      "file_type": "code",
+      "source_file": "src/pages/index.astro",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "pages_index",
+      "community": 2,
+      "norm_label": "index.astro"
+    },
+    {
+      "label": "tsconfig.json",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "tsconfig",
+      "community": 11,
+      "norm_label": "tsconfig.json"
+    },
+    {
+      "label": "extends",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "tsconfig_extends",
+      "community": 11,
+      "norm_label": "extends"
+    },
+    {
+      "label": "AGENTS.md",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "agents",
+      "community": 19,
+      "norm_label": "agents.md"
+    },
+    {
+      "label": "graphify",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "agents_graphify",
+      "community": 19,
+      "norm_label": "graphify"
+    },
+    {
+      "label": "CHANGELOG.md",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "changelog",
+      "community": 3,
+      "norm_label": "changelog.md"
+    },
+    {
+      "label": "Changelog",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "changelog_changelog",
+      "community": 3,
+      "norm_label": "changelog"
+    },
+    {
+      "label": "[0.28.0] - 2026-06-29",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "changelog_0_28_0_2026_06_29",
+      "community": 3,
+      "norm_label": "[0.28.0] - 2026-06-29"
+    },
+    {
+      "label": "Upgraded",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "changelog_upgraded",
+      "community": 3,
+      "norm_label": "upgraded"
+    },
+    {
+      "label": "Added",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "changelog_added",
+      "community": 3,
+      "norm_label": "added"
+    },
+    {
+      "label": "Fixed",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "changelog_fixed",
+      "community": 3,
+      "norm_label": "fixed"
+    },
+    {
+      "label": "[0.27.0] - 2026-05-28",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "changelog_0_27_0_2026_05_28",
+      "community": 3,
+      "norm_label": "[0.27.0] - 2026-05-28"
+    },
+    {
+      "label": "Changed",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "changelog_changed",
+      "community": 3,
+      "norm_label": "changed"
+    },
+    {
+      "label": "[0.26.0]",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "changelog_0_26_0",
+      "community": 3,
+      "norm_label": "[0.26.0]"
+    },
+    {
+      "label": "Fixed",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "changelog_fixed_27",
+      "community": 3,
+      "norm_label": "fixed"
+    },
+    {
+      "label": "[0.25.0]",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "changelog_0_25_0",
+      "community": 3,
+      "norm_label": "[0.25.0]"
+    },
+    {
+      "label": "Changed",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "changelog_changed_32",
+      "community": 3,
+      "norm_label": "changed"
+    },
+    {
+      "label": "NOTES.md",
+      "file_type": "document",
+      "source_file": "NOTES.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "notes",
+      "community": 6,
+      "norm_label": "notes.md"
+    },
+    {
+      "label": "Notes",
+      "file_type": "document",
+      "source_file": "NOTES.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "notes_notes",
+      "community": 6,
+      "norm_label": "notes"
+    },
+    {
+      "label": "Tags Meta",
+      "file_type": "document",
+      "source_file": "NOTES.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "notes_tags_meta",
+      "community": 6,
+      "norm_label": "tags meta"
+    },
+    {
+      "label": "Books List from Amazon",
+      "file_type": "document",
+      "source_file": "NOTES.md",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "notes_books_list_from_amazon",
+      "community": 6,
+      "norm_label": "books list from amazon"
+    },
+    {
+      "label": "Non-fiction",
+      "file_type": "document",
+      "source_file": "NOTES.md",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "notes_non_fiction",
+      "community": 6,
+      "norm_label": "non-fiction"
+    },
+    {
+      "label": "Fiction",
+      "file_type": "document",
+      "source_file": "NOTES.md",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "notes_fiction",
+      "community": 6,
+      "norm_label": "fiction"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme",
+      "community": 14,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "Books for Devs",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme_books_for_devs",
+      "community": 14,
+      "norm_label": "books for devs"
+    },
+    {
+      "label": "Stack",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "readme_stack",
+      "community": 14,
+      "norm_label": "stack"
+    },
+    {
+      "label": "Disclosure",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "readme_disclosure",
+      "community": 14,
+      "norm_label": "disclosure"
+    },
+    {
+      "label": "00-harry-potter-1.mdx",
+      "file_type": "document",
+      "source_file": "src/content/books/00-harry-potter-1.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "books_00_harry_potter_1",
+      "community": 6,
+      "norm_label": "00-harry-potter-1.mdx"
+    },
+    {
+      "label": "{frontmatter.title}",
+      "file_type": "document",
+      "source_file": "src/content/books/00-harry-potter-1.mdx",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "books_00_harry_potter_1_frontmatter_title",
+      "community": 6,
+      "norm_label": "{frontmatter.title}"
+    },
+    {
+      "label": "Description",
+      "file_type": "document",
+      "source_file": "src/content/books/00-harry-potter-1.mdx",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "books_00_harry_potter_1_description",
+      "community": 6,
+      "norm_label": "description"
+    },
+    {
+      "label": "Three reasons to read this book",
+      "file_type": "document",
+      "source_file": "src/content/books/00-harry-potter-1.mdx",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "books_00_harry_potter_1_three_reasons_to_read_this_book",
+      "community": 6,
+      "norm_label": "three reasons to read this book"
+    },
+    {
+      "label": "00-the-alchemist.mdx",
+      "file_type": "document",
+      "source_file": "src/content/books/00-the-alchemist.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "books_00_the_alchemist",
+      "community": 0,
+      "norm_label": "00-the-alchemist.mdx"
+    },
+    {
+      "label": "{frontmatter.title}",
+      "file_type": "document",
+      "source_file": "src/content/books/00-the-alchemist.mdx",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "books_00_the_alchemist_frontmatter_title",
+      "community": 0,
+      "norm_label": "{frontmatter.title}"
+    },
+    {
+      "label": "Description",
+      "file_type": "document",
+      "source_file": "src/content/books/00-the-alchemist.mdx",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "books_00_the_alchemist_description",
+      "community": 0,
+      "norm_label": "description"
+    },
+    {
+      "label": "00-who-moved-my-cheese.mdx",
+      "file_type": "document",
+      "source_file": "src/content/books/00-who-moved-my-cheese.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "books_00_who_moved_my_cheese",
+      "community": 0,
+      "norm_label": "00-who-moved-my-cheese.mdx"
+    },
+    {
+      "label": "{frontmatter.title}",
+      "file_type": "document",
+      "source_file": "src/content/books/00-who-moved-my-cheese.mdx",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "books_00_who_moved_my_cheese_frontmatter_title",
+      "community": 0,
+      "norm_label": "{frontmatter.title}"
+    },
+    {
+      "label": "Description",
+      "file_type": "document",
+      "source_file": "src/content/books/00-who-moved-my-cheese.mdx",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "books_00_who_moved_my_cheese_description",
+      "community": 0,
+      "norm_label": "description"
+    },
+    {
+      "label": "01-leaders-eat-last.mdx",
+      "file_type": "document",
+      "source_file": "src/content/books/01-leaders-eat-last.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "books_01_leaders_eat_last",
+      "community": 6,
+      "norm_label": "01-leaders-eat-last.mdx"
+    },
+    {
+      "label": "{frontmatter.title}",
+      "file_type": "document",
+      "source_file": "src/content/books/01-leaders-eat-last.mdx",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "books_01_leaders_eat_last_frontmatter_title",
+      "community": 6,
+      "norm_label": "{frontmatter.title}"
+    },
+    {
+      "label": "Description",
+      "file_type": "document",
+      "source_file": "src/content/books/01-leaders-eat-last.mdx",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "books_01_leaders_eat_last_description",
+      "community": 6,
+      "norm_label": "description"
+    },
+    {
+      "label": "02-atomic-habits.mdx",
+      "file_type": "document",
+      "source_file": "src/content/books/02-atomic-habits.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "books_02_atomic_habits",
+      "community": 17,
+      "norm_label": "02-atomic-habits.mdx"
+    },
+    {
+      "label": "{frontmatter.title}",
+      "file_type": "document",
+      "source_file": "src/content/books/02-atomic-habits.mdx",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "books_02_atomic_habits_frontmatter_title",
+      "community": 17,
+      "norm_label": "{frontmatter.title}"
+    },
+    {
+      "label": "Description",
+      "file_type": "document",
+      "source_file": "src/content/books/02-atomic-habits.mdx",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "books_02_atomic_habits_description",
+      "community": 17,
+      "norm_label": "description"
+    },
+    {
+      "label": "04-refactoring.mdx",
+      "file_type": "document",
+      "source_file": "src/content/books/04-refactoring.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "books_04_refactoring",
+      "community": 17,
+      "norm_label": "04-refactoring.mdx"
+    },
+    {
+      "label": "{frontmatter.title}",
+      "file_type": "document",
+      "source_file": "src/content/books/04-refactoring.mdx",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "books_04_refactoring_frontmatter_title",
+      "community": 17,
+      "norm_label": "{frontmatter.title}"
+    },
+    {
+      "label": "Description",
+      "file_type": "document",
+      "source_file": "src/content/books/04-refactoring.mdx",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "books_04_refactoring_description",
+      "community": 17,
+      "norm_label": "description"
+    },
+    {
+      "label": "05-algorithms-to-live-by.mdx",
+      "file_type": "document",
+      "source_file": "src/content/books/05-algorithms-to-live-by.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "books_05_algorithms_to_live_by",
+      "community": 0,
+      "norm_label": "05-algorithms-to-live-by.mdx"
+    },
+    {
+      "label": "{frontmatter.title}",
+      "file_type": "document",
+      "source_file": "src/content/books/05-algorithms-to-live-by.mdx",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "books_05_algorithms_to_live_by_frontmatter_title",
+      "community": 0,
+      "norm_label": "{frontmatter.title}"
+    },
+    {
+      "label": "Description",
+      "file_type": "document",
+      "source_file": "src/content/books/05-algorithms-to-live-by.mdx",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "books_05_algorithms_to_live_by_description",
+      "community": 0,
+      "norm_label": "description"
+    },
+    {
+      "label": "06-clean-code.mdx",
+      "file_type": "document",
+      "source_file": "src/content/books/06-clean-code.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "books_06_clean_code",
+      "community": 17,
+      "norm_label": "06-clean-code.mdx"
+    },
+    {
+      "label": "{frontmatter.title}",
+      "file_type": "document",
+      "source_file": "src/content/books/06-clean-code.mdx",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "books_06_clean_code_frontmatter_title",
+      "community": 17,
+      "norm_label": "{frontmatter.title}"
+    },
+    {
+      "label": "Description",
+      "file_type": "document",
+      "source_file": "src/content/books/06-clean-code.mdx",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "books_06_clean_code_description",
+      "community": 17,
+      "norm_label": "description"
+    },
+    {
+      "label": "07-pragmatic-programmer.mdx",
+      "file_type": "document",
+      "source_file": "src/content/books/07-pragmatic-programmer.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "books_07_pragmatic_programmer",
+      "community": 0,
+      "norm_label": "07-pragmatic-programmer.mdx"
+    },
+    {
+      "label": "{frontmatter.title}",
+      "file_type": "document",
+      "source_file": "src/content/books/07-pragmatic-programmer.mdx",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "books_07_pragmatic_programmer_frontmatter_title",
+      "community": 0,
+      "norm_label": "{frontmatter.title}"
+    },
+    {
+      "label": "Description",
+      "file_type": "document",
+      "source_file": "src/content/books/07-pragmatic-programmer.mdx",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "books_07_pragmatic_programmer_description",
+      "community": 0,
+      "norm_label": "description"
+    },
+    {
+      "label": "_template.mdx",
+      "file_type": "document",
+      "source_file": "src/content/books/_template.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "books_template",
+      "community": 18,
+      "norm_label": "_template.mdx"
+    },
+    {
+      "label": "Book Title",
+      "file_type": "document",
+      "source_file": "src/content/books/_template.mdx",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "books_template_book_title",
+      "community": 18,
+      "norm_label": "book title"
+    },
+    {
+      "label": "Why read this book? OR Three reasons to read this book",
+      "file_type": "document",
+      "source_file": "src/content/books/_template.mdx",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "books_template_why_read_this_book_or_three_reasons_to_read_this_book",
+      "community": 18,
+      "norm_label": "why read this book? or three reasons to read this book"
+    },
+    {
+      "label": "VSCode Extensions Recommendations",
+      "file_type": "code",
+      "source_file": ".vscode/extensions.json",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 16,
+      "norm_label": "vscode extensions recommendations",
+      "id": "vscode_extensions"
+    },
+    {
+      "label": "VSCode Settings (MDX as Markdown)",
+      "file_type": "code",
+      "source_file": ".vscode/settings.json",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 4,
+      "norm_label": "vscode settings (mdx as markdown)",
+      "id": "vscode_settings"
+    },
+    {
+      "label": "Book Detail Dynamic Page Route",
+      "file_type": "code",
+      "source_file": "src/pages/books/[slug].astro",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 4,
+      "norm_label": "book detail dynamic page route",
+      "id": "books__slug_"
+    },
+    {
+      "label": "GitHub Actions Deploy to GitHub Pages",
+      "file_type": "code",
+      "source_file": ".github/workflows/deploy.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 8,
+      "norm_label": "github actions deploy to github pages",
+      "id": "workflows_deploy"
+    },
+    {
+      "label": "Pages CMS Content Config",
+      "file_type": "code",
+      "source_file": ".pages.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 4,
+      "norm_label": "pages cms content config",
+      "id": "pages_yml"
+    },
+    {
+      "label": "Dark/Light Theme Persistence via localStorage",
+      "file_type": "concept",
+      "source_file": "src/components/ThemeToggle.astro",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 2,
+      "norm_label": "dark/light theme persistence via localstorage",
+      "id": "concept_theme_persistence"
+    },
+    {
+      "label": "Books Content Collection (Astro Content API)",
+      "file_type": "concept",
+      "source_file": "src/content.config.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 4,
+      "norm_label": "books content collection (astro content api)",
+      "id": "concept_books_collection"
+    },
+    {
+      "label": "Passthrough Image Service: No-op to avoid MissingSharp error",
+      "file_type": "rationale",
+      "source_file": "astro.config.mjs",
+      "source_location": "line 15",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 8,
+      "norm_label": "passthrough image service: no-op to avoid missingsharp error",
+      "id": "rationale_passthrough_image"
+    },
+    {
+      "label": "pnpm Workspace Configuration",
+      "file_type": "code",
+      "source_file": "pnpm-workspace.yaml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 13,
+      "norm_label": "pnpm workspace configuration",
+      "id": "pnpm_workspace"
+    },
+    {
+      "label": "Book Content Template (MDX)",
+      "file_type": "document",
+      "source_file": "src/content/books/_template.mdx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 12,
+      "norm_label": "book content template (mdx)",
+      "id": "books__template"
+    },
+    {
+      "label": "Software Craft Intent Tag",
+      "file_type": "concept",
+      "source_file": "src/content/books/04-refactoring.mdx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Covers books about code quality, craftsmanship, and engineering discipline",
+      "community": 17,
+      "norm_label": "software craft intent tag",
+      "id": "concept_software_craft"
+    },
+    {
+      "label": "Systems Thinking Intent Tag",
+      "file_type": "concept",
+      "source_file": "src/content/books/02-atomic-habits.mdx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Covers books that apply systemic frameworks to problems",
+      "community": 17,
+      "norm_label": "systems thinking intent tag",
+      "id": "concept_systems_thinking"
+    },
+    {
+      "label": "Decision Making Intent Tag",
+      "file_type": "concept",
+      "source_file": "src/content/books/05-algorithms-to-live-by.mdx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Covers books about structured decision frameworks",
+      "community": 0,
+      "norm_label": "decision making intent tag",
+      "id": "concept_decision_making"
+    },
+    {
+      "label": "Human Behavior Intent Tag",
+      "file_type": "concept",
+      "source_file": "src/content/books/00-harry-potter-1.mdx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Covers books that illuminate human psychology, group dynamics, and motivation",
+      "community": 6,
+      "norm_label": "human behavior intent tag",
+      "id": "concept_human_behavior"
+    },
+    {
+      "label": "Career Leverage Intent Tag",
+      "file_type": "concept",
+      "source_file": "src/content/books/00-the-alchemist.mdx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Covers books that provide mindset or skills for career growth",
+      "community": 0,
+      "norm_label": "career leverage intent tag",
+      "id": "concept_career_leverage"
+    },
+    {
+      "label": "Leadership Intent Tag",
+      "file_type": "concept",
+      "source_file": "src/content/books/01-leaders-eat-last.mdx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Covers books about leading teams, trust, and organizational culture",
+      "community": 6,
+      "norm_label": "leadership intent tag",
+      "id": "concept_leadership"
+    },
+    {
+      "label": "Favicon SVG Icon",
+      "file_type": "image",
+      "source_file": "public/favicon.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 9,
+      "norm_label": "favicon svg icon",
+      "id": "public_favicon_icon"
+    },
+    {
+      "label": "Astro Framework Logo Shape",
+      "file_type": "concept",
+      "source_file": "public/favicon.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 9,
+      "norm_label": "astro framework logo shape",
+      "id": "public_favicon_astro_logo"
+    },
+    {
+      "label": "Dark Mode Color Adaptation",
+      "file_type": "concept",
+      "source_file": "public/favicon.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 9,
+      "norm_label": "dark mode color adaptation",
+      "id": "public_favicon_dark_mode_support"
+    },
+    {
+      "label": "3D Fluency Exploding Head Icon",
+      "file_type": "image",
+      "source_file": "public/icons/3d-fluency-exploding-head.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 7,
+      "norm_label": "3d fluency exploding head icon",
+      "id": "icons_3d_fluency_exploding_head_icon"
+    },
+    {
+      "label": "Microsoft Fluent 3D Emoji Design Style",
+      "file_type": "concept",
+      "source_file": "public/icons/3d-fluency-exploding-head.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 7,
+      "norm_label": "microsoft fluent 3d emoji design style",
+      "id": "icons_fluent_3d_design_style"
+    },
+    {
+      "label": "Exploding Head Emoji Concept",
+      "file_type": "concept",
+      "source_file": "public/icons/3d-fluency-exploding-head.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 7,
+      "norm_label": "exploding head emoji concept",
+      "id": "icons_exploding_head_emoji_concept"
+    },
+    {
+      "label": "Mind-Blown Visual Metaphor",
+      "file_type": "concept",
+      "source_file": "public/icons/3d-fluency-exploding-head.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 7,
+      "norm_label": "mind-blown visual metaphor",
+      "id": "icons_mind_blown_visual_metaphor"
+    },
+    {
+      "label": "Overwhelming Knowledge Wow Factor Theme",
+      "file_type": "concept",
+      "source_file": "public/icons/3d-fluency-exploding-head.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 7,
+      "norm_label": "overwhelming knowledge wow factor theme",
+      "id": "icons_overwhelming_knowledge_theme"
+    },
+    {
+      "label": "Profile Photo - Siddhesh",
+      "file_type": "image",
+      "source_file": "public/profile-photo-siddhesh.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 10,
+      "norm_label": "profile photo - siddhesh",
+      "id": "public_profile_photo_siddhesh_photo"
+    },
+    {
+      "label": "Siddhesh (Project Author)",
+      "file_type": "concept",
+      "source_file": "public/profile-photo-siddhesh.jpg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 10,
+      "norm_label": "siddhesh (project author)",
+      "id": "siddhesh_person"
+    }
+  ],
+  "links": [
+    {
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "astro.config.mjs",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "rationale_passthrough_image",
+      "target": "astro_config"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": ".github/workflows/deploy.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "workflows_deploy",
+      "target": "astro_config"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_dependencies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_name"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_packagemanager"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_scripts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_type"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_version"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_astro"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_build"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_dev"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_preview"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_start"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_astro"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_astrojs_mdx"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_sharp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_tailwindcss"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_tailwindcss_vite"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_typescript"
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Card.astro",
+      "confidence_score": 1.0,
+      "source": "components_card",
+      "target": "astro_assets"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "src/components/Card.astro",
+      "source_location": "lines 4-15 \u2014 Card Props fields (title, subtitle, body, image, readingStatus, recommended, insight, intentTags, slug) directly mirror booksCollection Zod schema fields",
+      "weight": 1.0,
+      "source": "components_card",
+      "target": "src_content_config"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/index.astro",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pages_index",
+      "target": "components_card"
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Footer.astro",
+      "confidence_score": 1.0,
+      "source": "components_footer",
+      "target": "astro_assets"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": "src/components/CreditsModal.astro",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_creditsmodal",
+      "target": "components_footer"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/index.astro",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pages_index",
+      "target": "components_footer"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/books/[slug].astro",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "books_slug",
+      "target": "components_header"
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Header.astro",
+      "confidence_score": 1.0,
+      "source": "components_header",
+      "target": "components_themetoggle"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/index.astro",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pages_index",
+      "target": "components_header"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "src/components/ThemeToggle.astro",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_themetoggle",
+      "target": "concept_theme_persistence"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/ThemeToggle.astro",
+      "source_location": "ThemeToggle line 49, Layout line 30 \u2014 both read/write localStorage key 'theme'",
+      "weight": 1.0,
+      "source": "components_themetoggle",
+      "target": "layouts_layout"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "src/components/Intro.astro",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_intro",
+      "target": "components_outro"
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Intro.astro",
+      "confidence_score": 1.0,
+      "source": "components_intro",
+      "target": "layouts_bluegradientcard"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/index.astro",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pages_index",
+      "target": "components_intro"
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Outro.astro",
+      "confidence_score": 1.0,
+      "source": "components_outro",
+      "target": "layouts_bluegradientcard"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/index.astro",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pages_index",
+      "target": "components_outro"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": ".pages.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "pages_yml",
+      "target": "src_content_config"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content.config.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_content_config",
+      "target": "astro_content"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content.config.ts",
+      "source_location": "line 7",
+      "weight": 1.0,
+      "source": "src_content_config",
+      "target": "concept_books_collection"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content.config.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_content_config",
+      "target": "src_content_config_bookscollection"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content.config.ts",
+      "source_location": "L27",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_content_config",
+      "target": "src_content_config_collections"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": ".vscode/settings.json",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "vscode_settings",
+      "target": "src_content_config"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/books/[slug].astro",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "books_slug",
+      "target": "layouts_layout"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "src/layouts/Layout.astro",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "layouts_layout",
+      "target": "concept_theme_persistence"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/index.astro",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pages_index",
+      "target": "layouts_layout"
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/books/[slug].astro",
+      "confidence_score": 1.0,
+      "source": "books_slug",
+      "target": "astro_content"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/books/[slug].astro",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "books_slug",
+      "target": "books_slug_getstaticpaths"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/books/[slug].astro",
+      "source_location": "L32",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "books_slug",
+      "target": "books_slug_screen"
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/index.astro",
+      "confidence_score": 1.0,
+      "source": "pages_index",
+      "target": "astro_content"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "src/pages/index.astro",
+      "source_location": "line 10 \u2014 getCollection('books')",
+      "weight": 1.0,
+      "source": "pages_index",
+      "target": "concept_books_collection"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tsconfig",
+      "target": "tsconfig_extends"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "agents",
+      "target": "agents_graphify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "changelog",
+      "target": "changelog_changelog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "changelog_changelog",
+      "target": "changelog_0_25_0",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "changelog_changelog",
+      "target": "changelog_0_26_0",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "changelog_changelog",
+      "target": "changelog_0_27_0_2026_05_28",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "changelog_changelog",
+      "target": "changelog_0_28_0_2026_06_29",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "changelog_0_28_0_2026_06_29",
+      "target": "changelog_added",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "changelog_0_28_0_2026_06_29",
+      "target": "changelog_fixed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "changelog_0_28_0_2026_06_29",
+      "target": "changelog_upgraded",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "changelog_0_27_0_2026_05_28",
+      "target": "changelog_changed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "changelog_0_26_0",
+      "target": "changelog_fixed_27",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "changelog_0_25_0",
+      "target": "changelog_changed_32",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "NOTES.md",
+      "source_location": "line 33",
+      "weight": 1.0,
+      "source": "notes",
+      "target": "books_01_leaders_eat_last"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NOTES.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "notes",
+      "target": "notes_notes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NOTES.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "notes_notes",
+      "target": "notes_books_list_from_amazon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NOTES.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "notes_notes",
+      "target": "notes_fiction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NOTES.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "notes_notes",
+      "target": "notes_non_fiction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "NOTES.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "notes_notes",
+      "target": "notes_tags_meta",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "readme",
+      "target": "readme_books_for_devs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "readme_books_for_devs",
+      "target": "readme_disclosure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "readme_books_for_devs",
+      "target": "readme_stack",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/books/00-harry-potter-1.mdx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "books_00_harry_potter_1",
+      "target": "books_00_harry_potter_1_frontmatter_title",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/books/00-harry-potter-1.mdx",
+      "source_location": "frontmatter.intentTags",
+      "weight": 1.0,
+      "source": "books_00_harry_potter_1",
+      "target": "concept_human_behavior"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": "src/content/books/01-leaders-eat-last.mdx",
+      "source_location": null,
+      "weight": 0.65,
+      "source": "books_01_leaders_eat_last",
+      "target": "books_00_harry_potter_1"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/books/00-harry-potter-1.mdx",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "books_00_harry_potter_1_frontmatter_title",
+      "target": "books_00_harry_potter_1_description",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/books/00-harry-potter-1.mdx",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "books_00_harry_potter_1_frontmatter_title",
+      "target": "books_00_harry_potter_1_three_reasons_to_read_this_book",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/books/00-the-alchemist.mdx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "books_00_the_alchemist",
+      "target": "books_00_the_alchemist_frontmatter_title",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/books/00-the-alchemist.mdx",
+      "source_location": "frontmatter.intentTags",
+      "weight": 1.0,
+      "source": "books_00_the_alchemist",
+      "target": "concept_career_leverage"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/books/00-the-alchemist.mdx",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "books_00_the_alchemist_frontmatter_title",
+      "target": "books_00_the_alchemist_description",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/books/00-who-moved-my-cheese.mdx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "books_00_who_moved_my_cheese",
+      "target": "books_00_who_moved_my_cheese_frontmatter_title",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/books/00-who-moved-my-cheese.mdx",
+      "source_location": "frontmatter.intentTags",
+      "weight": 1.0,
+      "source": "books_00_who_moved_my_cheese",
+      "target": "concept_career_leverage"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/books/00-who-moved-my-cheese.mdx",
+      "source_location": "frontmatter.intentTags",
+      "weight": 1.0,
+      "source": "books_00_who_moved_my_cheese",
+      "target": "concept_decision_making"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/books/00-who-moved-my-cheese.mdx",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "books_00_who_moved_my_cheese_frontmatter_title",
+      "target": "books_00_who_moved_my_cheese_description",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/books/01-leaders-eat-last.mdx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "books_01_leaders_eat_last",
+      "target": "books_01_leaders_eat_last_frontmatter_title",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/books/01-leaders-eat-last.mdx",
+      "source_location": "frontmatter.intentTags",
+      "weight": 1.0,
+      "source": "books_01_leaders_eat_last",
+      "target": "concept_human_behavior"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/books/01-leaders-eat-last.mdx",
+      "source_location": "frontmatter.intentTags",
+      "weight": 1.0,
+      "source": "books_01_leaders_eat_last",
+      "target": "concept_leadership"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/books/01-leaders-eat-last.mdx",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "books_01_leaders_eat_last_frontmatter_title",
+      "target": "books_01_leaders_eat_last_description",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/books/02-atomic-habits.mdx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "books_02_atomic_habits",
+      "target": "books_02_atomic_habits_frontmatter_title",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/books/02-atomic-habits.mdx",
+      "source_location": "frontmatter.intentTags",
+      "weight": 1.0,
+      "source": "books_02_atomic_habits",
+      "target": "concept_systems_thinking"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "src/content/books/05-algorithms-to-live-by.mdx",
+      "source_location": null,
+      "weight": 0.75,
+      "source": "books_05_algorithms_to_live_by",
+      "target": "books_02_atomic_habits"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/books/02-atomic-habits.mdx",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "books_02_atomic_habits_frontmatter_title",
+      "target": "books_02_atomic_habits_description",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/books/04-refactoring.mdx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "books_04_refactoring",
+      "target": "books_04_refactoring_frontmatter_title",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/content/books/04-refactoring.mdx",
+      "source_location": null,
+      "weight": 0.85,
+      "source": "books_04_refactoring",
+      "target": "books_06_clean_code"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/books/04-refactoring.mdx",
+      "source_location": "frontmatter.intentTags",
+      "weight": 1.0,
+      "source": "books_04_refactoring",
+      "target": "concept_software_craft"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/books/04-refactoring.mdx",
+      "source_location": "frontmatter.intentTags",
+      "weight": 1.0,
+      "source": "books_04_refactoring",
+      "target": "concept_systems_thinking"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/books/04-refactoring.mdx",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "books_04_refactoring_frontmatter_title",
+      "target": "books_04_refactoring_description",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/books/05-algorithms-to-live-by.mdx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "books_05_algorithms_to_live_by",
+      "target": "books_05_algorithms_to_live_by_frontmatter_title",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/books/05-algorithms-to-live-by.mdx",
+      "source_location": "frontmatter.intentTags",
+      "weight": 1.0,
+      "source": "books_05_algorithms_to_live_by",
+      "target": "concept_decision_making"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/books/05-algorithms-to-live-by.mdx",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "books_05_algorithms_to_live_by_frontmatter_title",
+      "target": "books_05_algorithms_to_live_by_description",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/books/06-clean-code.mdx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "books_06_clean_code",
+      "target": "books_06_clean_code_frontmatter_title",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/books/06-clean-code.mdx",
+      "source_location": "frontmatter.intentTags",
+      "weight": 1.0,
+      "source": "books_06_clean_code",
+      "target": "concept_software_craft"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/books/06-clean-code.mdx",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "books_06_clean_code_frontmatter_title",
+      "target": "books_06_clean_code_description",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/books/07-pragmatic-programmer.mdx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "books_07_pragmatic_programmer",
+      "target": "books_07_pragmatic_programmer_frontmatter_title",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/books/07-pragmatic-programmer.mdx",
+      "source_location": "frontmatter.intentTags",
+      "weight": 1.0,
+      "source": "books_07_pragmatic_programmer",
+      "target": "concept_career_leverage"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/books/07-pragmatic-programmer.mdx",
+      "source_location": "frontmatter.intentTags",
+      "weight": 1.0,
+      "source": "books_07_pragmatic_programmer",
+      "target": "concept_software_craft"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/books/07-pragmatic-programmer.mdx",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "books_07_pragmatic_programmer_frontmatter_title",
+      "target": "books_07_pragmatic_programmer_description",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/books/_template.mdx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "books_template",
+      "target": "books_template_book_title",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/books/_template.mdx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "books_template_book_title",
+      "target": "books_template_why_read_this_book_or_three_reasons_to_read_this_book",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "src/pages/books/[slug].astro",
+      "source_location": "line 7 \u2014 getCollection('books') inside getStaticPaths",
+      "weight": 1.0,
+      "source": "books__slug_",
+      "target": "concept_books_collection"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "public/favicon.svg",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "public_favicon_icon",
+      "target": "public_favicon_astro_logo"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "public/favicon.svg",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "public_favicon_icon",
+      "target": "public_favicon_dark_mode_support"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "public/icons/3d-fluency-exploding-head.png",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "icons_3d_fluency_exploding_head_icon",
+      "target": "icons_exploding_head_emoji_concept"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "public/icons/3d-fluency-exploding-head.png",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "icons_3d_fluency_exploding_head_icon",
+      "target": "icons_fluent_3d_design_style"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "public/icons/3d-fluency-exploding-head.png",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "icons_3d_fluency_exploding_head_icon",
+      "target": "icons_mind_blown_visual_metaphor"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "public/icons/3d-fluency-exploding-head.png",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "icons_mind_blown_visual_metaphor",
+      "target": "icons_overwhelming_knowledge_theme"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "public/profile-photo-siddhesh.jpg",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "public_profile_photo_siddhesh_photo",
+      "target": "siddhesh_person"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "index_page_composition",
+      "label": "Index Page Full Component Composition",
+      "nodes": [
+        "pages_index",
+        "components_card",
+        "components_header",
+        "components_footer",
+        "components_intro",
+        "components_outro",
+        "layouts_layout"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/pages/index.astro"
+    },
+    {
+      "id": "books_data_flow",
+      "label": "Books Content Data Flow Pipeline (Schema to Pages to Card)",
+      "nodes": [
+        "src_content_config",
+        "concept_books_collection",
+        "pages_index",
+        "books__slug_",
+        "components_card"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "src/content.config.ts"
+    },
+    {
+      "id": "theme_management_system",
+      "label": "Dark/Light Theme Management System",
+      "nodes": [
+        "layouts_layout",
+        "components_themetoggle",
+        "concept_theme_persistence"
+      ],
+      "relation": "implement",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "src/layouts/Layout.astro"
+    },
+    {
+      "id": "hyperedge_software_craft_canon",
+      "label": "Software Craft Book Canon",
+      "nodes": [
+        "books_04_refactoring",
+        "books_06_clean_code",
+        "books_07_pragmatic_programmer",
+        "concept_software_craft"
+      ],
+      "relation": "implement",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/books/04-refactoring.mdx"
+    },
+    {
+      "id": "hyperedge_career_leverage_books",
+      "label": "Career Leverage Reading Cluster",
+      "nodes": [
+        "books_00_the_alchemist",
+        "books_00_who_moved_my_cheese",
+        "books_07_pragmatic_programmer",
+        "concept_career_leverage"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/books/00-the-alchemist.mdx"
+    },
+    {
+      "id": "hyperedge_decision_making_cluster",
+      "label": "Decision Making and Adaptability Books",
+      "nodes": [
+        "books_05_algorithms_to_live_by",
+        "books_00_who_moved_my_cheese",
+        "concept_decision_making"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/content/books/05-algorithms-to-live-by.mdx"
+    }
+  ],
+  "built_at_commit": "e7e24113390227f0a834de463b6c371d90029622"
+}

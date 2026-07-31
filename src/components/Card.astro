@@ -53,30 +53,30 @@ switch (readingStatus) {
 }
 ---
 
-<li class="link-card"
-    data-status={readingStatus}
-    data-recommended={String(recommended)}
-    data-tags={JSON.stringify(intentTags ?? [])}>
+<li
+  class="link-card"
+  data-status={readingStatus}
+  data-recommended={String(recommended)}
+  data-tags={JSON.stringify(intentTags ?? [])}
+>
   <div class="status-container">
     <div class="status-row">
-      {recommended && (
-        <button class="rec-star" title="Recommended" aria-label="Recommended">⭐</button>
-      )}
+      {
+        recommended && (
+          <button class="rec-star" title="Recommended" aria-label="Recommended">
+            ⭐
+          </button>
+        )
+      }
       <div class={"tag " + tagBasedCSS + " font-mono"}>{displayStatus}</div>
     </div>
   </div>
   <div class="bookDetails">
     <Image src={image} alt={title + " Cover"} inferSize />
-    <h3>{title}<br /><span>{subtitle}</span></h3>
+    <h3>{title}<br /><span class="text-xs text-muted">{subtitle}</span></h3>
     <!-- <p class="bookDescription">{body}</p> -->
     <div class="my-auto flex flex-col gap-0 mt-3">
-      {
-        insight && (
-          <p class="insight text-xs mb-0">
-            <i class="not-italic bi bi-coin text-xs mr-1" /> {insight}
-          </p>
-        )
-      }
+      {insight && <p class="insight text-2xs mb-0 font-hand">{insight}</p>}
       {
         intentTags && intentTags.length > 0 && (
           <div class="intent-tags">

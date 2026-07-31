@@ -1,0 +1,182 @@
+{
+  "/Users/siddhesh/code/books-for-devs/.vscode/extensions.json": {
+    "mtime": 1779948646.1824586,
+    "ast_hash": "3adedb22d082dbd1ebb00b75d21403aa",
+    "semantic_hash": "3adedb22d082dbd1ebb00b75d21403aa"
+  },
+  "/Users/siddhesh/code/books-for-devs/.vscode/settings.json": {
+    "mtime": 1779948646.182514,
+    "ast_hash": "5bd4bff6707111cb4f40d40a08f0cbbf",
+    "semantic_hash": "5bd4bff6707111cb4f40d40a08f0cbbf"
+  },
+  "/Users/siddhesh/code/books-for-devs/astro.config.mjs": {
+    "mtime": 1779948646.1826982,
+    "ast_hash": "a4067677d29ada39f2494e64064438e4",
+    "semantic_hash": "a4067677d29ada39f2494e64064438e4"
+  },
+  "/Users/siddhesh/code/books-for-devs/package.json": {
+    "mtime": 1779949759.6706805,
+    "ast_hash": "1591ed8f91cf7c259ecb50050916ea4e",
+    "semantic_hash": "1591ed8f91cf7c259ecb50050916ea4e"
+  },
+  "/Users/siddhesh/code/books-for-devs/src/components/Card.astro": {
+    "mtime": 1779948646.1840317,
+    "ast_hash": "eee1f4cf261b39626fb37ed0891fa5d1",
+    "semantic_hash": "eee1f4cf261b39626fb37ed0891fa5d1"
+  },
+  "/Users/siddhesh/code/books-for-devs/src/components/CreditsModal.astro": {
+    "mtime": 1779948646.184104,
+    "ast_hash": "4bab54c2188451dc939aef561a22d39e",
+    "semantic_hash": "4bab54c2188451dc939aef561a22d39e"
+  },
+  "/Users/siddhesh/code/books-for-devs/src/components/Footer.astro": {
+    "mtime": 1779948646.1841612,
+    "ast_hash": "8a941684798bd5b62b56a69d3f15e379",
+    "semantic_hash": "8a941684798bd5b62b56a69d3f15e379"
+  },
+  "/Users/siddhesh/code/books-for-devs/src/components/Header.astro": {
+    "mtime": 1779948646.1842206,
+    "ast_hash": "0e8073b1ed541360a10b692912716bcc",
+    "semantic_hash": "0e8073b1ed541360a10b692912716bcc"
+  },
+  "/Users/siddhesh/code/books-for-devs/src/components/Intro.astro": {
+    "mtime": 1779948646.1842759,
+    "ast_hash": "b9cdc09e5631f1c657c586f011e5ee77",
+    "semantic_hash": "b9cdc09e5631f1c657c586f011e5ee77"
+  },
+  "/Users/siddhesh/code/books-for-devs/src/components/Outro.astro": {
+    "mtime": 1779948646.1843398,
+    "ast_hash": "2ab10542993739cf794d5a9b3aa4868d",
+    "semantic_hash": "2ab10542993739cf794d5a9b3aa4868d"
+  },
+  "/Users/siddhesh/code/books-for-devs/src/components/ThemeToggle.astro": {
+    "mtime": 1779948646.1843965,
+    "ast_hash": "9e00ad74cf09faef241cfbd3058fd16c",
+    "semantic_hash": "9e00ad74cf09faef241cfbd3058fd16c"
+  },
+  "/Users/siddhesh/code/books-for-devs/src/content.config.ts": {
+    "mtime": 1779948646.1844535,
+    "ast_hash": "3fb6ecff96c1778c361b50b7edb5f97d",
+    "semantic_hash": "3fb6ecff96c1778c361b50b7edb5f97d"
+  },
+  "/Users/siddhesh/code/books-for-devs/src/env.d.ts": {
+    "mtime": 1779948646.1852143,
+    "ast_hash": "1dd7153244f921edac1f1d04155b52b1",
+    "semantic_hash": "1dd7153244f921edac1f1d04155b52b1"
+  },
+  "/Users/siddhesh/code/books-for-devs/src/layouts/BlueGradientCard.astro": {
+    "mtime": 1779948646.1853025,
+    "ast_hash": "c4e8957c34857c8df13c17c9e99a8bbf",
+    "semantic_hash": "c4e8957c34857c8df13c17c9e99a8bbf"
+  },
+  "/Users/siddhesh/code/books-for-devs/src/layouts/Layout.astro": {
+    "mtime": 1779948646.1853619,
+    "ast_hash": "1cac480d6cf68bb46d55c9a36daff50f",
+    "semantic_hash": "1cac480d6cf68bb46d55c9a36daff50f"
+  },
+  "/Users/siddhesh/code/books-for-devs/src/pages/books/[slug].astro": {
+    "mtime": 1779948646.1854846,
+    "ast_hash": "5f9ba8d4dae0abbdd554fdb870809442",
+    "semantic_hash": "5f9ba8d4dae0abbdd554fdb870809442"
+  },
+  "/Users/siddhesh/code/books-for-devs/src/pages/index.astro": {
+    "mtime": 1779948646.185542,
+    "ast_hash": "22ce227e85c411a93f1f84c0724a2e45",
+    "semantic_hash": "22ce227e85c411a93f1f84c0724a2e45"
+  },
+  "/Users/siddhesh/code/books-for-devs/tsconfig.json": {
+    "mtime": 1779948646.1856914,
+    "ast_hash": "3809491c054359a262f0472df328065e",
+    "semantic_hash": "3809491c054359a262f0472df328065e"
+  },
+  "/Users/siddhesh/code/books-for-devs/.github/workflows/deploy.yml": {
+    "mtime": 1779948646.1822462,
+    "ast_hash": "67865a42d68fdca25b4b0764938707d5",
+    "semantic_hash": "67865a42d68fdca25b4b0764938707d5"
+  },
+  "/Users/siddhesh/code/books-for-devs/.pages.yml": {
+    "mtime": 1779948646.1823678,
+    "ast_hash": "c918907539bd8d5b4b96ec045547f7ae",
+    "semantic_hash": "c918907539bd8d5b4b96ec045547f7ae"
+  },
+  "/Users/siddhesh/code/books-for-devs/NOTES.md": {
+    "mtime": 1779948646.1825712,
+    "ast_hash": "54824425e71dd54d05c94b17538b23c3",
+    "semantic_hash": "54824425e71dd54d05c94b17538b23c3"
+  },
+  "/Users/siddhesh/code/books-for-devs/README.md": {
+    "mtime": 1779948646.1826358,
+    "ast_hash": "2f0598193fe4a4125445f7ebbc78fd8e",
+    "semantic_hash": "2f0598193fe4a4125445f7ebbc78fd8e"
+  },
+  "/Users/siddhesh/code/books-for-devs/pnpm-workspace.yaml": {
+    "mtime": 1779949707.8842988,
+    "ast_hash": "fecc45bf223b25e4e2f2be08edd9848f",
+    "semantic_hash": "fecc45bf223b25e4e2f2be08edd9848f"
+  },
+  "/Users/siddhesh/code/books-for-devs/src/content/books/00-harry-potter-1.mdx": {
+    "mtime": 1779948646.184589,
+    "ast_hash": "4270f8b670c9c254ce4c1d15f4a9950d",
+    "semantic_hash": "4270f8b670c9c254ce4c1d15f4a9950d"
+  },
+  "/Users/siddhesh/code/books-for-devs/src/content/books/00-the-alchemist.mdx": {
+    "mtime": 1779948646.1846514,
+    "ast_hash": "4a4a3cdbd87f6737ea51a772b7c81c79",
+    "semantic_hash": "4a4a3cdbd87f6737ea51a772b7c81c79"
+  },
+  "/Users/siddhesh/code/books-for-devs/src/content/books/00-who-moved-my-cheese.mdx": {
+    "mtime": 1779948646.1847262,
+    "ast_hash": "2554d7af412b259b00c2e46f4890719e",
+    "semantic_hash": "2554d7af412b259b00c2e46f4890719e"
+  },
+  "/Users/siddhesh/code/books-for-devs/src/content/books/01-leaders-eat-last.mdx": {
+    "mtime": 1779948646.184795,
+    "ast_hash": "d5c69a2c7df8987d76f6072adaf6553c",
+    "semantic_hash": "d5c69a2c7df8987d76f6072adaf6553c"
+  },
+  "/Users/siddhesh/code/books-for-devs/src/content/books/02-atomic-habits.mdx": {
+    "mtime": 1779948646.1848643,
+    "ast_hash": "04d71ae5af7a407c1dba53bd2182e2a4",
+    "semantic_hash": "04d71ae5af7a407c1dba53bd2182e2a4"
+  },
+  "/Users/siddhesh/code/books-for-devs/src/content/books/04-refactoring.mdx": {
+    "mtime": 1779948646.1849215,
+    "ast_hash": "e37eaa2d18619902d8ff69138f80da1e",
+    "semantic_hash": "e37eaa2d18619902d8ff69138f80da1e"
+  },
+  "/Users/siddhesh/code/books-for-devs/src/content/books/05-algorithms-to-live-by.mdx": {
+    "mtime": 1779948646.1849785,
+    "ast_hash": "010cdc06cea31c0ccad0c5b762aa6671",
+    "semantic_hash": "010cdc06cea31c0ccad0c5b762aa6671"
+  },
+  "/Users/siddhesh/code/books-for-devs/src/content/books/06-clean-code.mdx": {
+    "mtime": 1779948646.1850402,
+    "ast_hash": "6961784c89414fcf335018204c41b91c",
+    "semantic_hash": "6961784c89414fcf335018204c41b91c"
+  },
+  "/Users/siddhesh/code/books-for-devs/src/content/books/07-pragmatic-programmer.mdx": {
+    "mtime": 1779948646.1850982,
+    "ast_hash": "31a7271461f101f4c8798f7324aafbbe",
+    "semantic_hash": "31a7271461f101f4c8798f7324aafbbe"
+  },
+  "/Users/siddhesh/code/books-for-devs/src/content/books/_template.mdx": {
+    "mtime": 1779948646.1851575,
+    "ast_hash": "75c6e71a3a469cf66bc34e537d2accc0",
+    "semantic_hash": "75c6e71a3a469cf66bc34e537d2accc0"
+  },
+  "/Users/siddhesh/code/books-for-devs/public/favicon.svg": {
+    "mtime": 1779948646.183158,
+    "ast_hash": "8c13f40658976ea1dfb8ba37a8be0e8d",
+    "semantic_hash": "8c13f40658976ea1dfb8ba37a8be0e8d"
+  },
+  "/Users/siddhesh/code/books-for-devs/public/icons/3d-fluency-exploding-head.png": {
+    "mtime": 1779948646.183494,
+    "ast_hash": "47f6f72ec044ff3347a59a1837d9e2ca",
+    "semantic_hash": "47f6f72ec044ff3347a59a1837d9e2ca"
+  },
+  "/Users/siddhesh/code/books-for-devs/public/profile-photo-siddhesh.jpg": {
+    "mtime": 1779948646.1837535,
+    "ast_hash": "b2d3755ad1562a2794f3712f6d61a396",
+    "semantic_hash": "b2d3755ad1562a2794f3712f6d61a396"
+  }
+}

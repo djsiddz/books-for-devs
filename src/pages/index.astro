@@ -1,10 +1,9 @@
 ---
 import { getCollection } from "astro:content";
-import Card from "../components/Card.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Intro from "../components/Intro.astro";
-import Outro from "../components/Outro.astro";
+import TradingCard from "../components/TradingCard.astro";
 import Layout from "../layouts/Layout.astro";
 
 const booksCollection = await getCollection("books");
@@ -21,10 +20,10 @@ const activeStatuses = new Set(
 const hasRecommended = booksCollection.some((b) => b.data.recommended);
 ---
 
-<Layout title="Books for Devs">
+<Layout title="Books for Devs - by Siddhesh Thadeshwar">
   <Header />
   <main>
-    <section class="intro">
+    <section class="intro mb-12">
       <h1 class="text-gradient1">
         <span class="text-2xl"
           >Good engineers read docs. Great engineers study</span
@@ -37,10 +36,10 @@ const hasRecommended = booksCollection.some((b) => b.data.recommended);
       </p>
     </section>
     <section class="collection">
-      <h2 class="text-xl font-bold uppercase mb-0!">
+      <h2 class="text-xl font-bold uppercase mb-0! text-balance">
         The Reading List <span
-          class="text-xs text-muted capitalize font-hand tracking-wide"
-          >( Updated in Jun 2026 )</span
+          class="text-xs text-muted capitalize font-hand tracking-tight relative inline-block -rotate-6 text-(--primary)"
+          >(Updated in Jun 2026)</span
         >
       </h2>
 
@@ -63,7 +62,7 @@ const hasRecommended = booksCollection.some((b) => b.data.recommended);
               <>
                 <span class="filter-sep">|</span>
                 <button class="filter-btn yellowTag" data-filter="recommended">
-                  ⭐ Recommended
+                  <i class="bi bi-star-fill text-yellow-400" /> Recommended
                 </button>
               </>
             )
@@ -74,38 +73,12 @@ const hasRecommended = booksCollection.some((b) => b.data.recommended);
         >
       </div>
 
-      <!-- <p class="text-xs">
-        Kindle editions too are available for most of these.
-      </p>
-      <p class="text-xs">
-        The tag on each book marks my status with these books:<br />
-        <span class="font-mono"
-          >Read, Currently Reading, Next Up, Wishlisted, and Recommended.</span
-        >
-      </p> -->
-      <ul role="list" class="booksGrid">
-        <li class="row-span-2"><Intro /></li>
-        {
-          booksCollection.map((book) => (
-            <Card
-              href={book.data.amazonINLink}
-              title={book.data.title}
-              subtitle={book.data.subtitle}
-              body={book.data.description}
-              image={book.data.coverImage}
-              readingStatus={book.data.readingStatus || ""}
-              recommended={book.data.recommended || false}
-              insight={book.data.insight}
-              intentTags={book.data.intentTags}
-              slug={book.id}
-            />
-          ))
-        }
-        <li><Outro /></li>
-      </ul>
-      <div class="mt-12 mb-8">
+      <div class="my-6">
+        <TradingCard books={booksCollection} />
+      </div>
+      <div class="flex w-fit mx-auto">
         <p
-          class="rounded-[0.4rem] border border-gray-500/10 px-4 py-2 text-center text-balance text-xs font-mono"
+          class="rounded-2xl border border-gray-500/10 px-4 py-2 text-center text-balance text-[10px] tracking-tight text-gray-500 bg-gray-500/10 font-mono"
         >
           The list contains affiliate links. I may earn a commission should you
           make a purchase using my links. Thank you for supporting me & my work!
@@ -113,13 +86,17 @@ const hasRecommended = booksCollection.some((b) => b.data.recommended);
       </div>
     </section>
   </main>
+  <div class="intro-card-wrap max-w-xl mx-auto my-6">
+    <Intro />
+  </div>
+
   <Footer />
 </Layout>
 
 <style>
   @reference "../styles/global.css";
   main {
-    @apply mx-auto max-w-4xl p-6;
+    @apply mx-auto max-w-4xl px-6;
   }
   h1 {
     @apply text-4xl max-w-2xl font-bold m-0 mb-6;

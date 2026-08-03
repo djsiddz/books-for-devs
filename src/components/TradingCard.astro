@@ -1,0 +1,656 @@
+---
+import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  books: CollectionEntry<"books">[];
+}
+
+const { books } = Astro.props;
+
+function getStatusInfo(status?: string) {
+  switch (status) {
+    case "Read ✅":
+      return { css: "greenTag", label: "Read" };
+    case "Currently Reading 👓":
+      return { css: "blueTag", label: "Currently Reading" };
+    case "Next Up ⏭️":
+      return { css: "blueTag", label: "Next Up" };
+    case "Wishlisted ⭐":
+      return { css: "orangeTag", label: "Wishlisted" };
+    default:
+      return { css: "neutralTag", label: status || "" };
+  }
+}
+---
+
+<div class="trading-carousel-wrapper" id="trading-carousel-wrapper">
+  <!-- Desktop Navigation Arrow Controls -->
+  <button
+    class="carousel-nav-btn prev-btn"
+    id="carousel-prev"
+    aria-label="Previous Book"
+  >
+    <i class="bi bi-chevron-left"></i>
+  </button>
+  <button
+    class="carousel-nav-btn next-btn"
+    id="carousel-next"
+    aria-label="Next Book"
+  >
+    <i class="bi bi-chevron-right"></i>
+  </button>
+
+  <!-- 3D Carousel Stage -->
+  <div class="trading-carousel-stage" id="trading-carousel-stage">
+    <div class="trading-carousel-track" id="trading-carousel-track">
+      {
+        books.map((book, index) => {
+          const statusInfo = getStatusInfo(book.data.readingStatus);
+          return (
+            <div
+              class="tc-card-wrapper link-card"
+              data-index={index}
+              data-status={book.data.readingStatus || ""}
+              data-recommended={String(book.data.recommended || false)}
+              data-tags={JSON.stringify(book.data.intentTags ?? [])}
+            >
+              <div class="tc-card-container">
+                <div class="tc-card-inner">
+                  <!-- Front Face: Full-size Cover Image with Top-Right Badges -->
+                  <div class="tc-face tc-face-front">
+                    <Image
+                      src={book.data.coverImage}
+                      alt={book.data.title + " Cover"}
+                      inferSize
+                      draggable="false"
+                      class="tc-full-cover"
+                    />
+
+                    <!-- Top Right Floating Badges (Directly styled tags, no outer pill) -->
+                    <div class="tc-badge-overlay">
+                      {book.data.recommended && (
+                        <span class="tc-rec-star bi bi-star-fill" title="Recommended"></span>
+                      )}
+                      {statusInfo.label && (
+                        <div class={`tag ${statusInfo.css} font-mono`}>
+                          {statusInfo.label}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  <!-- Back Face: Book Details (Compact Zero-Scroll Layout) -->
+                  <div class="tc-face tc-face-back">
+                    <div class="tc-back-header">
+                      <div class="status-row ml-auto">
+                        {book.data.recommended && (
+                          <span class="rec-star bi bi-star-fill text-yellow-400" title="Recommended">
+                          </span>
+                        )}
+                        <div class={`tag ${statusInfo.css} font-mono`}>
+                          {statusInfo.label}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="tc-back-content">
+                      <div class="tc-back-top-row">
+                        {/* <Image
+                          src={book.data.coverImage}
+                          alt={book.data.title + " Cover"}
+                          inferSize
+                          draggable="false"
+                          class="tc-back-thumb"
+                        /> */}
+                        <div class="tc-back-title-group">
+                          <p class="tc-title">{book.data.title}</p>
+                          <span class="tc-subtitle">{book.data.subtitle}</span>
+                        </div>
+                      </div>
+
+                      {book.data.insight && (
+                        <div class="tc-insight-box font-hand">
+                          <p class="insight">"{book.data.insight}"</p>
+                        </div>
+                      )}
+
+                      {book.data.intentTags &&
+                        book.data.intentTags.length > 0 && (
+                          <div class="intent-tags">
+                            <i class="bi bi-tags text-xs opacity-60" />
+                            {book.data.intentTags.map((tag) => (
+                              <span class="tag intentTag">{tag}</span>
+                            ))}
+                          </div>
+                        )}
+                    </div>
+
+                    <div class="tc-back-footer">
+                      <a
+                        href={book.data.amazonINLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="tc-buy-btn"
+                      >
+                        Buy Now on <i class="bi bi-amazon ml-1" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+
+  <!-- Pagination Indicator Dots -->
+  <div class="trading-carousel-pagination" id="trading-carousel-pagination">
+  </div>
+</div>
+
+<style>
+  @reference "../styles/global.css";
+
+  .trading-carousel-wrapper {
+    @apply relative w-full select-none py-6 overflow-hidden min-h-[540px] sm:min-h-[580px];
+    perspective: 1200px;
+    touch-action: pan-y;
+  }
+
+  .trading-carousel-stage {
+    @apply relative w-full flex items-center justify-center min-h-[460px] sm:min-h-[500px];
+    perspective: 1200px;
+  }
+
+  .trading-carousel-track {
+    @apply relative w-full h-full flex items-center justify-center;
+    transform-style: preserve-3d;
+  }
+
+  /* Individual Card Positioner */
+  .tc-card-wrapper {
+    @apply absolute w-[270px] sm:min-w-[300px] h-[360px] sm:min-h-[400px] top-1/2 left-1/2 -mt-[215px] sm:-mt-[235px] -ml-[135px] sm:-ml-[155px];
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.5s ease;
+    transform-style: preserve-3d;
+    will-change: transform, opacity;
+  }
+
+  .tc-card-container {
+    @apply w-full h-full relative cursor-pointer;
+    perspective: 1000px;
+  }
+
+  .tc-card-inner {
+    @apply w-full h-full relative rounded-sm shadow-2xl;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.34, 1.4, 0.64, 1);
+  }
+
+  .tc-card-inner.is-flipped {
+    transform: rotateY(180deg);
+  }
+
+  /* Prevent Native Image Dragging */
+  img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  /* Card Faces Base Style */
+  .tc-face {
+    @apply absolute inset-0 w-full h-full rounded-sm overflow-hidden border border-white/15;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    background: var(--bg);
+    box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.4), 0 0 1px 1px rgba(255, 255, 255, 0.08);
+  }
+
+  /* FRONT FACE - Full Size Cover Image */
+  .tc-face-front {
+    @apply relative p-0 bg-black flex items-center justify-center;
+  }
+
+  .tc-full-cover {
+    @apply w-full h-full object-cover rounded-sm transition-transform duration-500;
+  }
+
+  .tc-badge-overlay {
+    @apply absolute top-3 right-3 z-20 flex items-center gap-1.5;
+  }
+
+  .tc-rec-star {
+    @apply text-xs px-1 py-1 rounded-full bg-black text-yellow-400 shadow-sm flex items-center justify-center;
+  }
+
+  /* BACK FACE - Compact Details Layout (Zero Scroll) */
+  .tc-face-back {
+    transform: rotateY(180deg);
+    @apply bg-(--bg) p-4 flex flex-col justify-between overflow-hidden;
+  }
+
+  .tc-back-header {
+    @apply flex items-center justify-between mb-2 z-10;
+  }
+
+  .status-row {
+    @apply flex items-center gap-1.5;
+  }
+
+  .tc-back-content {
+    @apply flex-1 flex flex-col justify-between;
+  }
+
+  .tc-back-top-row {
+    @apply flex items-start gap-2 mb-1;
+  }
+
+  .tc-back-thumb {
+    @apply w-16 h-22 object-cover rounded-sm shrink-0 shadow-md border border-white/10 absolute top-1 left-1;
+  }
+
+  .tc-back-title-group {
+    @apply flex-1 min-w-0 flex flex-col justify-center;
+  }
+
+  .tc-title {
+    @apply text-xs leading-tight m-0 text-pretty text-(--text);
+  }
+
+  .tc-subtitle {
+    @apply text-xs opacity-70 font-light mt-1 leading-snug line-clamp-2;
+  }
+
+  .tc-insight-box {
+    @apply bg-white/4 border border-white/10 rounded-sm p-2.5 my-0;
+  }
+
+  .tc-insight-box .insight {
+    @apply text-xs italic leading-relaxed m-0 text-(--accent) line-clamp-4;
+  }
+
+  .intent-tags {
+    @apply flex flex-wrap items-center gap-1 mt-auto pt-1;
+  }
+
+  .tc-back-footer {
+    @apply mt-2 pt-2 border-t border-white/10 shrink-0;
+  }
+
+  .tc-buy-btn {
+    @apply w-full bg-(--buttonBg) rounded-sm text-(--buttonText) flex items-center justify-center gap-1.5 leading-none opacity-90 py-2.5 px-3 no-underline font-medium text-xs sm:text-sm hover:opacity-100 transition-opacity;
+  }
+
+  /* Tags Styling - White 80% Background */
+  .tag {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #111827;
+    @apply text-xs py-0.5 px-2.5 font-mono font-semibold whitespace-nowrap inline-block rounded-full shadow-sm;
+  }
+  .intentTag {
+    @apply bg-white/5 border-0 text-(--lightGrey) text-[0.65rem] py-0.5 px-1.5 rounded-sm font-normal;
+  }
+  .blueTag {
+    color: #0284c7;
+    border-color: rgba(2, 132, 199, 0.3);
+  }
+  .greenTag {
+    color: #16a34a;
+    border-color: rgba(22, 163, 74, 0.3);
+  }
+  .orangeTag {
+    color: #ea580c;
+    border-color: rgba(234, 88, 12, 0.3);
+  }
+  .neutralTag {
+    color: #1f2937;
+    border-color: rgba(31, 41, 55, 0.2);
+  }
+
+  /* Navigation Arrows */
+  .carousel-nav-btn {
+    @apply absolute top-1/2 -translate-y-1/2 z-40 w-11 h-11 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-(--text) items-center justify-center cursor-pointer transition-all hover:bg-white/20 hover:scale-110 active:scale-95 hidden sm:flex;
+  }
+  .prev-btn {
+    @apply left-2 sm:left-4;
+  }
+  .next-btn {
+    @apply right-2 sm:right-4;
+  }
+
+  /* Pagination Dots */
+  .trading-carousel-pagination {
+    @apply flex items-center justify-center gap-2 mt-4 z-30 relative;
+  }
+
+  :global(.tc-dot) {
+    @apply w-2.5 h-2.5 rounded-full bg-white/20 transition-all duration-300 cursor-pointer border-0 p-0;
+  }
+
+  :global(.tc-dot.active) {
+    @apply w-7 bg-(--accent) rounded-full;
+  }
+</style>
+
+<script>
+  class TradingCoverflowCarousel {
+    private stage: HTMLElement;
+    private track: HTMLElement;
+    private cards: HTMLElement[];
+    private prevBtn: HTMLButtonElement | null;
+    private nextBtn: HTMLButtonElement | null;
+    private paginationContainer: HTMLElement | null;
+
+    private activeIndex: number = 0;
+    private visibleCards: HTMLElement[] = [];
+
+    // Drag / Swipe State
+    private isDragging: boolean = false;
+    private startX: number = 0;
+    private currentX: number = 0;
+    private dragOffset: number = 0;
+
+    constructor() {
+      this.stage = document.getElementById("trading-carousel-stage")!;
+      this.track = document.getElementById("trading-carousel-track")!;
+      this.cards = Array.from(document.querySelectorAll(".tc-card-wrapper"));
+      this.prevBtn = document.getElementById("carousel-prev") as HTMLButtonElement;
+      this.nextBtn = document.getElementById("carousel-next") as HTMLButtonElement;
+      this.paginationContainer = document.getElementById("trading-carousel-pagination");
+
+      if (!this.stage || !this.track || this.cards.length === 0) return;
+
+      this.init();
+    }
+
+    private init() {
+      this.updateVisibleCards();
+      this.setupEventListeners();
+      this.updateCarousel();
+    }
+
+    private updateVisibleCards() {
+      this.visibleCards = this.cards.filter((card) => !card.hidden);
+      if (this.visibleCards.length === 0) return;
+      
+      if (this.activeIndex >= this.visibleCards.length) {
+        this.activeIndex = 0;
+      }
+      this.renderPagination();
+    }
+
+    private renderPagination() {
+      if (!this.paginationContainer) return;
+      this.paginationContainer.innerHTML = "";
+
+      this.visibleCards.forEach((_, idx) => {
+        const dot = document.createElement("button");
+        dot.className = `tc-dot ${idx === this.activeIndex ? "active" : ""}`;
+        dot.setAttribute("aria-label", `Go to slide ${idx + 1}`);
+        dot.addEventListener("click", () => {
+          this.setActiveIndex(idx);
+        });
+        this.paginationContainer!.appendChild(dot);
+      });
+    }
+
+    private resetCardFlips() {
+      this.cards.forEach((card) => {
+        const inner = card.querySelector(".tc-card-inner") as HTMLElement;
+        if (inner && inner.classList.contains("is-flipped")) {
+          inner.classList.remove("is-flipped");
+          inner.style.transform = "";
+        }
+      });
+    }
+
+    private setActiveIndex(index: number) {
+      const N = this.visibleCards.length;
+      if (N === 0) return;
+
+      // Infinite loop wrap-around
+      const nextIndex = ((index % N) + N) % N;
+
+      if (this.activeIndex !== nextIndex) {
+        this.resetCardFlips();
+      }
+      this.activeIndex = nextIndex;
+      this.updateCarousel();
+    }
+
+    private updateCarousel() {
+      const N = this.visibleCards.length;
+      if (N === 0) return;
+
+      const isMobile = window.innerWidth < 640;
+      const stepX = isMobile ? 110 : 160;
+      const stepZ = isMobile ? -80 : -110;
+      const stepRotate = isMobile ? 18 : 25;
+
+      this.cards.forEach((card) => {
+        const visibleIdx = this.visibleCards.indexOf(card);
+
+        if (visibleIdx === -1) {
+          card.style.opacity = "0";
+          card.style.pointerEvents = "none";
+          card.style.transform = `translate3d(0, 0, -500px) scale(0)`;
+          card.classList.remove("active");
+          return;
+        }
+
+        // Calculate shortest circular offset for infinite carousel
+        let offset = visibleIdx - this.activeIndex;
+        if (N > 3) {
+          const half = N / 2;
+          while (offset > half) offset -= N;
+          while (offset < -half) offset += N;
+        }
+
+        const absOffset = Math.abs(offset);
+
+        // Display up to ±3 flanking cards (7 cards total visible)
+        if (absOffset <= 3) {
+          const dir = offset > 0 ? 1 : (offset < 0 ? -1 : 0);
+          
+          if (absOffset === 0) {
+            // Center active card
+            card.classList.add("active");
+            card.style.zIndex = "50";
+            card.style.opacity = "1";
+            card.style.pointerEvents = "auto";
+            const dragShift = this.dragOffset * (isMobile ? 0.7 : 0.9);
+            card.style.transform = `translate3d(${dragShift}px, 0, 0) scale(1) rotateY(0deg)`;
+          } else {
+            // Flanking cards
+            card.classList.remove("active");
+            card.style.zIndex = `${40 - absOffset * 10}`;
+            card.style.opacity = `${Math.max(0.2, 0.9 - absOffset * 0.25)}`;
+            card.style.pointerEvents = "auto";
+
+            const posX = dir * stepX * (1 + (absOffset - 1) * 0.65) + this.dragOffset * 0.4;
+            const posZ = absOffset * stepZ;
+            const rotY = -dir * (stepRotate + (absOffset - 1) * 8);
+            const scale = Math.max(0.55, 1 - absOffset * 0.12);
+
+            card.style.transform = `translate3d(${posX}px, 0, ${posZ}px) scale(${scale}) rotateY(${rotY}deg)`;
+          }
+        } else {
+          // Hidden overflow cards
+          card.classList.remove("active");
+          card.style.zIndex = "0";
+          card.style.opacity = "0";
+          card.style.pointerEvents = "none";
+          const dir = offset > 0 ? 1 : -1;
+          card.style.transform = `translate3d(${dir * 600}px, 0, -500px) scale(0.4)`;
+        }
+      });
+
+      // Update Pagination Dots
+      if (this.paginationContainer) {
+        const dots = this.paginationContainer.querySelectorAll(".tc-dot");
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle("active", idx === this.activeIndex);
+        });
+      }
+    }
+
+    private setupEventListeners() {
+      // Prevent native image dragging
+      this.stage.addEventListener("dragstart", (e) => e.preventDefault());
+
+      // 1. Navigation Arrow Buttons
+      this.prevBtn?.addEventListener("click", () => {
+        this.setActiveIndex(this.activeIndex - 1);
+      });
+
+      this.nextBtn?.addEventListener("click", () => {
+        this.setActiveIndex(this.activeIndex + 1);
+      });
+
+      // 2. Click, Flip & Desktop 3D Cursor Tilt
+      this.cards.forEach((card) => {
+        const cardContainer = card.querySelector(".tc-card-container") as HTMLElement;
+        const cardInner = card.querySelector(".tc-card-inner") as HTMLElement;
+
+        // Desktop 3D Hover Tilt Effect
+        cardContainer.addEventListener("mousemove", (e) => {
+          if (!card.classList.contains("active") || this.isDragging) return;
+
+          const rect = cardContainer.getBoundingClientRect();
+          const x = (e.clientX - rect.left) / rect.width - 0.5;
+          const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+          const tiltX = (y * -20).toFixed(2);
+          const tiltY = (x * 20).toFixed(2);
+
+          const isFlipped = cardInner.classList.contains("is-flipped");
+          const baseRotateY = isFlipped ? 180 : 0;
+
+          cardInner.style.transform = `rotateY(${baseRotateY}deg) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale(1.02)`;
+        });
+
+        cardContainer.addEventListener("mouseleave", () => {
+          const isFlipped = cardInner.classList.contains("is-flipped");
+          cardInner.style.transform = isFlipped ? "rotateY(180deg)" : "";
+        });
+
+        // Click & Flip handling
+        card.addEventListener("click", (e) => {
+          const visibleIdx = this.visibleCards.indexOf(card);
+          if (visibleIdx === -1) return;
+
+          // If non-center card clicked -> bring to center
+          if (visibleIdx !== this.activeIndex) {
+            e.preventDefault();
+            this.setActiveIndex(visibleIdx);
+            return;
+          }
+
+          // Center Card clicked -> check if button clicked
+          const target = e.target as HTMLElement;
+          const isButtonOrLink = target.closest("a, button");
+
+          if (isButtonOrLink && cardInner.classList.contains("is-flipped")) {
+            return; // allow link navigation
+          }
+
+          // Toggle 180deg Y-axis flip
+          const isFlipped = cardInner.classList.toggle("is-flipped");
+          cardInner.style.transform = isFlipped ? "rotateY(180deg)" : "rotateY(0deg)";
+        });
+      });
+
+      // 3. Drag / Swipe Touch & Mouse Events
+      const onDragStart = (clientX: number) => {
+        this.isDragging = true;
+        this.startX = clientX;
+        this.currentX = clientX;
+        this.dragOffset = 0;
+      };
+
+      const onDragMove = (clientX: number) => {
+        if (!this.isDragging) return;
+        this.currentX = clientX;
+        this.dragOffset = this.currentX - this.startX;
+        this.updateCarousel();
+      };
+
+      const onDragEnd = () => {
+        if (!this.isDragging) return;
+        this.isDragging = false;
+
+        const threshold = 55;
+        if (this.dragOffset < -threshold) {
+          this.setActiveIndex(this.activeIndex + 1);
+        } else if (this.dragOffset > threshold) {
+          this.setActiveIndex(this.activeIndex - 1);
+        }
+
+        this.dragOffset = 0;
+        this.updateCarousel();
+      };
+
+      // Mouse Events
+      this.stage.addEventListener("mousedown", (e) => onDragStart(e.clientX));
+      window.addEventListener("mousemove", (e) => onDragMove(e.clientX));
+      window.addEventListener("mouseup", () => onDragEnd());
+
+      // Touch Events
+      this.stage.addEventListener("touchstart", (e) => onDragStart(e.touches[0].clientX), { passive: true });
+      window.addEventListener("touchmove", (e) => onDragMove(e.touches[0].clientX), { passive: true });
+      window.addEventListener("touchend", () => onDragEnd());
+
+      // 4. Keyboard Navigation
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowLeft") {
+          this.setActiveIndex(this.activeIndex - 1);
+        } else if (e.key === "ArrowRight") {
+          this.setActiveIndex(this.activeIndex + 1);
+        } else if (e.key === " " || e.key === "Enter") {
+          const activeCard = this.visibleCards[this.activeIndex];
+          if (activeCard) {
+            const inner = activeCard.querySelector(".tc-card-inner") as HTMLElement;
+            if (inner) {
+              const isFlipped = inner.classList.toggle("is-flipped");
+              inner.style.transform = isFlipped ? "rotateY(180deg)" : "rotateY(0deg)";
+            }
+          }
+        }
+      });
+
+      // 5. Responsive Resize
+      window.addEventListener("resize", () => {
+        this.updateCarousel();
+      });
+
+      // 6. Filter Synchronization Observer
+      const filterBtns = document.querySelectorAll<HTMLButtonElement>(".filter-btn");
+      const clearBtn = document.getElementById("clear-btn") as HTMLButtonElement;
+
+      const handleFilterUpdate = () => {
+        setTimeout(() => {
+          this.resetCardFlips();
+          this.updateVisibleCards();
+          this.activeIndex = 0;
+          this.updateCarousel();
+        }, 50);
+      };
+
+      filterBtns.forEach((btn) => btn.addEventListener("click", handleFilterUpdate));
+      clearBtn?.addEventListener("click", handleFilterUpdate);
+    }
+  }
+
+  // Initialize carousel on DOMContentLoaded
+  document.addEventListener("DOMContentLoaded", () => {
+    new TradingCoverflowCarousel();
+  });
+</script>

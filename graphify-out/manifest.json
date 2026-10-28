@@ -80,8 +80,8 @@
     "semantic_hash": "5f9ba8d4dae0abbdd554fdb870809442"
   },
   "src/pages/index.astro": {
-    "mtime": 1785744934.7745912,
-    "ast_hash": "762298673846725ed427c6c323bbb7f0",
+    "mtime": 1793161320.3483796,
+    "ast_hash": "a8c921fb01a0c5e2afce4f7d75e3c170",
     "semantic_hash": ""
   },
   "tsconfig.json": {
@@ -215,8 +215,8 @@
     "semantic_hash": ""
   },
   "src/content/books/09-psycho-cybernetics.mdx": {
-    "mtime": 1793160461.961155,
-    "ast_hash": "7176a0ae38aedd5c82cd5eaa38a85f69",
+    "mtime": 1793161335.646043,
+    "ast_hash": "107e3576eb3a216dd36a0c8a753386cc",
     "semantic_hash": ""
   }
 }

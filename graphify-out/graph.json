@@ -283,15 +283,14 @@
       "norm_label": "packagemanager"
     },
     {
-      "label": "../components/Card.astro",
+      "label": "Card.astro",
       "file_type": "code",
       "source_file": "src/components/Card.astro",
       "source_location": "L1",
       "_origin": "ast",
-      "confidence": "EXTRACTED",
       "id": "components_card",
       "community": 2,
-      "norm_label": "../components/card.astro"
+      "norm_label": "card.astro"
     },
     {
       "label": "astro:assets",
@@ -325,6 +324,17 @@
       "norm_label": "../components/footer.astro"
     },
     {
+      "label": "Outro.astro",
+      "file_type": "code",
+      "source_file": "src/components/Outro.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast",
+      "source_location": "L1",
+      "id": "components_outro",
+      "community": 2,
+      "norm_label": "outro.astro"
+    },
+    {
       "label": "../components/Header.astro",
       "file_type": "code",
       "source_file": "src/components/Header.astro",
@@ -332,7 +342,7 @@
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "id": "components_header",
-      "community": 2,
+      "community": 4,
       "norm_label": "../components/header.astro"
     },
     {
@@ -343,7 +353,7 @@
       "_origin": "ast",
       "source_location": "L1",
       "id": "components_themetoggle",
-      "community": 2,
+      "community": 4,
       "norm_label": "themetoggle.astro"
     },
     {
@@ -369,15 +379,35 @@
       "norm_label": "bluegradientcard.astro"
     },
     {
-      "label": "../components/Outro.astro",
+      "label": "../components/TradingCard.astro",
       "file_type": "code",
-      "source_file": "src/components/Outro.astro",
+      "source_file": "src/components/TradingCard.astro",
       "source_location": "L1",
       "_origin": "ast",
       "confidence": "EXTRACTED",
-      "id": "components_outro",
+      "id": "components_tradingcard",
       "community": 2,
-      "norm_label": "../components/outro.astro"
+      "norm_label": "../components/tradingcard.astro"
+    },
+    {
+      "label": "getStatusInfo()",
+      "file_type": "code",
+      "source_file": "src/components/TradingCard.astro",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "components_tradingcard_getstatusinfo",
+      "community": 2,
+      "norm_label": "getstatusinfo()"
+    },
+    {
+      "label": "astro:content",
+      "file_type": "code",
+      "source_file": "astro:content",
+      "confidence": "EXTRACTED",
+      "_origin": "ast",
+      "id": "astro_content",
+      "community": 2,
+      "norm_label": "astro:content"
     },
     {
       "label": "content.config.ts",
@@ -386,7 +416,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_content_config",
-      "community": 4,
+      "community": 2,
       "norm_label": "content.config.ts"
     },
     {
@@ -396,7 +426,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_content_config_bookscollection",
-      "community": 4,
+      "community": 2,
       "norm_label": "bookscollection"
     },
     {
@@ -406,7 +436,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "src_content_config_collections",
-      "community": 4,
+      "community": 2,
       "norm_label": "collections"
     },
     {
@@ -427,7 +457,7 @@
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "id": "layouts_layout",
-      "community": 2,
+      "community": 4,
       "norm_label": "../layouts/layout.astro"
     },
     {
@@ -437,7 +467,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "books_slug",
-      "community": 2,
+      "community": 4,
       "norm_label": "[slug].astro"
     },
     {
@@ -447,7 +477,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "books_slug_getstaticpaths",
-      "community": 2,
+      "community": 4,
       "norm_label": "getstaticpaths()"
     },
     {
@@ -457,18 +487,8 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "books_slug_screen",
-      "community": 2,
+      "community": 4,
       "norm_label": "screen()"
-    },
-    {
-      "label": "astro:content",
-      "file_type": "code",
-      "source_file": "astro:content",
-      "confidence": "EXTRACTED",
-      "_origin": "ast",
-      "id": "astro_content",
-      "community": 2,
-      "norm_label": "astro:content"
     },
     {
       "label": "index.astro",
@@ -739,6 +759,26 @@
       "id": "readme_disclosure",
       "community": 14,
       "norm_label": "disclosure"
+    },
+    {
+      "label": "next-prompt.md",
+      "file_type": "document",
+      "source_file": "next-prompt.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "next_prompt",
+      "community": 20,
+      "norm_label": "next-prompt.md"
+    },
+    {
+      "label": "Prompt - 2026-07-28",
+      "file_type": "document",
+      "source_file": "next-prompt.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "next_prompt_prompt_2026_07_28",
+      "community": 20,
+      "norm_label": "prompt - 2026-07-28"
     },
     {
       "label": "00-harry-potter-1.mdx",
@@ -1072,7 +1112,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 2,
       "norm_label": "vscode settings (mdx as markdown)",
       "id": "vscode_settings"
     },
@@ -1085,7 +1125,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 2,
       "norm_label": "book detail dynamic page route",
       "id": "books__slug_"
     },
@@ -1111,7 +1151,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 2,
       "norm_label": "pages cms content config",
       "id": "pages_yml"
     },
@@ -1124,7 +1164,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 2,
+      "community": 4,
       "norm_label": "dark/light theme persistence via localstorage",
       "id": "concept_theme_persistence"
     },
@@ -1137,7 +1177,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 2,
       "norm_label": "books content collection (astro content api)",
       "id": "concept_books_collection"
     },
@@ -1552,9 +1592,9 @@
       "source_file": "package.json",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package_dependencies",
-      "target": "package_dependencies_sharp",
-      "confidence_score": 1.0
+      "target": "package_dependencies_sharp"
     },
     {
       "relation": "contains",
@@ -1624,6 +1664,14 @@
       "target": "astro_assets"
     },
     {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/TradingCard.astro",
+      "source": "components_tradingcard",
+      "target": "astro_assets",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "semantically_similar_to",
       "confidence": "INFERRED",
       "confidence_score": 0.65,
@@ -1637,12 +1685,52 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/components/Footer.astro",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "components_footer",
+      "target": "components_outro",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/pages/index.astro",
       "source_location": "L4",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "pages_index",
       "target": "components_footer"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "src/components/Intro.astro",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "components_intro",
+      "target": "components_outro"
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Outro.astro",
+      "confidence_score": 1.0,
+      "source": "components_outro",
+      "target": "layouts_bluegradientcard"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/index.astro",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "pages_index",
+      "target": "components_outro"
     },
     {
       "relation": "imports_from",
@@ -1695,16 +1783,6 @@
       "target": "layouts_layout"
     },
     {
-      "relation": "semantically_similar_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.75,
-      "source_file": "src/components/Intro.astro",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "components_intro",
-      "target": "components_outro"
-    },
-    {
       "relation": "imports_from",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Intro.astro",
@@ -1725,32 +1803,51 @@
     },
     {
       "relation": "imports_from",
+      "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/components/Outro.astro",
-      "confidence_score": 1.0,
-      "source": "components_outro",
-      "target": "layouts_bluegradientcard"
+      "source_file": "src/components/TradingCard.astro",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "components_tradingcard",
+      "target": "astro_content",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/TradingCard.astro",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "components_tradingcard",
+      "target": "components_tradingcard_getstatusinfo",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/pages/index.astro",
-      "source_location": "L7",
+      "source_location": "L6",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "pages_index",
-      "target": "components_outro"
+      "target": "components_tradingcard",
+      "confidence_score": 1.0
     },
     {
-      "relation": "semantically_similar_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.95,
-      "source_file": ".pages.yml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "pages_yml",
-      "target": "src_content_config"
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/books/[slug].astro",
+      "confidence_score": 1.0,
+      "source": "books_slug",
+      "target": "astro_content"
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/index.astro",
+      "confidence_score": 1.0,
+      "source": "pages_index",
+      "target": "astro_content"
     },
     {
       "relation": "imports_from",
@@ -1762,6 +1859,16 @@
       "confidence_score": 1.0,
       "source": "src_content_config",
       "target": "astro_content"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": ".pages.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "pages_yml",
+      "target": "src_content_config"
     },
     {
       "relation": "implements",
@@ -1836,14 +1943,6 @@
       "target": "layouts_layout"
     },
     {
-      "relation": "imports_from",
-      "confidence": "EXTRACTED",
-      "source_file": "src/pages/books/[slug].astro",
-      "confidence_score": 1.0,
-      "source": "books_slug",
-      "target": "astro_content"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/pages/books/[slug].astro",
@@ -1862,14 +1961,6 @@
       "confidence_score": 1.0,
       "source": "books_slug",
       "target": "books_slug_screen"
-    },
-    {
-      "relation": "imports_from",
-      "confidence": "EXTRACTED",
-      "source_file": "src/pages/index.astro",
-      "confidence_score": 1.0,
-      "source": "pages_index",
-      "target": "astro_content"
     },
     {
       "relation": "references",
@@ -1897,9 +1988,9 @@
       "source_file": "AGENTS.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents",
-      "target": "agents_graphify",
-      "confidence_score": 1.0
+      "target": "agents_graphify"
     },
     {
       "relation": "contains",
@@ -1907,9 +1998,9 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "changelog",
-      "target": "changelog_changelog",
-      "confidence_score": 1.0
+      "target": "changelog_changelog"
     },
     {
       "relation": "contains",
@@ -1917,9 +2008,9 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "changelog_changelog",
-      "target": "changelog_0_25_0",
-      "confidence_score": 1.0
+      "target": "changelog_0_25_0"
     },
     {
       "relation": "contains",
@@ -1927,9 +2018,9 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "changelog_changelog",
-      "target": "changelog_0_26_0",
-      "confidence_score": 1.0
+      "target": "changelog_0_26_0"
     },
     {
       "relation": "contains",
@@ -1937,9 +2028,9 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "changelog_changelog",
-      "target": "changelog_0_27_0_2026_05_28",
-      "confidence_score": 1.0
+      "target": "changelog_0_27_0_2026_05_28"
     },
     {
       "relation": "contains",
@@ -1947,9 +2038,9 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "changelog_changelog",
-      "target": "changelog_0_28_0_2026_06_29",
-      "confidence_score": 1.0
+      "target": "changelog_0_28_0_2026_06_29"
     },
     {
       "relation": "contains",
@@ -1957,9 +2048,9 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "changelog_0_28_0_2026_06_29",
-      "target": "changelog_added",
-      "confidence_score": 1.0
+      "target": "changelog_added"
     },
     {
       "relation": "contains",
@@ -1967,9 +2058,9 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "changelog_0_28_0_2026_06_29",
-      "target": "changelog_fixed",
-      "confidence_score": 1.0
+      "target": "changelog_fixed"
     },
     {
       "relation": "contains",
@@ -1977,9 +2068,9 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "changelog_0_28_0_2026_06_29",
-      "target": "changelog_upgraded",
-      "confidence_score": 1.0
+      "target": "changelog_upgraded"
     },
     {
       "relation": "contains",
@@ -1987,9 +2078,9 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "changelog_0_27_0_2026_05_28",
-      "target": "changelog_changed",
-      "confidence_score": 1.0
+      "target": "changelog_changed"
     },
     {
       "relation": "contains",
@@ -1997,9 +2088,9 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "changelog_0_26_0",
-      "target": "changelog_fixed_27",
-      "confidence_score": 1.0
+      "target": "changelog_fixed_27"
     },
     {
       "relation": "contains",
@@ -2007,9 +2098,9 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L32",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "changelog_0_25_0",
-      "target": "changelog_changed_32",
-      "confidence_score": 1.0
+      "target": "changelog_changed_32"
     },
     {
       "relation": "references",
@@ -2027,9 +2118,9 @@
       "source_file": "NOTES.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "notes",
-      "target": "notes_notes",
-      "confidence_score": 1.0
+      "target": "notes_notes"
     },
     {
       "relation": "contains",
@@ -2037,9 +2128,9 @@
       "source_file": "NOTES.md",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "notes_notes",
-      "target": "notes_books_list_from_amazon",
-      "confidence_score": 1.0
+      "target": "notes_books_list_from_amazon"
     },
     {
       "relation": "contains",
@@ -2047,9 +2138,9 @@
       "source_file": "NOTES.md",
       "source_location": "L43",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "notes_notes",
-      "target": "notes_fiction",
-      "confidence_score": 1.0
+      "target": "notes_fiction"
     },
     {
       "relation": "contains",
@@ -2057,9 +2148,9 @@
       "source_file": "NOTES.md",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "notes_notes",
-      "target": "notes_non_fiction",
-      "confidence_score": 1.0
+      "target": "notes_non_fiction"
     },
     {
       "relation": "contains",
@@ -2067,9 +2158,9 @@
       "source_file": "NOTES.md",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "notes_notes",
-      "target": "notes_tags_meta",
-      "confidence_score": 1.0
+      "target": "notes_tags_meta"
     },
     {
       "relation": "contains",
@@ -2077,9 +2168,9 @@
       "source_file": "README.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme",
-      "target": "readme_books_for_devs",
-      "confidence_score": 1.0
+      "target": "readme_books_for_devs"
     },
     {
       "relation": "contains",
@@ -2087,9 +2178,9 @@
       "source_file": "README.md",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_books_for_devs",
-      "target": "readme_disclosure",
-      "confidence_score": 1.0
+      "target": "readme_disclosure"
     },
     {
       "relation": "contains",
@@ -2097,8 +2188,18 @@
       "source_file": "README.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_books_for_devs",
-      "target": "readme_stack",
+      "target": "readme_stack"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "next-prompt.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "next_prompt",
+      "target": "next_prompt_prompt_2026_07_28",
       "confidence_score": 1.0
     },
     {
@@ -2107,9 +2208,9 @@
       "source_file": "src/content/books/00-harry-potter-1.mdx",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "books_00_harry_potter_1",
-      "target": "books_00_harry_potter_1_frontmatter_title",
-      "confidence_score": 1.0
+      "target": "books_00_harry_potter_1_frontmatter_title"
     },
     {
       "relation": "conceptually_related_to",
@@ -2137,9 +2238,9 @@
       "source_file": "src/content/books/00-harry-potter-1.mdx",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "books_00_harry_potter_1_frontmatter_title",
-      "target": "books_00_harry_potter_1_description",
-      "confidence_score": 1.0
+      "target": "books_00_harry_potter_1_description"
     },
     {
       "relation": "contains",
@@ -2147,9 +2248,9 @@
       "source_file": "src/content/books/00-harry-potter-1.mdx",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "books_00_harry_potter_1_frontmatter_title",
-      "target": "books_00_harry_potter_1_three_reasons_to_read_this_book",
-      "confidence_score": 1.0
+      "target": "books_00_harry_potter_1_three_reasons_to_read_this_book"
     },
     {
       "relation": "contains",
@@ -2157,9 +2258,9 @@
       "source_file": "src/content/books/00-the-alchemist.mdx",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "books_00_the_alchemist",
-      "target": "books_00_the_alchemist_frontmatter_title",
-      "confidence_score": 1.0
+      "target": "books_00_the_alchemist_frontmatter_title"
     },
     {
       "relation": "conceptually_related_to",
@@ -2177,9 +2278,9 @@
       "source_file": "src/content/books/00-the-alchemist.mdx",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "books_00_the_alchemist_frontmatter_title",
-      "target": "books_00_the_alchemist_description",
-      "confidence_score": 1.0
+      "target": "books_00_the_alchemist_description"
     },
     {
       "relation": "contains",
@@ -2187,9 +2288,9 @@
       "source_file": "src/content/books/00-who-moved-my-cheese.mdx",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "books_00_who_moved_my_cheese",
-      "target": "books_00_who_moved_my_cheese_frontmatter_title",
-      "confidence_score": 1.0
+      "target": "books_00_who_moved_my_cheese_frontmatter_title"
     },
     {
       "relation": "conceptually_related_to",
@@ -2217,9 +2318,9 @@
       "source_file": "src/content/books/00-who-moved-my-cheese.mdx",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "books_00_who_moved_my_cheese_frontmatter_title",
-      "target": "books_00_who_moved_my_cheese_description",
-      "confidence_score": 1.0
+      "target": "books_00_who_moved_my_cheese_description"
     },
     {
       "relation": "contains",
@@ -2227,9 +2328,9 @@
       "source_file": "src/content/books/01-leaders-eat-last.mdx",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "books_01_leaders_eat_last",
-      "target": "books_01_leaders_eat_last_frontmatter_title",
-      "confidence_score": 1.0
+      "target": "books_01_leaders_eat_last_frontmatter_title"
     },
     {
       "relation": "conceptually_related_to",
@@ -2257,9 +2358,9 @@
       "source_file": "src/content/books/01-leaders-eat-last.mdx",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "books_01_leaders_eat_last_frontmatter_title",
-      "target": "books_01_leaders_eat_last_description",
-      "confidence_score": 1.0
+      "target": "books_01_leaders_eat_last_description"
     },
     {
       "relation": "contains",
@@ -2267,9 +2368,9 @@
       "source_file": "src/content/books/02-atomic-habits.mdx",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "books_02_atomic_habits",
-      "target": "books_02_atomic_habits_frontmatter_title",
-      "confidence_score": 1.0
+      "target": "books_02_atomic_habits_frontmatter_title"
     },
     {
       "relation": "conceptually_related_to",
@@ -2297,9 +2398,9 @@
       "source_file": "src/content/books/02-atomic-habits.mdx",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "books_02_atomic_habits_frontmatter_title",
-      "target": "books_02_atomic_habits_description",
-      "confidence_score": 1.0
+      "target": "books_02_atomic_habits_description"
     },
     {
       "relation": "contains",
@@ -2307,9 +2408,9 @@
       "source_file": "src/content/books/04-refactoring.mdx",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "books_04_refactoring",
-      "target": "books_04_refactoring_frontmatter_title",
-      "confidence_score": 1.0
+      "target": "books_04_refactoring_frontmatter_title"
     },
     {
       "relation": "semantically_similar_to",
@@ -2347,9 +2448,9 @@
       "source_file": "src/content/books/04-refactoring.mdx",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "books_04_refactoring_frontmatter_title",
-      "target": "books_04_refactoring_description",
-      "confidence_score": 1.0
+      "target": "books_04_refactoring_description"
     },
     {
       "relation": "contains",
@@ -2357,9 +2458,9 @@
       "source_file": "src/content/books/05-algorithms-to-live-by.mdx",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "books_05_algorithms_to_live_by",
-      "target": "books_05_algorithms_to_live_by_frontmatter_title",
-      "confidence_score": 1.0
+      "target": "books_05_algorithms_to_live_by_frontmatter_title"
     },
     {
       "relation": "conceptually_related_to",
@@ -2377,9 +2478,9 @@
       "source_file": "src/content/books/05-algorithms-to-live-by.mdx",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "books_05_algorithms_to_live_by_frontmatter_title",
-      "target": "books_05_algorithms_to_live_by_description",
-      "confidence_score": 1.0
+      "target": "books_05_algorithms_to_live_by_description"
     },
     {
       "relation": "contains",
@@ -2387,9 +2488,9 @@
       "source_file": "src/content/books/06-clean-code.mdx",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "books_06_clean_code",
-      "target": "books_06_clean_code_frontmatter_title",
-      "confidence_score": 1.0
+      "target": "books_06_clean_code_frontmatter_title"
     },
     {
       "relation": "conceptually_related_to",
@@ -2407,9 +2508,9 @@
       "source_file": "src/content/books/06-clean-code.mdx",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "books_06_clean_code_frontmatter_title",
-      "target": "books_06_clean_code_description",
-      "confidence_score": 1.0
+      "target": "books_06_clean_code_description"
     },
     {
       "relation": "contains",
@@ -2417,9 +2518,9 @@
       "source_file": "src/content/books/07-pragmatic-programmer.mdx",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "books_07_pragmatic_programmer",
-      "target": "books_07_pragmatic_programmer_frontmatter_title",
-      "confidence_score": 1.0
+      "target": "books_07_pragmatic_programmer_frontmatter_title"
     },
     {
       "relation": "conceptually_related_to",
@@ -2447,9 +2548,9 @@
       "source_file": "src/content/books/07-pragmatic-programmer.mdx",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "books_07_pragmatic_programmer_frontmatter_title",
-      "target": "books_07_pragmatic_programmer_description",
-      "confidence_score": 1.0
+      "target": "books_07_pragmatic_programmer_description"
     },
     {
       "relation": "contains",
@@ -2457,9 +2558,9 @@
       "source_file": "src/content/books/_template.mdx",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "books_template",
-      "target": "books_template_book_title",
-      "confidence_score": 1.0
+      "target": "books_template_book_title"
     },
     {
       "relation": "contains",
@@ -2467,9 +2568,9 @@
       "source_file": "src/content/books/_template.mdx",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "books_template_book_title",
-      "target": "books_template_why_read_this_book_or_three_reasons_to_read_this_book",
-      "confidence_score": 1.0
+      "target": "books_template_why_read_this_book_or_three_reasons_to_read_this_book"
     },
     {
       "relation": "references",
@@ -2640,5 +2741,5 @@
       "source_file": "src/content/books/05-algorithms-to-live-by.mdx"
     }
   ],
-  "built_at_commit": "e7e24113390227f0a834de463b6c371d90029622"
+  "built_at_commit": "318c94216d3a845b7f1e6ce4a4c7b76705bea577"
 }

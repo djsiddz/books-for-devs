@@ -15,13 +15,13 @@
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1782717999.0081604,
-    "ast_hash": "28d6ecfd95e1b287e8d95d52324e495f",
+    "mtime": 1793157026.171238,
+    "ast_hash": "f2de2afaed858140d7ac2d8ae6698c36",
     "semantic_hash": ""
   },
   "src/components/Card.astro": {
-    "mtime": 1782723892.6532388,
-    "ast_hash": "dcdbfe2f242e79319725b0537314d899",
+    "mtime": 1785516422.822363,
+    "ast_hash": "bc37f3ffbb05831ba910e7419f4670e2",
     "semantic_hash": ""
   },
   "src/components/CreditsModal.astro": {
@@ -30,9 +30,9 @@
     "semantic_hash": "4bab54c2188451dc939aef561a22d39e"
   },
   "src/components/Footer.astro": {
-    "mtime": 1779948646.1841612,
-    "ast_hash": "8a941684798bd5b62b56a69d3f15e379",
-    "semantic_hash": "8a941684798bd5b62b56a69d3f15e379"
+    "mtime": 1785744934.7736723,
+    "ast_hash": "9f0a95dda0113799a9c5d431eff306b1",
+    "semantic_hash": ""
   },
   "src/components/Header.astro": {
     "mtime": 1779948646.1842206,
@@ -40,14 +40,14 @@
     "semantic_hash": "0e8073b1ed541360a10b692912716bcc"
   },
   "src/components/Intro.astro": {
-    "mtime": 1779948646.1842759,
-    "ast_hash": "b9cdc09e5631f1c657c586f011e5ee77",
-    "semantic_hash": "b9cdc09e5631f1c657c586f011e5ee77"
+    "mtime": 1785744934.773799,
+    "ast_hash": "d25670e622ff4c9d77da1cc97db88005",
+    "semantic_hash": ""
   },
   "src/components/Outro.astro": {
-    "mtime": 1779948646.1843398,
-    "ast_hash": "2ab10542993739cf794d5a9b3aa4868d",
-    "semantic_hash": "2ab10542993739cf794d5a9b3aa4868d"
+    "mtime": 1785744934.7739139,
+    "ast_hash": "4d7878f67e9e0f802d11815fb59cb546",
+    "semantic_hash": ""
   },
   "src/components/ThemeToggle.astro": {
     "mtime": 1779948646.1843965,
@@ -80,8 +80,8 @@
     "semantic_hash": "5f9ba8d4dae0abbdd554fdb870809442"
   },
   "src/pages/index.astro": {
-    "mtime": 1785244507.2645774,
-    "ast_hash": "322f28e570565eb91365aeeb75a39731",
+    "mtime": 1785744934.7745912,
+    "ast_hash": "762298673846725ed427c6c323bbb7f0",
     "semantic_hash": ""
   },
   "tsconfig.json": {
@@ -90,9 +90,9 @@
     "semantic_hash": "3809491c054359a262f0472df328065e"
   },
   ".github/workflows/deploy.yml": {
-    "mtime": 1779948646.1822462,
-    "ast_hash": "67865a42d68fdca25b4b0764938707d5",
-    "semantic_hash": "67865a42d68fdca25b4b0764938707d5"
+    "mtime": 1785517328.5162685,
+    "ast_hash": "de7faa7975291926fe7585153e5ce6fc",
+    "semantic_hash": ""
   },
   ".pages.yml": {
     "mtime": 1779948646.1823678,
@@ -125,9 +125,9 @@
     "semantic_hash": "4a4a3cdbd87f6737ea51a772b7c81c79"
   },
   "src/content/books/00-who-moved-my-cheese.mdx": {
-    "mtime": 1779948646.1847262,
-    "ast_hash": "2554d7af412b259b00c2e46f4890719e",
-    "semantic_hash": "2554d7af412b259b00c2e46f4890719e"
+    "mtime": 1785744934.7741902,
+    "ast_hash": "30a533081ca574d7da7fda1762a91b69",
+    "semantic_hash": ""
   },
   "src/content/books/01-leaders-eat-last.mdx": {
     "mtime": 1779948646.184795,
@@ -135,14 +135,14 @@
     "semantic_hash": "d5c69a2c7df8987d76f6072adaf6553c"
   },
   "src/content/books/02-atomic-habits.mdx": {
-    "mtime": 1782724968.2329025,
-    "ast_hash": "d7ce5c0e9a6a42b5505a6d6eb1973476",
+    "mtime": 1785744934.7743015,
+    "ast_hash": "0afff76f4e882631207ea627a8cf67aa",
     "semantic_hash": ""
   },
   "src/content/books/04-refactoring.mdx": {
-    "mtime": 1779948646.1849215,
-    "ast_hash": "e37eaa2d18619902d8ff69138f80da1e",
-    "semantic_hash": "e37eaa2d18619902d8ff69138f80da1e"
+    "mtime": 1785744934.7744257,
+    "ast_hash": "4a66bcaa96c12232d5d95ab26d26c8bf",
+    "semantic_hash": ""
   },
   "src/content/books/05-algorithms-to-live-by.mdx": {
     "mtime": 1779948646.1849785,
@@ -150,9 +150,9 @@
     "semantic_hash": "010cdc06cea31c0ccad0c5b762aa6671"
   },
   "src/content/books/06-clean-code.mdx": {
-    "mtime": 1779948646.1850402,
-    "ast_hash": "6961784c89414fcf335018204c41b91c",
-    "semantic_hash": "6961784c89414fcf335018204c41b91c"
+    "mtime": 1785252618.4967754,
+    "ast_hash": "420ec171cf0928f1de4edcd08afdb00f",
+    "semantic_hash": ""
   },
   "src/content/books/07-pragmatic-programmer.mdx": {
     "mtime": 1782719146.6353884,
@@ -197,6 +197,16 @@
   "public/favicon.png": {
     "mtime": 1782717999.008848,
     "ast_hash": "6fe2b9a5b5f0019de5c08b327c61b7d8",
+    "semantic_hash": ""
+  },
+  "src/components/TradingCard.astro": {
+    "mtime": 1785744934.7740366,
+    "ast_hash": "954c910152c575b374466199797bca00",
+    "semantic_hash": ""
+  },
+  "next-prompt.md": {
+    "mtime": 1785254679.329098,
+    "ast_hash": "303c8a7e5dc7831afb3434e3559ab7fe",
     "semantic_hash": ""
   }
 }

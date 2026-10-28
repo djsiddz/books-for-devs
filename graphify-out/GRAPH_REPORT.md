@@ -1,16 +1,16 @@
 # Graph Report - books-for-devs  (2026-10-28)
 
 ## Corpus Check
-- 36 files · ~15,748 words
+- 38 files · ~16,014 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 125 nodes · 122 edges · 21 communities (12 shown, 9 thin omitted)
-- Extraction: 85% EXTRACTED · 15% INFERRED · 0% AMBIGUOUS · INFERRED: 18 edges (avg confidence: 0.85)
+- 131 nodes · 126 edges · 23 communities (12 shown, 11 thin omitted)
+- Extraction: 86% EXTRACTED · 14% INFERRED · 0% AMBIGUOUS · INFERRED: 18 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `318c9421`
+- Built from commit: `3f0919bd`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -35,6 +35,8 @@
 - [[_COMMUNITY_Community 18|Community 18]]
 - [[_COMMUNITY_Community 19|Community 19]]
 - [[_COMMUNITY_Community 20|Community 20]]
+- [[_COMMUNITY_Community 21|Community 21]]
+- [[_COMMUNITY_Community 22|Community 22]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `scripts` - 6 edges
@@ -65,7 +67,7 @@
 - **Career Leverage Reading Cluster** — books_00_the_alchemist, books_00_who_moved_my_cheese, books_07_pragmatic_programmer, concept_career_leverage [EXTRACTED 1.00]
 - **Decision Making and Adaptability Books** — books_05_algorithms_to_live_by, books_00_who_moved_my_cheese, concept_decision_making [EXTRACTED 1.00]
 
-## Communities (21 total, 9 thin omitted)
+## Communities (23 total, 11 thin omitted)
 
 ### Community 0 - "Book Content & Concepts"
 Cohesion: 0.14
@@ -112,19 +114,19 @@ Cohesion: 0.20
 Nodes (8): Description, {frontmatter.title}, Description, {frontmatter.title}, Description, {frontmatter.title}, Software Craft Intent Tag, Systems Thinking Intent Tag
 
 ## Knowledge Gaps
-- **58 isolated node(s):** `name`, `type`, `version`, `dev`, `start` (+53 more)
+- **60 isolated node(s):** `name`, `type`, `version`, `dev`, `start` (+55 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **11 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `dependencies` connect `Dependencies & Package Config` to `Build & Dev Scripts`?**
-  _High betweenness centrality (0.011) - this node is a cross-community bridge._
-- **Why does `Software Craft Intent Tag` connect `Community 17` to `Book Content & Concepts`?**
   _High betweenness centrality (0.010) - this node is a cross-community bridge._
+- **Why does `Software Craft Intent Tag` connect `Community 17` to `Book Content & Concepts`?**
+  _High betweenness centrality (0.009) - this node is a cross-community bridge._
 - **What connects `name`, `type`, `version` to the rest of the system?**
-  _59 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _61 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Book Content & Concepts` be split into smaller, more focused modules?**
   _Cohesion score 0.14285714285714285 - nodes in this community are weakly interconnected._
 - **Should `Human & Leadership Books` be split into smaller, more focused modules?**

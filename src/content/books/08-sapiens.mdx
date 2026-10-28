@@ -1,0 +1,30 @@
+---
+title: "Sapiens"
+subtitle: "A Brief History of Humankind"
+authorName: "Yuval Noah Harari"
+publisher: "Vintage"
+publicationDate: "2015-05-01"
+printLength: 512
+coverImage: "https://m.media-amazon.com/images/I/713jIoMO3UL._SY466_.jpg"
+amazonINLink: "https://link.amazon/B0g14FRHH"
+description: "One hundred thousand years ago, at least six different species of humans inhabited Earth. Yet today there is only one—Homo sapiens. How did our species succeed in the battle for dominance? Why did our foraging ancestors come together to create cities and kingdoms? How did we come to believe in gods, nations, and human rights; to trust money, books, and laws; and to be enslaved by bureaucracy, timetables, and consumerism? And what will our world be like in the millennia to come?"
+readingStatus: "Currently Reading 👓"
+insight: "Human cooperation at scale is driven by shared fictions and collective imagination."
+intentTags: ["Human Behavior", "Systems Thinking"]
+slug: "sapiens"
+---
+
+import { Image } from "astro:assets";
+
+# {frontmatter.title}
+
+<Image
+  src={frontmatter.coverImage}
+  alt={frontmatter.title}
+  width="110"
+  height="160"
+/>
+
+## Description
+
+{frontmatter.description}

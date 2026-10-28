@@ -1061,6 +1061,66 @@
       "norm_label": "description"
     },
     {
+      "label": "08-sapiens.mdx",
+      "file_type": "document",
+      "source_file": "src/content/books/08-sapiens.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "books_08_sapiens",
+      "community": 21,
+      "norm_label": "08-sapiens.mdx"
+    },
+    {
+      "label": "{frontmatter.title}",
+      "file_type": "document",
+      "source_file": "src/content/books/08-sapiens.mdx",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "books_08_sapiens_frontmatter_title",
+      "community": 21,
+      "norm_label": "{frontmatter.title}"
+    },
+    {
+      "label": "Description",
+      "file_type": "document",
+      "source_file": "src/content/books/08-sapiens.mdx",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "books_08_sapiens_description",
+      "community": 21,
+      "norm_label": "description"
+    },
+    {
+      "label": "09-psycho-cybernetics.mdx",
+      "file_type": "document",
+      "source_file": "src/content/books/09-psycho-cybernetics.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "books_09_psycho_cybernetics",
+      "community": 22,
+      "norm_label": "09-psycho-cybernetics.mdx"
+    },
+    {
+      "label": "{frontmatter.title}",
+      "file_type": "document",
+      "source_file": "src/content/books/09-psycho-cybernetics.mdx",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "books_09_psycho_cybernetics_frontmatter_title",
+      "community": 22,
+      "norm_label": "{frontmatter.title}"
+    },
+    {
+      "label": "Description",
+      "file_type": "document",
+      "source_file": "src/content/books/09-psycho-cybernetics.mdx",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "books_09_psycho_cybernetics_description",
+      "community": 22,
+      "norm_label": "description"
+    },
+    {
       "label": "_template.mdx",
       "file_type": "document",
       "source_file": "src/content/books/_template.mdx",
@@ -1667,9 +1727,9 @@
       "relation": "imports_from",
       "confidence": "EXTRACTED",
       "source_file": "src/components/TradingCard.astro",
+      "confidence_score": 1.0,
       "source": "components_tradingcard",
-      "target": "astro_assets",
-      "confidence_score": 1.0
+      "target": "astro_assets"
     },
     {
       "relation": "semantically_similar_to",
@@ -1688,9 +1748,9 @@
       "source_file": "src/components/Footer.astro",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_footer",
-      "target": "components_outro",
-      "confidence_score": 1.0
+      "target": "components_outro"
     },
     {
       "relation": "imports_from",
@@ -1808,9 +1868,9 @@
       "source_file": "src/components/TradingCard.astro",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_tradingcard",
-      "target": "astro_content",
-      "confidence_score": 1.0
+      "target": "astro_content"
     },
     {
       "relation": "contains",
@@ -1818,9 +1878,9 @@
       "source_file": "src/components/TradingCard.astro",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_tradingcard",
-      "target": "components_tradingcard_getstatusinfo",
-      "confidence_score": 1.0
+      "target": "components_tradingcard_getstatusinfo"
     },
     {
       "relation": "imports_from",
@@ -1829,9 +1889,9 @@
       "source_file": "src/pages/index.astro",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_index",
-      "target": "components_tradingcard",
-      "confidence_score": 1.0
+      "target": "components_tradingcard"
     },
     {
       "relation": "imports_from",
@@ -2198,9 +2258,9 @@
       "source_file": "next-prompt.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "next_prompt",
-      "target": "next_prompt_prompt_2026_07_28",
-      "confidence_score": 1.0
+      "target": "next_prompt_prompt_2026_07_28"
     },
     {
       "relation": "contains",
@@ -2555,6 +2615,46 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "src/content/books/08-sapiens.mdx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "books_08_sapiens",
+      "target": "books_08_sapiens_frontmatter_title",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/books/08-sapiens.mdx",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "books_08_sapiens_frontmatter_title",
+      "target": "books_08_sapiens_description",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/books/09-psycho-cybernetics.mdx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "books_09_psycho_cybernetics",
+      "target": "books_09_psycho_cybernetics_frontmatter_title",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/books/09-psycho-cybernetics.mdx",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "books_09_psycho_cybernetics_frontmatter_title",
+      "target": "books_09_psycho_cybernetics_description",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "src/content/books/_template.mdx",
       "source_location": "L16",
       "weight": 1.0,
@@ -2741,5 +2841,5 @@
       "source_file": "src/content/books/05-algorithms-to-live-by.mdx"
     }
   ],
-  "built_at_commit": "318c94216d3a845b7f1e6ce4a4c7b76705bea577"
+  "built_at_commit": "3f0919bde076bb5dff0c56dc7c30b8f446ed2c70"
 }

@@ -1,0 +1,30 @@
+---
+title: "Psycho-Cybernetics"
+subtitle: "Updated and Expanded"
+authorName: "Maxwell Maltz"
+publisher: "TarcherPerigee"
+publicationDate: "2015-11-03"
+printLength: 336
+coverImage: "https://m.media-amazon.com/images/I/71QoX0nwsKL._SY466_.jpg"
+amazonINLink: "https://link.amazon/B00LE6nNg"
+description: "Cybernetics is the science of control and communication in the animal and the machine. Dr. Maxwell Maltz was the first to apply cybernetics to the human mind, explaining that the self-image is the steering mechanism of the human mind, and that by changing your mental blueprint, you can dramatically improve your performance, confidence, and happiness."
+readingStatus: "Currently Reading 👓"
+insight: "Your performance is bounded by your mental blueprint; debug the self-image first."
+intentTags: ["Human Behavior", "Systems Thinking"]
+slug: "psycho-cybernetics"
+---
+
+import { Image } from "astro:assets";
+
+# {frontmatter.title}
+
+<Image
+  src={frontmatter.coverImage}
+  alt={frontmatter.title}
+  width="110"
+  height="160"
+/>
+
+## Description
+
+{frontmatter.description}

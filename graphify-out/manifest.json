@@ -208,5 +208,15 @@
     "mtime": 1785254679.329098,
     "ast_hash": "303c8a7e5dc7831afb3434e3559ab7fe",
     "semantic_hash": ""
+  },
+  "src/content/books/08-sapiens.mdx": {
+    "mtime": 1793160455.9592154,
+    "ast_hash": "607ac75eccf7b07a087668dec9c204af",
+    "semantic_hash": ""
+  },
+  "src/content/books/09-psycho-cybernetics.mdx": {
+    "mtime": 1793160461.961155,
+    "ast_hash": "7176a0ae38aedd5c82cd5eaa38a85f69",
+    "semantic_hash": ""
   }
 }

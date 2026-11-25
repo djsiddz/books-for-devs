@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.30.0] - 2026-11-25
+
+### Security
+- Resolved 2 advisories in `astro` (GHSA-r3h5-4585-7x3w, GHSA-mh32-jxcr-mh9f) by upgrading to 7.4.13; `pnpm audit` now reports no known vulnerabilities
+
+### Upgraded
+- `astro` 7.4.2 → 7.4.13
+- `@astrojs/mdx` 8.1.1 → 8.1.6
+- `tailwindcss` 4.3.3 → 4.3.5
+- `@tailwindcss/vite` 4.3.3 → 4.3.5
+- `typescript` 6.0.3 → 7.0.2
+
+### Verified
+- `pnpm build` succeeds with no warnings
+- `astro sync` and `tsc --noEmit` pass with no type errors
+
 ## [0.28.0] - 2026-06-29
 
 ### Upgraded

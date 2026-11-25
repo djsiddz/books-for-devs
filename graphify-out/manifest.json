@@ -15,8 +15,8 @@
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1793157026.171238,
-    "ast_hash": "f2de2afaed858140d7ac2d8ae6698c36",
+    "mtime": 1795585820.7233233,
+    "ast_hash": "e65a200dd2fed47f8274e6ef5dbcbfc5",
     "semantic_hash": ""
   },
   "src/components/Card.astro": {
@@ -190,8 +190,8 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1782717999.007419,
-    "ast_hash": "ccd7c22f66a67d327c43df83181cc12f",
+    "mtime": 1795585820.7233732,
+    "ast_hash": "81670acf230fbf99d13cb627a7a70593",
     "semantic_hash": ""
   },
   "public/favicon.png": {

@@ -1,0 +1,222 @@
+{
+  ".vscode/extensions.json": {
+    "mtime": 1779948646.1824586,
+    "ast_hash": "3adedb22d082dbd1ebb00b75d21403aa",
+    "semantic_hash": "3adedb22d082dbd1ebb00b75d21403aa"
+  },
+  ".vscode/settings.json": {
+    "mtime": 1779948646.182514,
+    "ast_hash": "5bd4bff6707111cb4f40d40a08f0cbbf",
+    "semantic_hash": "5bd4bff6707111cb4f40d40a08f0cbbf"
+  },
+  "astro.config.mjs": {
+    "mtime": 1782717999.007568,
+    "ast_hash": "94c5922aa35a187019deac2e6c630af7",
+    "semantic_hash": ""
+  },
+  "package.json": {
+    "mtime": 1793157026.171238,
+    "ast_hash": "f2de2afaed858140d7ac2d8ae6698c36",
+    "semantic_hash": ""
+  },
+  "src/components/Card.astro": {
+    "mtime": 1785516422.822363,
+    "ast_hash": "bc37f3ffbb05831ba910e7419f4670e2",
+    "semantic_hash": ""
+  },
+  "src/components/CreditsModal.astro": {
+    "mtime": 1779948646.184104,
+    "ast_hash": "4bab54c2188451dc939aef561a22d39e",
+    "semantic_hash": "4bab54c2188451dc939aef561a22d39e"
+  },
+  "src/components/Footer.astro": {
+    "mtime": 1785744934.7736723,
+    "ast_hash": "9f0a95dda0113799a9c5d431eff306b1",
+    "semantic_hash": ""
+  },
+  "src/components/Header.astro": {
+    "mtime": 1779948646.1842206,
+    "ast_hash": "0e8073b1ed541360a10b692912716bcc",
+    "semantic_hash": "0e8073b1ed541360a10b692912716bcc"
+  },
+  "src/components/Intro.astro": {
+    "mtime": 1785744934.773799,
+    "ast_hash": "d25670e622ff4c9d77da1cc97db88005",
+    "semantic_hash": ""
+  },
+  "src/components/Outro.astro": {
+    "mtime": 1785744934.7739139,
+    "ast_hash": "4d7878f67e9e0f802d11815fb59cb546",
+    "semantic_hash": ""
+  },
+  "src/components/ThemeToggle.astro": {
+    "mtime": 1779948646.1843965,
+    "ast_hash": "9e00ad74cf09faef241cfbd3058fd16c",
+    "semantic_hash": "9e00ad74cf09faef241cfbd3058fd16c"
+  },
+  "src/content.config.ts": {
+    "mtime": 1779948646.1844535,
+    "ast_hash": "3fb6ecff96c1778c361b50b7edb5f97d",
+    "semantic_hash": "3fb6ecff96c1778c361b50b7edb5f97d"
+  },
+  "src/env.d.ts": {
+    "mtime": 1779948646.1852143,
+    "ast_hash": "1dd7153244f921edac1f1d04155b52b1",
+    "semantic_hash": "1dd7153244f921edac1f1d04155b52b1"
+  },
+  "src/layouts/BlueGradientCard.astro": {
+    "mtime": 1779948646.1853025,
+    "ast_hash": "c4e8957c34857c8df13c17c9e99a8bbf",
+    "semantic_hash": "c4e8957c34857c8df13c17c9e99a8bbf"
+  },
+  "src/layouts/Layout.astro": {
+    "mtime": 1782717999.0090954,
+    "ast_hash": "1ca40e17d57b53f3134f0b880b7b5a5a",
+    "semantic_hash": ""
+  },
+  "src/pages/books/[slug].astro": {
+    "mtime": 1779948646.1854846,
+    "ast_hash": "5f9ba8d4dae0abbdd554fdb870809442",
+    "semantic_hash": "5f9ba8d4dae0abbdd554fdb870809442"
+  },
+  "src/pages/index.astro": {
+    "mtime": 1793161320.3483796,
+    "ast_hash": "a8c921fb01a0c5e2afce4f7d75e3c170",
+    "semantic_hash": ""
+  },
+  "tsconfig.json": {
+    "mtime": 1779948646.1856914,
+    "ast_hash": "3809491c054359a262f0472df328065e",
+    "semantic_hash": "3809491c054359a262f0472df328065e"
+  },
+  ".github/workflows/deploy.yml": {
+    "mtime": 1785517328.5162685,
+    "ast_hash": "de7faa7975291926fe7585153e5ce6fc",
+    "semantic_hash": ""
+  },
+  ".pages.yml": {
+    "mtime": 1779948646.1823678,
+    "ast_hash": "c918907539bd8d5b4b96ec045547f7ae",
+    "semantic_hash": "c918907539bd8d5b4b96ec045547f7ae"
+  },
+  "NOTES.md": {
+    "mtime": 1779948646.1825712,
+    "ast_hash": "54824425e71dd54d05c94b17538b23c3",
+    "semantic_hash": "54824425e71dd54d05c94b17538b23c3"
+  },
+  "README.md": {
+    "mtime": 1779948646.1826358,
+    "ast_hash": "2f0598193fe4a4125445f7ebbc78fd8e",
+    "semantic_hash": "2f0598193fe4a4125445f7ebbc78fd8e"
+  },
+  "pnpm-workspace.yaml": {
+    "mtime": 1779949707.8842988,
+    "ast_hash": "fecc45bf223b25e4e2f2be08edd9848f",
+    "semantic_hash": "fecc45bf223b25e4e2f2be08edd9848f"
+  },
+  "src/content/books/00-harry-potter-1.mdx": {
+    "mtime": 1779948646.184589,
+    "ast_hash": "4270f8b670c9c254ce4c1d15f4a9950d",
+    "semantic_hash": "4270f8b670c9c254ce4c1d15f4a9950d"
+  },
+  "src/content/books/00-the-alchemist.mdx": {
+    "mtime": 1779948646.1846514,
+    "ast_hash": "4a4a3cdbd87f6737ea51a772b7c81c79",
+    "semantic_hash": "4a4a3cdbd87f6737ea51a772b7c81c79"
+  },
+  "src/content/books/00-who-moved-my-cheese.mdx": {
+    "mtime": 1785744934.7741902,
+    "ast_hash": "30a533081ca574d7da7fda1762a91b69",
+    "semantic_hash": ""
+  },
+  "src/content/books/01-leaders-eat-last.mdx": {
+    "mtime": 1779948646.184795,
+    "ast_hash": "d5c69a2c7df8987d76f6072adaf6553c",
+    "semantic_hash": "d5c69a2c7df8987d76f6072adaf6553c"
+  },
+  "src/content/books/02-atomic-habits.mdx": {
+    "mtime": 1785744934.7743015,
+    "ast_hash": "0afff76f4e882631207ea627a8cf67aa",
+    "semantic_hash": ""
+  },
+  "src/content/books/04-refactoring.mdx": {
+    "mtime": 1785744934.7744257,
+    "ast_hash": "4a66bcaa96c12232d5d95ab26d26c8bf",
+    "semantic_hash": ""
+  },
+  "src/content/books/05-algorithms-to-live-by.mdx": {
+    "mtime": 1779948646.1849785,
+    "ast_hash": "010cdc06cea31c0ccad0c5b762aa6671",
+    "semantic_hash": "010cdc06cea31c0ccad0c5b762aa6671"
+  },
+  "src/content/books/06-clean-code.mdx": {
+    "mtime": 1785252618.4967754,
+    "ast_hash": "420ec171cf0928f1de4edcd08afdb00f",
+    "semantic_hash": ""
+  },
+  "src/content/books/07-pragmatic-programmer.mdx": {
+    "mtime": 1782719146.6353884,
+    "ast_hash": "8aa6b6f9e2de16b394e8e3f183cfc452",
+    "semantic_hash": ""
+  },
+  "src/content/books/_template.mdx": {
+    "mtime": 1779948646.1851575,
+    "ast_hash": "75c6e71a3a469cf66bc34e537d2accc0",
+    "semantic_hash": "75c6e71a3a469cf66bc34e537d2accc0"
+  },
+  "public/icons/3d-fluency-exploding-head.png": {
+    "mtime": 1779948646.183494,
+    "ast_hash": "47f6f72ec044ff3347a59a1837d9e2ca",
+    "semantic_hash": "47f6f72ec044ff3347a59a1837d9e2ca"
+  },
+  "public/profile-photo-siddhesh.jpg": {
+    "mtime": 1779948646.1837535,
+    "ast_hash": "b2d3755ad1562a2794f3712f6d61a396",
+    "semantic_hash": "b2d3755ad1562a2794f3712f6d61a396"
+  },
+  ".claude/settings.json": {
+    "mtime": 1782715500.6724389,
+    "ast_hash": "3af33fd7e52e050ec1386fd69f1c58dd",
+    "semantic_hash": ""
+  },
+  ".codex/hooks.json": {
+    "mtime": 1783699944.936918,
+    "ast_hash": "ef6d85ef1f5d28ff9a3cc84b95a3d207",
+    "semantic_hash": ""
+  },
+  "AGENTS.md": {
+    "mtime": 1783699944.9367385,
+    "ast_hash": "62c05a2bf20bf036a0b2633478663e64",
+    "semantic_hash": ""
+  },
+  "CHANGELOG.md": {
+    "mtime": 1782717999.007419,
+    "ast_hash": "ccd7c22f66a67d327c43df83181cc12f",
+    "semantic_hash": ""
+  },
+  "public/favicon.png": {
+    "mtime": 1782717999.008848,
+    "ast_hash": "6fe2b9a5b5f0019de5c08b327c61b7d8",
+    "semantic_hash": ""
+  },
+  "src/components/TradingCard.astro": {
+    "mtime": 1785744934.7740366,
+    "ast_hash": "954c910152c575b374466199797bca00",
+    "semantic_hash": ""
+  },
+  "next-prompt.md": {
+    "mtime": 1785254679.329098,
+    "ast_hash": "303c8a7e5dc7831afb3434e3559ab7fe",
+    "semantic_hash": ""
+  },
+  "src/content/books/08-sapiens.mdx": {
+    "mtime": 1793160455.9592154,
+    "ast_hash": "607ac75eccf7b07a087668dec9c204af",
+    "semantic_hash": ""
+  },
+  "src/content/books/09-psycho-cybernetics.mdx": {
+    "mtime": 1793161335.646043,
+    "ast_hash": "107e3576eb3a216dd36a0c8a753386cc",
+    "semantic_hash": ""
+  }
+}

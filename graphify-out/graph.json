@@ -561,10 +561,50 @@
       "norm_label": "changelog"
     },
     {
-      "label": "[0.28.0] - 2026-06-29",
+      "label": "[0.30.0] - 2026-11-25",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
       "source_location": "L3",
+      "_origin": "ast",
+      "id": "changelog_0_30_0_2026_11_25",
+      "community": 3,
+      "norm_label": "[0.30.0] - 2026-11-25"
+    },
+    {
+      "label": "Security",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "changelog_security",
+      "community": 3,
+      "norm_label": "security"
+    },
+    {
+      "label": "Upgraded",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "changelog_upgraded",
+      "community": 3,
+      "norm_label": "upgraded"
+    },
+    {
+      "label": "Verified",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "changelog_verified",
+      "community": 3,
+      "norm_label": "verified"
+    },
+    {
+      "label": "[0.28.0] - 2026-06-29",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L19",
       "_origin": "ast",
       "id": "changelog_0_28_0_2026_06_29",
       "community": 3,
@@ -574,9 +614,9 @@
       "label": "Upgraded",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L5",
+      "source_location": "L21",
       "_origin": "ast",
-      "id": "changelog_upgraded",
+      "id": "changelog_upgraded_21",
       "community": 3,
       "norm_label": "upgraded"
     },
@@ -584,7 +624,7 @@
       "label": "Added",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L12",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "changelog_added",
       "community": 3,
@@ -594,7 +634,7 @@
       "label": "Fixed",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L15",
+      "source_location": "L31",
       "_origin": "ast",
       "id": "changelog_fixed",
       "community": 3,
@@ -604,7 +644,7 @@
       "label": "[0.27.0] - 2026-05-28",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L20",
+      "source_location": "L36",
       "_origin": "ast",
       "id": "changelog_0_27_0_2026_05_28",
       "community": 3,
@@ -614,7 +654,7 @@
       "label": "Changed",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L22",
+      "source_location": "L38",
       "_origin": "ast",
       "id": "changelog_changed",
       "community": 3,
@@ -624,7 +664,7 @@
       "label": "[0.26.0]",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L25",
+      "source_location": "L41",
       "_origin": "ast",
       "id": "changelog_0_26_0",
       "community": 3,
@@ -634,9 +674,9 @@
       "label": "Fixed",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L27",
+      "source_location": "L43",
       "_origin": "ast",
-      "id": "changelog_fixed_27",
+      "id": "changelog_fixed_43",
       "community": 3,
       "norm_label": "fixed"
     },
@@ -644,7 +684,7 @@
       "label": "[0.25.0]",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L30",
+      "source_location": "L46",
       "_origin": "ast",
       "id": "changelog_0_25_0",
       "community": 3,
@@ -654,9 +694,9 @@
       "label": "Changed",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L32",
+      "source_location": "L48",
       "_origin": "ast",
-      "id": "changelog_changed_32",
+      "id": "changelog_changed_48",
       "community": 3,
       "norm_label": "changed"
     },
@@ -2106,6 +2146,56 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "changelog_changelog",
+      "target": "changelog_0_30_0_2026_11_25",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "changelog_0_30_0_2026_11_25",
+      "target": "changelog_security",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "changelog_0_30_0_2026_11_25",
+      "target": "changelog_upgraded",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "changelog_0_30_0_2026_11_25",
+      "target": "changelog_verified",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "changelog_0_28_0_2026_06_29",
+      "target": "changelog_upgraded"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
       "source_location": "L12",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -2126,11 +2216,11 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L5",
+      "source_location": "L21",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "changelog_0_28_0_2026_06_29",
-      "target": "changelog_upgraded"
+      "target": "changelog_upgraded_21",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2146,21 +2236,21 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L27",
+      "source_location": "L43",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "changelog_0_26_0",
-      "target": "changelog_fixed_27"
+      "target": "changelog_fixed_43",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L32",
+      "source_location": "L48",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "changelog_0_25_0",
-      "target": "changelog_changed_32"
+      "target": "changelog_changed_48",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -2618,9 +2708,9 @@
       "source_file": "src/content/books/08-sapiens.mdx",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "books_08_sapiens",
-      "target": "books_08_sapiens_frontmatter_title",
-      "confidence_score": 1.0
+      "target": "books_08_sapiens_frontmatter_title"
     },
     {
       "relation": "contains",
@@ -2628,9 +2718,9 @@
       "source_file": "src/content/books/08-sapiens.mdx",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "books_08_sapiens_frontmatter_title",
-      "target": "books_08_sapiens_description",
-      "confidence_score": 1.0
+      "target": "books_08_sapiens_description"
     },
     {
       "relation": "contains",
@@ -2638,9 +2728,9 @@
       "source_file": "src/content/books/09-psycho-cybernetics.mdx",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "books_09_psycho_cybernetics",
-      "target": "books_09_psycho_cybernetics_frontmatter_title",
-      "confidence_score": 1.0
+      "target": "books_09_psycho_cybernetics_frontmatter_title"
     },
     {
       "relation": "contains",
@@ -2648,9 +2738,9 @@
       "source_file": "src/content/books/09-psycho-cybernetics.mdx",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "books_09_psycho_cybernetics_frontmatter_title",
-      "target": "books_09_psycho_cybernetics_description",
-      "confidence_score": 1.0
+      "target": "books_09_psycho_cybernetics_description"
     },
     {
       "relation": "contains",
@@ -2841,5 +2931,5 @@
       "source_file": "src/content/books/05-algorithms-to-live-by.mdx"
     }
   ],
-  "built_at_commit": "3f0919bde076bb5dff0c56dc7c30b8f446ed2c70"
+  "built_at_commit": "1fbbeef980f69f0d02307d86a1672333a9bd134d"
 }

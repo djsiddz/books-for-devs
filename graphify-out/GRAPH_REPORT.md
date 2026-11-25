@@ -1,16 +1,16 @@
-# Graph Report - books-for-devs  (2026-10-28)
+# Graph Report - books-for-devs  (2026-11-25)
 
 ## Corpus Check
-- 38 files · ~16,014 words
+- 38 files · ~16,086 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 131 nodes · 126 edges · 23 communities (12 shown, 11 thin omitted)
+- 135 nodes · 131 edges · 23 communities (12 shown, 11 thin omitted)
 - Extraction: 86% EXTRACTED · 14% INFERRED · 0% AMBIGUOUS · INFERRED: 18 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `3f0919bd`
+- Built from commit: `1fbbeef9`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -40,15 +40,15 @@
 
 ## God Nodes (most connected - your core abstractions)
 1. `scripts` - 6 edges
-2. `Changelog` - 5 edges
-3. `Notes` - 5 edges
-4. `../components/Footer.astro` - 4 edges
-5. `../components/TradingCard.astro` - 4 edges
-6. `../layouts/Layout.astro` - 4 edges
-7. `[0.28.0] - 2026-06-29` - 4 edges
-8. `../components/Header.astro` - 3 edges
-9. `../components/Intro.astro` - 3 edges
-10. `Books for Devs` - 3 edges
+2. `Changelog` - 6 edges
+3. `[0.28.0] - 2026-06-29` - 5 edges
+4. `Notes` - 5 edges
+5. `../components/Footer.astro` - 4 edges
+6. `../components/TradingCard.astro` - 4 edges
+7. `../layouts/Layout.astro` - 4 edges
+8. `[0.30.0] - 2026-11-25` - 4 edges
+9. `../components/Header.astro` - 3 edges
+10. `../components/Intro.astro` - 3 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `../layouts/Layout.astro` --implements--> `Dark/Light Theme Persistence via localStorage`  [INFERRED]
@@ -82,8 +82,8 @@ Cohesion: 0.16
 Nodes (9): Book Detail Dynamic Page Route, ../components/Footer.astro, ../components/Intro.astro, ../components/TradingCard.astro, Books Content Collection (Astro Content API), Pages CMS Content Config, booksCollection, collections (+1 more)
 
 ### Community 3 - "Content Rendering & Routing"
-Cohesion: 0.17
-Nodes (11): [0.25.0], [0.26.0], [0.27.0] - 2026-05-28, [0.28.0] - 2026-06-29, Added, Changed, Changed, Changelog (+3 more)
+Cohesion: 0.13
+Nodes (15): [0.25.0], [0.26.0], [0.27.0] - 2026-05-28, [0.28.0] - 2026-06-29, [0.30.0] - 2026-11-25, Added, Changed, Changed (+7 more)
 
 ### Community 4 - "Content Schema & CMS"
 Cohesion: 0.38
@@ -114,7 +114,7 @@ Cohesion: 0.20
 Nodes (8): Description, {frontmatter.title}, Description, {frontmatter.title}, Description, {frontmatter.title}, Software Craft Intent Tag, Systems Thinking Intent Tag
 
 ## Knowledge Gaps
-- **60 isolated node(s):** `name`, `type`, `version`, `dev`, `start` (+55 more)
+- **62 isolated node(s):** `name`, `type`, `version`, `dev`, `start` (+57 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **11 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -122,12 +122,12 @@ Nodes (8): Description, {frontmatter.title}, Description, {frontmatter.title}, D
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `dependencies` connect `Dependencies & Package Config` to `Build & Dev Scripts`?**
-  _High betweenness centrality (0.010) - this node is a cross-community bridge._
-- **Why does `Software Craft Intent Tag` connect `Community 17` to `Book Content & Concepts`?**
   _High betweenness centrality (0.009) - this node is a cross-community bridge._
 - **What connects `name`, `type`, `version` to the rest of the system?**
-  _61 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _63 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Book Content & Concepts` be split into smaller, more focused modules?**
   _Cohesion score 0.14285714285714285 - nodes in this community are weakly interconnected._
+- **Should `Content Rendering & Routing` be split into smaller, more focused modules?**
+  _Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected._
 - **Should `Human & Leadership Books` be split into smaller, more focused modules?**
   _Cohesion score 0.14285714285714285 - nodes in this community are weakly interconnected._
